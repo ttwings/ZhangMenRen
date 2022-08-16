@@ -9,9 +9,9 @@ var selected_location : Location
 
 
 func _ready():
-    battle_field = $BattleFiled
+	battle_field = $BattleFiled
 
 # 下一回合
 func next_turn():
-    battle_field.battle_loop()
-    pass
+	battle_field.next_turn()
+	pass

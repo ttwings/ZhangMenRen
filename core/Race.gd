@@ -1,6 +1,6 @@
-extends Resource
+extends Node
 # 属性类
-class_name Race
+# class_name Race
 # 当设置属性时
 # signal on_set_attribute(id)
 # 种类
@@ -38,7 +38,15 @@ export(int) var will = 0
 export(Dictionary) var attacks = {}
 # 目前的攻击方式
 export(String) var current_attack = ""
+# 防御方式
+export(Dictionary) var defenses = {}
+# 目前的防御方式
+export(String) var current_defense = ""
+
 # 遵守法律
 export(int) var law = 0
 # 性格善良
 export(int) var good = 0
+
+func _ready():
+    owner.race = self

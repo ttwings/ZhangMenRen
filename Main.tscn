@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://core/Hero.gd" type="Script" id=1]
 [ext_resource path="res://res/texture/dungeon/floor/floor_sand_rock_0.png" type="Texture" id=2]
@@ -18,12 +18,19 @@
 [ext_resource path="res://res/shortcuts/shortcut_action2.tres" type="ShortCut" id=16]
 [ext_resource path="res://res/shortcuts/shortcut_action3.tres" type="ShortCut" id=17]
 [ext_resource path="res://core/ex/Game.gd" type="Script" id=18]
+[ext_resource path="res://core/Battlefield.gd" type="Script" id=19]
+[ext_resource path="res://Main.gd" type="Script" id=20]
+[ext_resource path="res://res/theme/default_font.tres" type="DynamicFont" id=21]
 
 [sub_resource type="TileSet" id=1]
+
+[sub_resource type="Theme" id=2]
+default_font = ExtResource( 21 )
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 20 )
 
 [node name="Game" type="Control" parent="."]
 anchor_right = 1.0
@@ -33,6 +40,7 @@ script = ExtResource( 18 )
 [node name="BattleFiled" type="TileMap" parent="Game"]
 tile_set = SubResource( 1 )
 format = 1
+script = ExtResource( 19 )
 
 [node name="Floor" type="TileMap" parent="Game/BattleFiled"]
 tile_set = ExtResource( 4 )
@@ -74,10 +82,9 @@ smoothing_enabled = true
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="ActionButtons" type="HBoxContainer" parent="UI"]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -70.0
+margin_top = 730.0
+margin_right = 1014.0
+margin_bottom = 800.0
 custom_constants/separation = 5
 
 [node name="Button_1" type="Button" parent="UI/ActionButtons"]
@@ -148,3 +155,146 @@ margin_right = 805.0
 margin_bottom = 70.0
 shortcut = ExtResource( 8 )
 icon = ExtResource( 2 )
+
+[node name="Status" type="VBoxContainer" parent="UI/ActionButtons"]
+margin_left = 810.0
+margin_right = 1024.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Hp" type="HBoxContainer" parent="UI/ActionButtons/Status"]
+margin_right = 214.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 2 )
+
+[node name="Label" type="Label" parent="UI/ActionButtons/Status/Hp"]
+margin_right = 54.0
+margin_bottom = 19.0
+text = "肉体："
+
+[node name="ProgressBar" type="ProgressBar" parent="UI/ActionButtons/Status/Hp"]
+margin_left = 58.0
+margin_right = 158.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 100, 10 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 20.0
+step = 1.0
+value = 10.0
+percent_visible = false
+
+[node name="current" type="Label" parent="UI/ActionButtons/Status/Hp"]
+margin_left = 162.0
+margin_right = 180.0
+margin_bottom = 19.0
+text = "10"
+
+[node name="segmentation" type="Label" parent="UI/ActionButtons/Status/Hp"]
+margin_left = 184.0
+margin_right = 192.0
+margin_bottom = 19.0
+text = "/"
+
+[node name="max" type="Label" parent="UI/ActionButtons/Status/Hp"]
+margin_left = 196.0
+margin_right = 214.0
+margin_bottom = 19.0
+text = "20"
+
+[node name="Mp" type="HBoxContainer" parent="UI/ActionButtons/Status"]
+margin_top = 24.0
+margin_right = 214.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 2 )
+
+[node name="Label" type="Label" parent="UI/ActionButtons/Status/Mp"]
+margin_top = 1.0
+margin_right = 54.0
+margin_bottom = 20.0
+text = "灵力："
+
+[node name="ProgressBar" type="ProgressBar" parent="UI/ActionButtons/Status/Mp"]
+margin_left = 58.0
+margin_right = 158.0
+margin_bottom = 21.0
+rect_min_size = Vector2( 100, 10 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 20.0
+step = 1.0
+value = 10.0
+percent_visible = false
+
+[node name="current" type="Label" parent="UI/ActionButtons/Status/Mp"]
+margin_left = 162.0
+margin_top = 1.0
+margin_right = 180.0
+margin_bottom = 20.0
+text = "10"
+
+[node name="segmentation" type="Label" parent="UI/ActionButtons/Status/Mp"]
+margin_left = 184.0
+margin_top = 1.0
+margin_right = 192.0
+margin_bottom = 20.0
+text = "/"
+
+[node name="max" type="Label" parent="UI/ActionButtons/Status/Mp"]
+margin_left = 196.0
+margin_top = 1.0
+margin_right = 214.0
+margin_bottom = 20.0
+text = "20"
+
+[node name="Ap" type="HBoxContainer" parent="UI/ActionButtons/Status"]
+margin_top = 49.0
+margin_right = 214.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 2 )
+
+[node name="Label" type="Label" parent="UI/ActionButtons/Status/Ap"]
+margin_top = 1.0
+margin_right = 54.0
+margin_bottom = 20.0
+text = "神识："
+
+[node name="ProgressBar" type="ProgressBar" parent="UI/ActionButtons/Status/Ap"]
+margin_left = 58.0
+margin_right = 158.0
+margin_bottom = 21.0
+rect_min_size = Vector2( 100, 10 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 20.0
+step = 1.0
+value = 10.0
+percent_visible = false
+
+[node name="current" type="Label" parent="UI/ActionButtons/Status/Ap"]
+margin_left = 162.0
+margin_top = 1.0
+margin_right = 180.0
+margin_bottom = 20.0
+text = "10"
+
+[node name="segmentation" type="Label" parent="UI/ActionButtons/Status/Ap"]
+margin_left = 184.0
+margin_top = 1.0
+margin_right = 192.0
+margin_bottom = 20.0
+text = "/"
+
+[node name="max" type="Label" parent="UI/ActionButtons/Status/Ap"]
+margin_left = 196.0
+margin_top = 1.0
+margin_right = 214.0
+margin_bottom = 20.0
+text = "20"

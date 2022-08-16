@@ -7,7 +7,7 @@ var cdVal = 0
 var ranDec = ""
 var castRan = 10
 var isActive = true #是否主动技能
- 
+
 func castStart():
 	if _castIf() :
 		_cast()

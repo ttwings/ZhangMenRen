@@ -1,9 +1,9 @@
 # 类名 防御
 class_name  Defense
 
-# 防御分为肉体物理防御hp_def、灵力魔法防御sp_def、神识精神防御ap_def
+# 防御分为肉体物理防御hp_def、灵力魔法防御mp_def、神识精神防御ap_def
 var hp_def = 0
-var sp_def = 0
+var mp_def = 0
 var ap_def = 0
 # 防御不是伤害减免，而是和命中计算
 # 效果防御

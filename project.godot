@@ -12,27 +12,32 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Action",
 "language": "GDScript",
-"path": "res://core/action.gd"
+"path": "res://core/Action.gd"
 }, {
 "base": "Reference",
 "class": "ActionResult",
 "language": "GDScript",
-"path": "res://core/Actionresult.gd"
+"path": "res://core/ActionResult.gd"
 }, {
 "base": "Node2D",
 "class": "Actor",
 "language": "GDScript",
-"path": "res://core/actor.gd"
+"path": "res://core/Actor.gd"
 }, {
 "base": "Resource",
 "class": "Attack",
 "language": "GDScript",
-"path": "res://core/attack.gd"
+"path": "res://core/Attack.gd"
 }, {
 "base": "Action",
 "class": "AttackAction",
 "language": "GDScript",
 "path": "res://core/actions/AttackAction.gd"
+}, {
+"base": "Reference",
+"class": "AttackInfo",
+"language": "GDScript",
+"path": "res://core/AttackInfo.gd"
 }, {
 "base": "Reference",
 "class": "Base",
@@ -67,7 +72,7 @@ _global_script_classes=[ {
 "base": "Actor",
 "class": "Hero",
 "language": "GDScript",
-"path": "res://core/hero.gd"
+"path": "res://core/Hero.gd"
 }, {
 "base": "Buff",
 "class": "Item",
@@ -77,12 +82,12 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Loader",
 "language": "GDScript",
-"path": "res://core/global/loader.gd"
+"path": "res://core/global/Loader.gd"
 }, {
 "base": "Resource",
 "class": "Location",
 "language": "GDScript",
-"path": "res://core/location.gd"
+"path": "res://core/Location.gd"
 }, {
 "base": "Actor",
 "class": "Monster",
@@ -93,11 +98,6 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://core/Player.gd"
-}, {
-"base": "Resource",
-"class": "Race",
-"language": "GDScript",
-"path": "res://core/Race.gd"
 }, {
 "base": "Reference",
 "class": "Region",
@@ -113,11 +113,6 @@ _global_script_classes=[ {
 "class": "Skill",
 "language": "GDScript",
 "path": "res://core/Skill.gd"
-}, {
-"base": "Node",
-"class": "Sys",
-"language": "GDScript",
-"path": "res://core/global/Sys.gd"
 }, {
 "base": "Reference",
 "class": "Terrain",
@@ -140,6 +135,7 @@ _global_script_class_icons={
 "Actor": "",
 "Attack": "",
 "AttackAction": "",
+"AttackInfo": "",
 "Base": "",
 "Battlefield": "",
 "Buff": "",
@@ -152,11 +148,9 @@ _global_script_class_icons={
 "Location": "",
 "Monster": "",
 "Player": "",
-"Race": "",
 "Region": "",
 "Scroll": "",
 "Skill": "",
-"Sys": "",
 "Terrain": "",
 "WalkAction": "",
 "Weather": ""
@@ -170,6 +164,8 @@ config/icon="res://icon.png"
 [autoload]
 
 TexturePlayer="res://res/texture_player.gd"
+PathGen="*res://core/global/PathGen.gd"
+FovGen="*res://core/global/FovGen.gd"
 
 [display]
 

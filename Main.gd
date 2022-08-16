@@ -4,7 +4,8 @@ extends Control
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+onready var game = $Game
+onready var ui = $UI
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
