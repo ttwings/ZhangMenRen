@@ -69,7 +69,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://core/ex/Game.gd"
 }, {
-"base": "Actor",
+"base": "Resource",
 "class": "Hero",
 "language": "GDScript",
 "path": "res://core/Hero.gd"
@@ -94,10 +94,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://core/Monster.gd"
 }, {
-"base": "Base",
-"class": "Player",
+"base": "Resource",
+"class": "Race",
 "language": "GDScript",
-"path": "res://core/Player.gd"
+"path": "res://core/Race.gd"
 }, {
 "base": "Reference",
 "class": "Region",
@@ -147,7 +147,7 @@ _global_script_class_icons={
 "Loader": "",
 "Location": "",
 "Monster": "",
-"Player": "",
+"Race": "",
 "Region": "",
 "Scroll": "",
 "Skill": "",
@@ -165,7 +165,7 @@ config/icon="res://icon.png"
 
 TexturePlayer="res://res/texture_player.gd"
 PathGen="*res://core/global/PathGen.gd"
-FovGen="*res://core/global/FovGen.gd"
+FovGen="res://core/global/FovGen.gd"
 
 [display]
 

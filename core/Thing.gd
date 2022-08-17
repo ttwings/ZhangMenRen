@@ -52,6 +52,7 @@ var cell = Vector2() setget _set_cell, _get_cell
 # components dictionary
 var components = {}
 var item
+var race
 var fighter
 var ai
 # status effects dictionary

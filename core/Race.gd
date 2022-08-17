@@ -1,6 +1,6 @@
-extends Node
+extends Resource
 # 属性类
-# class_name Race
+class_name Race
 # 当设置属性时
 # signal on_set_attribute(id)
 # 种类
@@ -47,6 +47,3 @@ export(String) var current_defense = ""
 export(int) var law = 0
 # 性格善良
 export(int) var good = 0
-
-func _ready():
-    owner.race = self

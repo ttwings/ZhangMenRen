@@ -6,18 +6,18 @@ extends Node
 # radius = distance in cells to (only cells within radius range are considered)
 
 func calucate_fov(data,wall_index,origin,radius):
-    pass
+	pass
 
 func get_fov_rect(origin,radius):
-    pass
+	pass
 
 func is_wall(data,wall_index,cell):
-    return data[cell.x][cell.y] = wall_index
-    pass
+#	return data[cell.x][cell.y] = wall_index
+	pass
 
 func cast_fov_ray(data,wall_index,from,to):
-    pass
+	pass
 
 func get_line(from,to):
-    pass
+	pass
 

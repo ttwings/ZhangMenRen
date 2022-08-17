@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://core/Race.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+race = ""
+alias = ""
+body = ""
+speed = 0
+initiative = 0
+Hp_dice = 0
+Mp_dice = 0
+Ap_dice = 0
+Str = 0
+Con = 0
+Dex = 0
+Int = 0
+Cha = 0
+Wis = 0
+armor_class = 0
+fortitude = 0
+reflex = 0
+will = 0
+attacks = {
+}
+current_attack = ""
+defenses = {
+}
+current_defense = ""
+law = 0
+good = 0
