@@ -24,6 +24,171 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://core/Actor.gd"
 }, {
+"base": "AnimaAnimatable",
+"class": "AnimaAccordion",
+"language": "GDScript",
+"path": "res://addons/anima/components/AnimaAccordion.gd"
+}, {
+"base": "Control",
+"class": "AnimaAnimatable",
+"language": "GDScript",
+"path": "res://addons/anima/components/Animatable.gd"
+}, {
+"base": "Reference",
+"class": "AnimaAnimationsUtils",
+"language": "GDScript",
+"path": "res://addons/anima/utils/animations.gd"
+}, {
+"base": "Reference",
+"class": "AnimaArc",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/Arc.gd"
+}, {
+"base": "Reference",
+"class": "AnimaAwaitableAddChild",
+"language": "GDScript",
+"path": "res://addons/anima/core/deferred_add_child.gd"
+}, {
+"base": "AnimaRectangle",
+"class": "AnimaButton",
+"language": "GDScript",
+"path": "res://addons/anima/components/AnimaButton.gd"
+}, {
+"base": "VBoxContainer",
+"class": "AnimaCarousel",
+"language": "GDScript",
+"path": "res://addons/anima/components/Carousel.gd"
+}, {
+"base": "HBoxContainer",
+"class": "AnimaChars",
+"language": "GDScript",
+"path": "res://addons/anima/components/AnimaChars.gd"
+}, {
+"base": "Reference",
+"class": "AnimaCircle",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/Circle.gd"
+}, {
+"base": "Reference",
+"class": "AnimaCubicBezier",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/CubicBezier.gd"
+}, {
+"base": "Object",
+"class": "AnimaDeclarationBase",
+"language": "GDScript",
+"path": "res://addons/anima/core/declaration/anima_declaration_base.gd"
+}, {
+"base": "Reference",
+"class": "AnimaDeclarationForAnimation",
+"language": "GDScript",
+"path": "res://addons/anima/core/declaration/anima_declaration_for_animation.gd"
+}, {
+"base": "Reference",
+"class": "AnimaDeclarationForProperty",
+"language": "GDScript",
+"path": "res://addons/anima/core/declaration/anima_declaration_for_property.gd"
+}, {
+"base": "Reference",
+"class": "AnimaDeclarationForRelativeProperty",
+"language": "GDScript",
+"path": "res://addons/anima/core/declaration/anima_declaration_for_relative_property.gd"
+}, {
+"base": "Reference",
+"class": "AnimaDeclarationGrid",
+"language": "GDScript",
+"path": "res://addons/anima/core/declaration/anima_declaration_grid.gd"
+}, {
+"base": "Reference",
+"class": "AnimaDeclarationGroup",
+"language": "GDScript",
+"path": "res://addons/anima/core/declaration/anima_declaration_group.gd"
+}, {
+"base": "Reference",
+"class": "AnimaDeclarationNode",
+"language": "GDScript",
+"path": "res://addons/anima/core/declaration/anima_declaration_node.gd"
+}, {
+"base": "Reference",
+"class": "AnimaDeclarationNodes",
+"language": "GDScript",
+"path": "res://addons/anima/core/declaration/anima_declaration_nodes.gd"
+}, {
+"base": "Reference",
+"class": "AnimaEasing",
+"language": "GDScript",
+"path": "res://addons/anima/core/easings.gd"
+}, {
+"base": "Reference",
+"class": "AnimaLabel",
+"language": "GDScript",
+"path": "res://addons/anima/components/AnimaLabel.gd"
+}, {
+"base": "Reference",
+"class": "AnimaLine",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/Line.gd"
+}, {
+"base": "Reference",
+"class": "AnimaNode",
+"language": "GDScript",
+"path": "res://addons/anima/core/anima_node.gd"
+}, {
+"base": "Reference",
+"class": "AnimaNodesProperties",
+"language": "GDScript",
+"path": "res://addons/anima/utils/node_properties.gd"
+}, {
+"base": "Reference",
+"class": "AnimaPlayer",
+"language": "GDScript",
+"path": "res://addons/anima/core/player.gd"
+}, {
+"base": "Object",
+"class": "AnimaPropertyList",
+"language": "GDScript",
+"path": "res://addons/anima/utils/anima_properties_list.gd"
+}, {
+"base": "Reference",
+"class": "AnimaRectangle",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/Rectangle.gd"
+}, {
+"base": "Reference",
+"class": "AnimaShape",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/Shape.gd"
+}, {
+"base": "Reference",
+"class": "AnimaSquare",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/Square.gd"
+}, {
+"base": "Reference",
+"class": "AnimaStrings",
+"language": "GDScript",
+"path": "res://addons/anima/utils/strings.gd"
+}, {
+"base": "Reference",
+"class": "AnimaTriangle",
+"language": "GDScript",
+"path": "res://addons/anima/shapes/Triangle.gd"
+}, {
+"base": "Reference",
+"class": "AnimaTween",
+"language": "GDScript",
+"path": "res://addons/anima/core/tween.gd"
+}, {
+"base": "Reference",
+"class": "AnimaTweenUtils",
+"language": "GDScript",
+"path": "res://addons/anima/utils/tween_utils.gd"
+}, {
+"base": "Reference",
+"class": "AnimaVisualNode",
+"language": "GDScript",
+"path": "res://addons/anima/core/visual_node.gd"
+}, {
 "base": "Resource",
 "class": "Attack",
 "language": "GDScript",
@@ -89,6 +254,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://core/Location.gd"
 }, {
+"base": "Resource",
+"class": "Map",
+"language": "GDScript",
+"path": "res://core/Map.gd"
+}, {
 "base": "Actor",
 "class": "Monster",
 "language": "GDScript",
@@ -133,6 +303,39 @@ _global_script_class_icons={
 "Action": "",
 "ActionResult": "",
 "Actor": "",
+"AnimaAccordion": "",
+"AnimaAnimatable": "",
+"AnimaAnimationsUtils": "",
+"AnimaArc": "",
+"AnimaAwaitableAddChild": "",
+"AnimaButton": "",
+"AnimaCarousel": "",
+"AnimaChars": "",
+"AnimaCircle": "",
+"AnimaCubicBezier": "",
+"AnimaDeclarationBase": "",
+"AnimaDeclarationForAnimation": "",
+"AnimaDeclarationForProperty": "",
+"AnimaDeclarationForRelativeProperty": "",
+"AnimaDeclarationGrid": "",
+"AnimaDeclarationGroup": "",
+"AnimaDeclarationNode": "",
+"AnimaDeclarationNodes": "",
+"AnimaEasing": "",
+"AnimaLabel": "",
+"AnimaLine": "",
+"AnimaNode": "",
+"AnimaNodesProperties": "",
+"AnimaPlayer": "",
+"AnimaPropertyList": "",
+"AnimaRectangle": "",
+"AnimaShape": "",
+"AnimaSquare": "",
+"AnimaStrings": "",
+"AnimaTriangle": "",
+"AnimaTween": "",
+"AnimaTweenUtils": "",
+"AnimaVisualNode": "",
 "Attack": "",
 "AttackAction": "",
 "AttackInfo": "",
@@ -146,6 +349,7 @@ _global_script_class_icons={
 "Item": "",
 "Loader": "",
 "Location": "",
+"Map": "",
 "Monster": "",
 "Race": "",
 "Region": "",
@@ -166,12 +370,24 @@ config/icon="res://icon.png"
 TexturePlayer="res://res/texture_player.gd"
 PathGen="*res://core/global/PathGen.gd"
 FovGen="res://core/global/FovGen.gd"
+ANIMA="*res://addons/anima/core/costants.gd"
+AnimaUI="*res://addons/anima/ui/AnimaUI.gd"
+Anima="*res://addons/anima/core/anima.gd"
+Sys="*res://core/global/Sys.gd"
 
 [display]
 
 window/size/width=1280
 window/size/height=800
 window/size/resizable=false
+
+[editor]
+
+scene_naming=1
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/anima/plugin.cfg" )
 
 [global]
 

@@ -41,3 +41,21 @@ func set_location(cell:Vector2,location:Location):
 
 func get_location(cell:Vector2):
 	return locations[cell]
+
+# 战场上的物品动画管理
+
+# 按方向移动
+func r_thing_move_dir(thing_path,dir):
+	var new_v = dir*64
+	Anima.begin(self)\
+	.then(Anima.Node(thing_path).anima_position(new_v,0.3))\
+	.play()
+
+# 跳跃动画
+func r_thing_jump_dir(thing_path,dir):
+	pass
+	
+# 冲锋
+func r_thing_charge_dir(thing_path,dir):
+	pass	
+	

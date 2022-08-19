@@ -46,6 +46,10 @@ func clear_message() :
 # roll random number generator
 func roll(l,h) :
 	return int(round(rand_range(l,h)))
+	
+func add_tip():
+	pass
+		
 
 # # 创建一个新的信息框
 # func new_message(file="",txt=""):
