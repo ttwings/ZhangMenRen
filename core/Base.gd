@@ -46,16 +46,16 @@ func del_append(base:Base):
 	
 #查找是否有目标id的append
 func find_append(id:String):
-    for base in appends:
-        if base.id == id:
-            return base
-    return null
+	for base in appends:
+		if base.id == id:
+			return base
+	return null
 # 判断是否含有目标id的append
 func has_append(id:String):
-    for base in appends:
-        if base.id == id:
-            return true
-    return false
+	for base in appends:
+		if base.id == id:
+			return true
+	return false
 
 #是否包含所有标签 tabs 可以是多个标签如“xxx xxx”
 func has_all_tabs(tabs):

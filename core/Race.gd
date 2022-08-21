@@ -4,7 +4,7 @@ class_name Race
 # 当设置属性时
 # signal on_set_attribute(id)
 # 种类
-export(String) var race
+export(String) var type
 # 名称
 export(String) var alias
 # 体型
@@ -34,14 +34,6 @@ export(int) var fortitude = 0
 export(int) var reflex = 0
 # 意志
 export(int) var will = 0
-# 攻击方式
-export(Dictionary) var attacks = {}
-# 目前的攻击方式
-export(String) var current_attack = ""
-# 防御方式
-export(Dictionary) var defenses = {}
-# 目前的防御方式
-export(String) var current_defense = ""
 
 # 遵守法律
 export(int) var law = 0

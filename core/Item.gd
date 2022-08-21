@@ -1,4 +1,4 @@
-extends Buff
+extends Thing
 class_name Item
 
 signal onSetNum()

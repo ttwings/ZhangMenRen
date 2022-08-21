@@ -37,15 +37,15 @@ enum AP_damage_effects{none, daze, fear, silence, confusion}
 
 
 func _init(alias = "", min_damage = 0, max_damage = 0, critical_rate = 0.05, critical_multiple = 2, attack_type = "", attack_range = 1, attack_distance = 1, attack_speed = 100, attack_animation = "", attack_sound = ""):
-    self.alias = alias
-    self.min_damage = min_damage
-    self.max_damage = max_damage
-    self.critical_rate = critical_rate
-    self.critical_multiple = critical_multiple
-    self.attack_type = attack_type
-    self.attack_range = attack_range
-    self.attack_distance = attack_distance
-    self.attack_speed = attack_speed
-    self.attack_animation = attack_animation
-    self.attack_sound = attack_sound
-    self.effects = {}
+	self.alias = alias
+	self.min_damage = min_damage
+	self.max_damage = max_damage
+	self.critical_rate = critical_rate
+	self.critical_multiple = critical_multiple
+	self.attack_type = attack_type
+	self.attack_range = attack_range
+	self.attack_distance = attack_distance
+	self.attack_speed = attack_speed
+	self.attack_animation = attack_animation
+	self.attack_sound = attack_sound
+	self.effects = {}

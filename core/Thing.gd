@@ -1,6 +1,6 @@
-extends Node2D
+extends Resource
+class_name Thing
 
-tool
 # const color for rice text label bbcode
 const NOR = "[/color]"
 const BLK = "[color=#000000]"
@@ -37,84 +37,63 @@ signal about_to_act(delta)
 
 var map
 
-export(String) var alias = "thing"
-export(String,MULTILINE) var description = ""
+var alias = "thing"
+var description = "this is a thing"
+var apperence = "thing"
+#export(Texture) var sprite_path setget _set_sprite_path
 
-export(Texture) var sprite_path setget _set_sprite_path
-
-export(bool) var blocks_movement = false
-export(bool) var blocks_sight = false
-export(bool) var stay_visible = false
+var blocks_movement = false
+var blocks_sight = false
+var stay_visible = false
 
 var found = false
 # current map cell
 var cell = Vector2() setget _set_cell, _get_cell
-# components dictionary
-var components = {}
-var item
-var race
-var fighter
-var ai
 # status effects dictionary
 var status_effects = {}
+# AI
+var ai
 # sid
 var sid = 0
 # dbpath
 var dbpath = ""
 # get save dictionary
 func get_save_dict():
-    var data = {
-        "sid": sid,
-        "dbpath": dbpath,
-        "cell": {"x":self.cell.x, "y":self.cell.y},
-        "components": {},
-        "status_effects": status_effects,
-        "found": found
-    }
-    for component in components:
-        if self.components[component].has_method("get_save_dict"):
-            data["components"][component] = self.components[component].get_save_dict()
-    return data
+	var data = {
+		"sid": sid,
+		"dbpath": dbpath,
+		"cell": {"x":self.cell.x, "y":self.cell.y},
+		"components": {},
+		"status_effects": status_effects,
+		"found": found
+	}
+	return data
 
 func get_message_name():
-    if "player" in self.components:
-        return "你"
-    else:
-        return self.alias
+	if "player" in self.components:
+		return "你"
+	else:
+		return self.alias
 
 func kill():
-    if self.blocks_movement or self.blocks_sight:
-        emit_signal("map_cell_changed", self.cell, null)
-    queue_free()
+	if self.blocks_movement or self.blocks_sight:
+		emit_signal("map_cell_changed", self.cell, null)
 
 func _rpg_process(delta = 5):
-    for status in self.status_effects:
-        status._rpg_process(delta)
-    if "AI" in self.components:
-        self.components["AI"].act(delta)
+	for status in self.status_effects:
+		status._rpg_process(delta)
+	if ai :
+		ai.act(delta)
 
-func _ready():
-    connect("about_to_act",self,"_on_about_to_act")
-    add_to_group("things")
-    if self.blocks_movement:
-        add_to_group("blockers")
-    if self.blocks_sight:
-        add_to_group("sight_blockers")
 
 func _get_cell():
-    if map is TileMap:
-        return map.world_to_map(position)
+	return cell
 
 func _set_cell(cell):
-    var old = self.cell
-    self.cell = cell
-    self.position = map.map_to_world(cell)
-    emit_signal("map_cell_changed", old, cell)
-
-func _set_sprite_path(path):
-    sprite_path = path
-    if is_inside_tree():
-        $Sprite.texture = sprite_path
+	var old = self.cell
+	self.cell = cell
+	self.position = map.map_to_world(cell)
+	emit_signal("map_cell_changed", old, cell)
 
 func _on_about_to_act(delta):
-    _rpg_process(delta)
+	_rpg_process(delta)

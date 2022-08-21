@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource( 1 )
-race = "人族"
-alias = "老巴"
+type = "人族"
+alias = "青年人族"
 body = "中型"
 speed = 4
 initiative = 2
@@ -22,11 +22,5 @@ armor_class = 2
 fortitude = 2
 reflex = 2
 will = 2
-attacks = {
-}
-current_attack = ""
-defenses = {
-}
-current_defense = ""
 law = 0
 good = 0
