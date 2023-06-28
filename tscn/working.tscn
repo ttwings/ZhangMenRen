@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://svxqqtwo2fc4"]
+
+[ext_resource type="Theme" uid="uid://dh8rbu7m2cxus" path="res://theme/theme_font20.tres" id="1_l7srn"]
+[ext_resource type="Script" path="res://tscn/working.gd" id="2_otkq2"]
+[ext_resource type="Script" path="res://core/work.gd" id="3_drnpv"]
+
+[sub_resource type="Resource" id="Resource_b6l5s"]
+script = ExtResource("3_drnpv")
+alias = &"采集灵石"
+skill = &"mine"
+difficult = 0
+max_practice = 20
+workload = 200
+output = {
+"stone": 20
+}
+desc = ""
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3cpky"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3xf5"]
+bg_color = Color(0.243137, 0.929412, 0.905882, 1)
+
+[node name="Working" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l7srn")
+script = ExtResource("2_otkq2")
+work = SubResource("Resource_b6l5s")
+work_practice = 20
+is_working = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 30.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "打坐练功"
+
+[node name="ProgressBar" type="ProgressBar" parent="Label"]
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_3cpky")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s3xf5")
+value = 50.0
+show_percentage = false
+
+[node name="ColorRect" type="ColorRect" parent="Label"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0862745, 0.0941176, 0.137255, 1)

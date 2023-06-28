@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Tag" load_steps=2 format=3 uid="uid://bqqg8hk7ejp8b"]
+
+[ext_resource type="Script" path="res://tag.gd" id="1_0vlej"]
+
+[resource]
+script = ExtResource("1_0vlej")
+alias = "流血"
+target = "血液"
+key = 0
+value = -1.0
+disappear = false
+life = 2
+atts = {}
+desc = "[color=red]死物[/color]
+[color=green]算命[/color]
+[color=yellow]趋吉避凶[/color]"
+color = Color(0, 0, 0, 1)

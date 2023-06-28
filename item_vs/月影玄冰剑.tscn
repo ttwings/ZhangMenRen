@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" uid="uid://df7tvi581w13l" path="res://item_panel.tscn" id="1_cy601"]
+
+[node name="ItemV" instance=ExtResource("1_cy601")]
+
+[node name="Alias" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+text = "月影玄冰剑
+"
+
+[node name="Desc" parent="MarginContainer/MarginContainer/VBoxContainer" index="1"]
+text = "遁速堪比极品二阶飞剑，制作材料经过改良，所需费用比一般二阶中品飞剑还低。需四年时间炼制，且要求制作之人有幻月相关本命。"
+
+[node name="Type" parent="MarginContainer/MarginContainer/VBoxContainer" index="2"]
+text = "飞剑"
+
+[node name="Alias" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe1" index="0"]
+text = "坚固"
+
+[node name="Alias" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe2" index="0"]
+text = "锋锐"
+
+[node name="Alias" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe3" index="0"]
+text = "极寒"
+
+[node name="Alias" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe4" index="0"]
+text = "幻月"
+
+[node name="Spe5" parent="MarginContainer/MarginContainer/VBoxContainer/Spe" index="5"]
+visible = false
+
+[node name="Spe6" parent="MarginContainer/MarginContainer/VBoxContainer/Spe" index="6"]
+visible = false
+
+[node name="Spe7" parent="MarginContainer/MarginContainer/VBoxContainer/Spe" index="7"]
+visible = false
+
+[node name="Spe8" parent="MarginContainer/MarginContainer/VBoxContainer/Spe" index="8"]
+visible = false
+
+[node name="Spe9" parent="MarginContainer/MarginContainer/VBoxContainer/Spe" index="9"]
+visible = false
+
+[node name="Desc" parent="MarginContainer/MarginContainer/VBoxContainer/Skill/Skill1" index="1"]
+visible = false
+
+[node name="Alias" parent="MarginContainer/MarginContainer/VBoxContainer/Skill/Skill2" index="0"]
+text = "月影幻"
+
+[node name="Desc" parent="MarginContainer/MarginContainer/VBoxContainer/Skill/Skill2" index="1"]
+visible = false
+
+[node name="Core" parent="MarginContainer/MarginContainer/VBoxContainer" index="6"]
+visible = false
+
+[node name="Req1" parent="MarginContainer/MarginContainer/VBoxContainer/Req" index="0"]
+visible = false
+
+[node name="Req3" parent="MarginContainer/MarginContainer/VBoxContainer/Req" index="2"]
+visible = false

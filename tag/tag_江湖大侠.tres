@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Tag" load_steps=2 format=3 uid="uid://b1dwayqin5x2f"]
+
+[ext_resource type="Script" path="res://tag.gd" id="1_o6h15"]
+
+[resource]
+script = ExtResource("1_o6h15")
+alias = "长春功"
+target = "寿元"
+key = 0
+value = -10.0
+disappear = false
+life = 2
+atts = {
+"life": 10.0
+}
+desc = "[color=red]死物[/color]
+[color=green]算命[/color]
+[color=yellow]趋吉避凶[/color]"
+color = Color(0, 0, 0, 1)

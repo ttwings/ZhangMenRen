@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://cv5qyiyakysst"]
+
+[ext_resource type="PackedScene" uid="uid://bdlj5o4votkp4" path="res://tscn/bullet.tscn" id="1_ds0ad"]
+[ext_resource type="Texture2D" uid="uid://bsn5bi8jegv02" path="res://res/texture/particle/slash_03.png" id="2_j4jny"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ykbmn"]
+size = Vector3(0.118352, 1, 1)
+
+[sub_resource type="Animation" id="Animation_1q6y1"]
+resource_name = "闪烁、"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0.839216)]
+}
+
+[sub_resource type="Animation" id="Animation_ngdsp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4mjk6"]
+_data = {
+"RESET": SubResource("Animation_ngdsp"),
+"闪烁、": SubResource("Animation_1q6y1")
+}
+
+[node name="Bullet" instance=ExtResource("1_ds0ad")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(0.642788, 0.766044, 0, -0.766044, 0.642788, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_ykbmn")
+
+[node name="Sprite3D" parent="." index="2"]
+transform = Transform3D(-4.37114e-08, 0.300139, -0.176883, 0, 0.251847, 0.2108, 1, 1.31195e-08, -7.73178e-09, 0, 0, 0)
+texture = ExtResource("2_j4jny")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+autoplay = "闪烁、"
+libraries = {
+"": SubResource("AnimationLibrary_4mjk6")
+}

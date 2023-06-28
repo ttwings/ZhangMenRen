@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Condition" load_steps=2 format=3 uid="uid://cjhm2vdh8hg11"]
+
+[ext_resource type="Script" path="res://condition.gd" id="1_wtmfm"]
+
+[resource]
+script = ExtResource("1_wtmfm")
+alias = ""
+max = 0.0
+current = 0.0
+change = 0.0
+tags = Array[Resource("res://tag.gd")]([])

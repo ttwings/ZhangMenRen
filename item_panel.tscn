@@ -1,0 +1,550 @@
+[gd_scene load_steps=9 format=3 uid="uid://df7tvi581w13l"]
+
+[ext_resource type="FontFile" uid="uid://b658rsk8en8bo" path="res://res/font/LXGWWenKaiGBScreenR.ttf" id="1_dahq5"]
+[ext_resource type="Texture2D" uid="uid://b08x3q0rwijgb" path="res://res/misc/grid_light.png" id="2_77av0"]
+[ext_resource type="Texture2D" uid="uid://ds21qegh7bo1f" path="res://res/texture/item/weapon/falchion_2_new.png" id="3_e0bwj"]
+
+[sub_resource type="Theme" id="Theme_6oi0y"]
+default_font = ExtResource("1_dahq5")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ey7y"]
+bg_color = Color(0.6, 0.6, 0.6, 0.321569)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63dt0"]
+bg_color = Color(1, 0.298039, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtvn4"]
+bg_color = Color(0.243137, 0.929412, 0.905882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1qdhp"]
+bg_color = Color(0.501961, 0.113725, 0.682353, 1)
+
+[node name="ItemPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = SubResource("Theme_6oi0y")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+offset_right = 400.0
+offset_bottom = 24.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer"]
+self_modulate = Color(0, 0, 0, 0.839216)
+layout_mode = 2
+texture = ExtResource("2_77av0")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+self_modulate = Color(0.054902, 0.607843, 0.952941, 1)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "五方揭谛宝心禅杖
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Texture" type="TextureRect" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("3_e0bwj")
+stretch_mode = 3
+
+[node name="Desc" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "这里填写物品描述，用bbcode"
+fit_content = true
+
+[node name="Type" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+self_modulate = Color(0.243137, 0.929412, 0.905882, 1)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "灵晶 斧"
+fit_content = true
+
+[node name="Atts" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+self_modulate = Color(0.505882, 0.505882, 0.505882, 1)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Att1" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Atts"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Atts/Att1"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "实体"
+
+[node name="Colon" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Atts/Att1"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = ":"
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/MarginContainer/VBoxContainer/Atts/Att1"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_4ey7y")
+theme_override_styles/fill = SubResource("StyleBoxFlat_63dt0")
+max_value = 999.0
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Atts/Att1/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "100"
+horizontal_alignment = 1
+
+[node name="Att2" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Atts"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Atts/Att2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "灵气"
+
+[node name="Colon" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Atts/Att2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = ":"
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/MarginContainer/VBoxContainer/Atts/Att2"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_4ey7y")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rtvn4")
+max_value = 999.0
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Atts/Att2/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "100"
+horizontal_alignment = 1
+
+[node name="Att3" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Atts"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Atts/Att3"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "神魂"
+
+[node name="Colon" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Atts/Att3"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = ":"
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/MarginContainer/VBoxContainer/Atts/Att3"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_4ey7y")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1qdhp")
+max_value = 999.0
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Atts/Att3/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "100"
+horizontal_alignment = 1
+
+[node name="Spe" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Spe"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.945098, 0.262745, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "特性："
+
+[node name="Spe1" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Spe"]
+layout_mode = 2
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.501961, 0.113725, 0.682353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "影"
+
+[node name="Desc" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = " 增加0.2攻速"
+fit_content = true
+
+[node name="Spe2" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Spe"]
+layout_mode = 2
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "玄冰"
+
+[node name="Desc" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = " 20点冰冷伤害"
+fit_content = true
+
+[node name="Spe3" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Spe"]
+layout_mode = 2
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe3"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "砍"
+
+[node name="Desc" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = " 1点砍伤害"
+fit_content = true
+
+[node name="Spe4" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Spe"]
+layout_mode = 2
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe4"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "砍"
+
+[node name="Desc" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = " 1点砍伤害"
+fit_content = true
+
+[node name="Spe5" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Spe"]
+layout_mode = 2
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe5"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "砍"
+
+[node name="Desc" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe5"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = " 1点砍伤害"
+fit_content = true
+
+[node name="Spe6" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Spe"]
+layout_mode = 2
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe6"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "砍"
+
+[node name="Desc" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe6"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = " 1点砍伤害"
+fit_content = true
+
+[node name="Spe7" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Spe"]
+layout_mode = 2
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe7"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "砍"
+
+[node name="Desc" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe7"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = " 1点砍伤害"
+fit_content = true
+
+[node name="Spe8" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Spe"]
+layout_mode = 2
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe8"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "砍"
+
+[node name="Desc" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe8"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = " 1点砍伤害"
+fit_content = true
+
+[node name="Spe9" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Spe"]
+layout_mode = 2
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe9"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "砍"
+
+[node name="Desc" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe9"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = " 1点砍伤害"
+fit_content = true
+
+[node name="Skill" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Skill"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.243137, 0.929412, 0.905882, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "技能："
+
+[node name="Skill1" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Skill"]
+layout_mode = 2
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Skill/Skill1"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "冰封刃"
+
+[node name="Desc" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/Skill/Skill1"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "在月光的环境中，每秒额外发出一道[color=yellow]20点光属性伤害[/color]。"
+fit_content = true
+
+[node name="Skill2" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Skill"]
+layout_mode = 2
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Skill/Skill2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "月影"
+
+[node name="Desc" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/Skill/Skill2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "在月光的环境中，每秒额外发出一道[color=yellow]20点光属性伤害[/color]。"
+fit_content = true
+
+[node name="Core" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Core"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.94902, 0.0470588, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "器灵："
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Core"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "青牛"
+
+[node name="Desc" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/Core"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "忠厚敦实，攻击欲望低，但韧性高，一定概率发怒，疯狂攻击。"
+fit_content = true
+
+[node name="Act1" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Core"]
+layout_mode = 2
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Core/Act1"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "牛角"
+
+[node name="Desc" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/Core/Act1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "2点穿刺伤害"
+fit_content = true
+
+[node name="Req" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+self_modulate = Color(0.580392, 0.580392, 0.580392, 1)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Req1" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Req"]
+layout_mode = 2
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Req/Req1"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.67451, 0.67451, 0.67451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "肉体强度需求："
+
+[node name="Value" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Req/Req1"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.67451, 0.67451, 0.67451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "10"
+
+[node name="Req2" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Req"]
+layout_mode = 2
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Req/Req2"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.67451, 0.67451, 0.67451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "灵力强度需求："
+
+[node name="Value" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Req/Req2"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.67451, 0.67451, 0.67451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "10"
+
+[node name="Req3" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Req"]
+layout_mode = 2
+
+[node name="Alias" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Req/Req3"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.67451, 0.67451, 0.67451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "神识强度需求："
+
+[node name="Value" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Req/Req3"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.67451, 0.67451, 0.67451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "10"
+
+[node name="Lv" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+self_modulate = Color(0.580392, 0.580392, 0.580392, 1)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "一阶上品"

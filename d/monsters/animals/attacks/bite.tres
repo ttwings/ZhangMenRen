@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://core/Attack.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+alias = "啮咬"
+min_damage = 1
+max_damage = 4
+critical_rate = 0.0
+critical_multiple = 0.0
+attack_type = ""
+attack_range = 0
+attack_distance = 0
+attack_speed = 0
+attack_animation = ""
+attack_sound = ""
+effects = {
+}

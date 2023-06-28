@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Tag" load_steps=3 format=3 uid="uid://xcbs1cr1gihe"]
+
+[ext_resource type="Script" path="res://tag.gd" id="1_qvrnm"]
+[ext_resource type="Texture2D" uid="uid://bf21o6qrqpn3r" path="res://res/texture/monster/animals/alligator_snapping_turtle_shell.png" id="2_tf1j0"]
+
+[resource]
+script = ExtResource("1_qvrnm")
+alias = "月影玄冰剑"
+target = "血液"
+key = 0
+value = -1.0
+disappear = false
+life = 2
+atts = {}
+texture = ExtResource("2_tf1j0")
+desc = "[color=red]月影[/color]
+[color=green]玄冰[/color]
+[color=yellow]剑影[/color]"
+color = Color(0.054902, 0.607843, 0.952941, 1)

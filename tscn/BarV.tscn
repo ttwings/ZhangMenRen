@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://qibjlr543yab"]
+
+[ext_resource type="Script" path="res://tscn/BarV.gd" id="1_l43e5"]
+
+[node name="BarV" type="ProgressBar"]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 12)
+offset_right = 128.0
+offset_bottom = 12.0
+value = 50.0
+show_percentage = false
+script = ExtResource("1_l43e5")

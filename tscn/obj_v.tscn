@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgjoc2ebmp5hm"]
+
+[ext_resource type="Script" path="res://tscn/obj_v.gd" id="1_e03jk"]
+
+[node name="ObjV" type="Area3D"]
+script = ExtResource("1_e03jk")

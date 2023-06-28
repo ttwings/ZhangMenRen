@@ -1,75 +1,31 @@
-extends HeroV
-
-# Hero
-export(Resource) var hero
-
-onready var animation = get_node("AnimationPlayer")
-onready var hp_bar = get_node("%HpBar") 
-onready var equips = get_node("Equips")
-var mp_bar
-var ap_bar
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+extends CharacterBody3D
 
 
-func init(t):
-	.init(t)
-	self.hero = t
-	self.hero.connect("on_cell_change",self,"r_cell_change")
-	self.hero.connect("on_hurt",self,"r_hurt")
-	self.hero.connect("on_plus",self,"r_plus")
-	self.hero.connect("on_plus_lv",self,"r_plus_lv")
-	self.hero.connect("on_play_animation",self,"r_play_animation")
-	# 肉体、灵力、神识初始化
-	hp_bar.init(hero)
-	mp_bar.init(hero)
-	ap_bar.init(hero)
-	# 动画显示初始化
-	animation.init(hero)
-	# 添加提示功能
-	Sys.add_tip()
-	# 装备添加按键
-	for i in self.hero.fighter.equips:
-		var button = preload("res://tscn/item/EquipButton.tscn").instance()
-		equips.add_child(button)
-		button.init(i)
+const SPEED = 5.0
+const JUMP_VELOCITY = 4.5
 
-func _unhandled_input(event):
-	# 英雄控制组件里面
-	var N = event.is_action_pressed("step_N")
-	var S = event.is_action_pressed("step_S")
-	var W = event.is_action_pressed("step_W")
-	var E = event.is_action_pressed("step_E")
-	var EN = event.is_action_pressed("step_EN")
-	var ES = event.is_action_pressed("step_ES")
-	var WN = event.is_action_pressed("step_WN")
-	var WS = event.is_action_pressed("step_WS")
-	var WAIT = event.is_action_pressed("step_WAIT")
-	
-	var GRAB = event.is_action_pressed("act_GRAB")
-	var DROP = event.is_action_pressed("act_DROP")
-	var THROW = event.is_action_pressed("act_THROW")
-	
-	if N:
-		hero.step(Vector2(0,-1))
-	if S:
-		hero.step(Vector2(0,1))
-	if W:
-		hero.step(Vector2(-1,0))
-	if E:
-		hero.step(Vector2(1,0))
-	## todo
-	
-	if GRAB:
-		hero.Grab()
-	pass
-		
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-func r_cell_change():
-	# animation to move
-	pass
-	
-func r_hurt():
-	animation.play("hurt")	
 
+func _physics_process(delta):
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y -= gravity * delta
+
+	# Handle Jump.
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if direction:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.z = move_toward(velocity.z, 0, SPEED)
+
+	move_and_slide()

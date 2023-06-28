@@ -1,0 +1,162 @@
+[gd_scene load_steps=3 format=3 uid="uid://dynu045hksgb1"]
+
+[ext_resource type="Theme" uid="uid://dh8rbu7m2cxus" path="res://theme/theme_font20.tres" id="1_kavwk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dftor"]
+bg_color = Color(0.364706, 0.364706, 0.364706, 1)
+
+[node name="WinQuest" type="Window"]
+title = "任务详情"
+position = Vector2i(400, 100)
+size = Vector2i(600, 400)
+theme = ExtResource("1_kavwk")
+
+[node name="CenterContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "任务名："
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Value" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "一份心意"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "委托人："
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Value" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "李长老"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "承接人："
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Value" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "李长老"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "任务详情："
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "                                             情况："
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Value" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "完成"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_dftor")
+
+[node name="RichLabel" type="RichTextLabel" parent="CenterContainer/Panel/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "达到打飞机啊地方劳动纠纷安定了房间啊浪费骄傲了地方垃圾测试你好"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = "报酬："
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Value" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = "500灵石"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "期限："
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Value" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "65日"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "                                                依赖："
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Value2" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "大河村"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+text = "任务提交"
+
+[node name="Button2" type="Button" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+text = "关闭"

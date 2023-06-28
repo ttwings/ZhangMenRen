@@ -1,8 +1,17 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d3edgno883oow"]
 
-[ext_resource path="res://core/Hero.gd" type="Script" id=1]
-[ext_resource path="res://d/human.tres" type="Resource" id=2]
+[ext_resource type="Script" path="res://core/Hero.gd" id="1"]
 
 [resource]
-script = ExtResource( 1 )
-race = ExtResource( 2 )
+script = ExtResource("1")
+Hp = 0
+Mp = 0
+Ap = 0
+Hp_max = 0
+Mp_max = 0
+Ap_max = 0
+Hp_temp = 0
+Mp_temp = 0
+Ap_temp = 0
+level = 0
+experience = 0

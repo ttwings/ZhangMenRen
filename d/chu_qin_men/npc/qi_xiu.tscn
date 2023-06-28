@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://npof74wtkotx"]
+
+[ext_resource type="Script" path="res://d/chu_qin_men/npc/qi_xiu.gd" id="1_ouuc5"]
+[ext_resource type="PackedScene" uid="uid://edql6lrwssjv" path="res://skill.tscn" id="1_tixem"]
+[ext_resource type="Script" path="res://core/race.gd" id="2_g4mfa"]
+[ext_resource type="Script" path="res://skill.gd" id="2_ysjgq"]
+[ext_resource type="Script" path="res://core/apprentice.gd" id="3_kqeh1"]
+
+[node name="Base" type="Node"]
+script = ExtResource("1_ouuc5")
+sid = "qi_xiu"
+alias = "齐休"
+long = "楚秦门掌门"
+
+[node name="Race" type="Node" parent="."]
+script = ExtResource("2_g4mfa")
+
+[node name="Apprentice" type="Node" parent="."]
+script = ExtResource("3_kqeh1")
+
+[node name="Attacker" type="Node" parent="."]
+
+[node name="Skillbook" parent="." instance=ExtResource("1_tixem")]
+script = ExtResource("2_ysjgq")
+skills = [NodePath("")]
+
+[node name="Node" type="Node" parent="Skillbook"]

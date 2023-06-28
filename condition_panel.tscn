@@ -1,0 +1,1094 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtefm2sc7l38c"]
+
+[ext_resource type="Theme" uid="uid://dh8rbu7m2cxus" path="res://theme/theme_font20.tres" id="1_0ueof"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hn2l8"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 9
+corner_radius_top_right = 7
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3qavh"]
+bg_color = Color(0.94902, 0.0470588, 0, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="ConditionPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0ueof")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+drag_to_rearrange_enabled = true
+
+[node name="肉身" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/肉身"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="Age" type="ColorRect" parent="TabContainer/肉身/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+color = Color(0.541176, 0.486275, 0.0980392, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/肉身/VBoxContainer/Age/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/肉身/VBoxContainer/Age/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "寿元"
+flat = true
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/肉身/VBoxContainer/Age/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_hn2l8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3qavh")
+value = 50.0
+show_percentage = false
+
+[node name="Value" type="Label" parent="TabContainer/肉身/VBoxContainer/Age/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -13.0
+offset_right = 50.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9999/9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Change" type="Label" parent="TabContainer/肉身/VBoxContainer/Age/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -13.0
+offset_bottom = 13.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "-100/+200    Δ5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Age2" type="ColorRect" parent="TabContainer/肉身/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+color = Color(0.541176, 0.486275, 0.0980392, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age2/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/肉身/VBoxContainer/Age2/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/肉身/VBoxContainer/Age2/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "皮肤"
+flat = true
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/肉身/VBoxContainer/Age2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_hn2l8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3qavh")
+value = 50.0
+show_percentage = false
+
+[node name="Value" type="Label" parent="TabContainer/肉身/VBoxContainer/Age2/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -13.0
+offset_right = 50.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9999/9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Change" type="Label" parent="TabContainer/肉身/VBoxContainer/Age2/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -13.0
+offset_bottom = 13.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "-100/+200    Δ5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Age3" type="ColorRect" parent="TabContainer/肉身/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+color = Color(0.541176, 0.486275, 0.0980392, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age3/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/肉身/VBoxContainer/Age3/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/肉身/VBoxContainer/Age3/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "肉身"
+flat = true
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/肉身/VBoxContainer/Age3/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_hn2l8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3qavh")
+value = 50.0
+show_percentage = false
+
+[node name="Value" type="Label" parent="TabContainer/肉身/VBoxContainer/Age3/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -13.0
+offset_right = 50.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9999/9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Change" type="Label" parent="TabContainer/肉身/VBoxContainer/Age3/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -13.0
+offset_bottom = 13.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "-100/+200    Δ5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Age4" type="ColorRect" parent="TabContainer/肉身/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+color = Color(0.541176, 0.486275, 0.0980392, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age4/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/肉身/VBoxContainer/Age4/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/肉身/VBoxContainer/Age4/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "血液"
+flat = true
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/肉身/VBoxContainer/Age4/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_hn2l8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3qavh")
+value = 50.0
+show_percentage = false
+
+[node name="Value" type="Label" parent="TabContainer/肉身/VBoxContainer/Age4/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -13.0
+offset_right = 50.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9999/9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Change" type="Label" parent="TabContainer/肉身/VBoxContainer/Age4/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -13.0
+offset_bottom = 13.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "-100/+200    Δ5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Age5" type="ColorRect" parent="TabContainer/肉身/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+color = Color(0.541176, 0.486275, 0.0980392, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age5/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/肉身/VBoxContainer/Age5/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/肉身/VBoxContainer/Age5/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "骨骼"
+flat = true
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/肉身/VBoxContainer/Age5/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_hn2l8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3qavh")
+value = 50.0
+show_percentage = false
+
+[node name="Value" type="Label" parent="TabContainer/肉身/VBoxContainer/Age5/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -13.0
+offset_right = 50.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9999/9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Change" type="Label" parent="TabContainer/肉身/VBoxContainer/Age5/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -13.0
+offset_bottom = 13.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "-100/+200    Δ5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Age6" type="ColorRect" parent="TabContainer/肉身/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+color = Color(0.541176, 0.486275, 0.0980392, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age6/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/肉身/VBoxContainer/Age6/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/肉身/VBoxContainer/Age6/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "皮肤"
+flat = true
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/肉身/VBoxContainer/Age6/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_hn2l8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3qavh")
+value = 50.0
+show_percentage = false
+
+[node name="Value" type="Label" parent="TabContainer/肉身/VBoxContainer/Age6/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -13.0
+offset_right = 50.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9999/9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Change" type="Label" parent="TabContainer/肉身/VBoxContainer/Age6/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -13.0
+offset_bottom = 13.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "-100/+200    Δ5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Age7" type="ColorRect" parent="TabContainer/肉身/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+color = Color(0.541176, 0.486275, 0.0980392, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age7/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/肉身/VBoxContainer/Age7/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/肉身/VBoxContainer/Age7/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "皮肤"
+flat = true
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/肉身/VBoxContainer/Age7/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_hn2l8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3qavh")
+value = 50.0
+show_percentage = false
+
+[node name="Value" type="Label" parent="TabContainer/肉身/VBoxContainer/Age7/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -13.0
+offset_right = 50.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9999/9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Change" type="Label" parent="TabContainer/肉身/VBoxContainer/Age7/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -13.0
+offset_bottom = 13.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "-100/+200    Δ5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Age8" type="ColorRect" parent="TabContainer/肉身/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+color = Color(0.541176, 0.486275, 0.0980392, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age8/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/肉身/VBoxContainer/Age8/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/肉身/VBoxContainer/Age8/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "皮肤"
+flat = true
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/肉身/VBoxContainer/Age8/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_hn2l8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3qavh")
+value = 50.0
+show_percentage = false
+
+[node name="Value" type="Label" parent="TabContainer/肉身/VBoxContainer/Age8/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -13.0
+offset_right = 50.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9999/9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Change" type="Label" parent="TabContainer/肉身/VBoxContainer/Age8/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -13.0
+offset_bottom = 13.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "-100/+200    Δ5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Age9" type="ColorRect" parent="TabContainer/肉身/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+color = Color(0.541176, 0.486275, 0.0980392, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age9/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/肉身/VBoxContainer/Age9/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/肉身/VBoxContainer/Age9/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "皮肤"
+flat = true
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/肉身/VBoxContainer/Age9/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_hn2l8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3qavh")
+value = 50.0
+show_percentage = false
+
+[node name="Value" type="Label" parent="TabContainer/肉身/VBoxContainer/Age9/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -13.0
+offset_right = 50.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9999/9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Change" type="Label" parent="TabContainer/肉身/VBoxContainer/Age9/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -13.0
+offset_bottom = 13.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "-100/+200    Δ5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Age10" type="ColorRect" parent="TabContainer/肉身/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+color = Color(0.541176, 0.486275, 0.0980392, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age10/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/肉身/VBoxContainer/Age10/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/肉身/VBoxContainer/Age10/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "皮肤"
+flat = true
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/肉身/VBoxContainer/Age10/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_hn2l8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3qavh")
+value = 50.0
+show_percentage = false
+
+[node name="Value" type="Label" parent="TabContainer/肉身/VBoxContainer/Age10/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -13.0
+offset_right = 50.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9999/9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Change" type="Label" parent="TabContainer/肉身/VBoxContainer/Age10/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -13.0
+offset_bottom = 13.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "-100/+200    Δ5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Age11" type="ColorRect" parent="TabContainer/肉身/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+color = Color(0.541176, 0.486275, 0.0980392, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age11"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age11/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/肉身/VBoxContainer/Age11/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/肉身/VBoxContainer/Age11/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "皮肤"
+flat = true
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/肉身/VBoxContainer/Age11/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_hn2l8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3qavh")
+value = 50.0
+show_percentage = false
+
+[node name="Value" type="Label" parent="TabContainer/肉身/VBoxContainer/Age11/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -13.0
+offset_right = 50.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9999/9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Change" type="Label" parent="TabContainer/肉身/VBoxContainer/Age11/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -13.0
+offset_bottom = 13.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "-100/+200    Δ5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Age12" type="ColorRect" parent="TabContainer/肉身/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+color = Color(0.541176, 0.486275, 0.0980392, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age12"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age12/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/肉身/VBoxContainer/Age12/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/肉身/VBoxContainer/Age12/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "皮肤"
+flat = true
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/肉身/VBoxContainer/Age12/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_hn2l8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3qavh")
+value = 50.0
+show_percentage = false
+
+[node name="Value" type="Label" parent="TabContainer/肉身/VBoxContainer/Age12/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -13.0
+offset_right = 50.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9999/9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Change" type="Label" parent="TabContainer/肉身/VBoxContainer/Age12/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -13.0
+offset_bottom = 13.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "-100/+200    Δ5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Age13" type="ColorRect" parent="TabContainer/肉身/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+color = Color(0.541176, 0.486275, 0.0980392, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age13"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age13/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/肉身/VBoxContainer/Age13/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/肉身/VBoxContainer/Age13/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "皮肤"
+flat = true
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/肉身/VBoxContainer/Age13/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_hn2l8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3qavh")
+value = 50.0
+show_percentage = false
+
+[node name="Value" type="Label" parent="TabContainer/肉身/VBoxContainer/Age13/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -13.0
+offset_right = 50.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9999/9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Change" type="Label" parent="TabContainer/肉身/VBoxContainer/Age13/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -13.0
+offset_bottom = 13.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "-100   Δ5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Age14" type="ColorRect" parent="TabContainer/肉身/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+color = Color(0.541176, 0.486275, 0.0980392, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age14"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/肉身/VBoxContainer/Age14/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/肉身/VBoxContainer/Age14/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/肉身/VBoxContainer/Age14/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "皮肤"
+flat = true
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/肉身/VBoxContainer/Age14/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_hn2l8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3qavh")
+value = 50.0
+show_percentage = false
+
+[node name="Value" type="Label" parent="TabContainer/肉身/VBoxContainer/Age14/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -13.0
+offset_right = 50.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9999/9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Change" type="Label" parent="TabContainer/肉身/VBoxContainer/Age14/VBoxContainer/HBoxContainer/ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -13.0
+offset_bottom = 13.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "-100/+200    Δ5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="灵脉" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="神元" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="道法" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="财宝" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="伴侣" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="山门" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="天地" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="秘境" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2

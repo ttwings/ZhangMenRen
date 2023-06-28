@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="cultivator" load_steps=8 format=3 uid="uid://ppg546oe7175"]
+
+[ext_resource type="Script" path="res://attribute.gd" id="1_4gqei"]
+[ext_resource type="Script" path="res://cultivator.gd" id="2_5al7r"]
+
+[sub_resource type="Resource" id="Resource_upgxf"]
+script = ExtResource("1_4gqei")
+alias = "肉身"
+value = 80.0
+max = 100.0
+min = 0.0
+step = 0.0
+
+[sub_resource type="Resource" id="Resource_7u375"]
+script = ExtResource("1_4gqei")
+alias = "练气初期"
+value = 100.0
+max = 100.0
+min = 0.0
+step = 0.0
+
+[sub_resource type="Resource" id="Resource_snhlv"]
+script = ExtResource("1_4gqei")
+alias = "寿元"
+value = 30.0
+max = 60.0
+min = 0.0
+step = 1.0
+
+[sub_resource type="Resource" id="Resource_x2fbu"]
+script = ExtResource("1_4gqei")
+alias = "神识"
+value = 100.0
+max = 100.0
+min = 0.0
+step = 1.0
+
+[sub_resource type="Resource" id="Resource_tub7o"]
+script = ExtResource("1_4gqei")
+alias = "零根"
+value = 100.0
+max = 100.0
+min = 0.0
+step = 0.0
+
+[resource]
+script = ExtResource("2_5al7r")
+alias = "齐妆"
+life = SubResource("Resource_snhlv")
+body = SubResource("Resource_upgxf")
+root = SubResource("Resource_tub7o")
+mind = SubResource("Resource_x2fbu")
+cultivation = SubResource("Resource_7u375")
+tags = Array[Resource("res://tag.gd")]([null, null])
+conditions = Array[Resource("res://condition.gd")]([])

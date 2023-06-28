@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://bskpc2hg4xt2y"]
+
+[ext_resource type="PackedScene" uid="uid://bdlj5o4votkp4" path="res://tscn/bullet.tscn" id="1_354ro"]
+[ext_resource type="Texture2D" uid="uid://drni6fn5tl5nh" path="res://res/texture/particle/scorch_01.png" id="2_w8csg"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_nl4wa"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_6linr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kyc4g"]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(1, 0.298039, 0, 1)
+albedo_texture = ExtResource("2_w8csg")
+
+[sub_resource type="Animation" id="Animation_1dkf1"]
+resource_name = "闪"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 2.92817),
+"update": 0,
+"values": [Color(1, 0.298039, 0, 0.686275), Color(1, 1, 1, 0.635294), Color(0.94902, 0.0470588, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_r4my4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.298039, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_37byu"]
+_data = {
+"RESET": SubResource("Animation_r4my4"),
+"闪": SubResource("Animation_1dkf1")
+}
+
+[node name="Bullet" instance=ExtResource("1_354ro")]
+muzzle_velocity = 20
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("SphereShape3D_nl4wa")
+
+[node name="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(-0.512558, 0.136215, -7.54979e-08, 0.16654, 0.419226, 4.4794e-15, 7.73941e-08, -2.05678e-08, -0.5, 0, 0, 0)
+mesh = SubResource("SphereMesh_6linr")
+surface_material_override/0 = SubResource("StandardMaterial3D_kyc4g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+autoplay = "闪"
+libraries = {
+"": SubResource("AnimationLibrary_37byu")
+}

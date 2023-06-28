@@ -1,0 +1,412 @@
+[gd_scene load_steps=16 format=3 uid="uid://bg1pcdhs7j7sq"]
+
+[ext_resource type="FontFile" uid="uid://b658rsk8en8bo" path="res://res/font/LXGWWenKaiGBScreenR.ttf" id="1_ynxlq"]
+[ext_resource type="Script" path="res://tscn/battle_stage.gd" id="2_vogb3"]
+[ext_resource type="PackedScene" uid="uid://lrhdsihadg12" path="res://tscn/Battle3d.tscn" id="3_10unc"]
+[ext_resource type="PackedScene" uid="uid://c2utkeo3r2t5w" path="res://tscn/action_v.tscn" id="4_c4vts"]
+[ext_resource type="PackedScene" uid="uid://qibjlr543yab" path="res://tscn/BarV.tscn" id="5_r0fog"]
+[ext_resource type="PackedScene" uid="uid://77dtecva4bwi" path="res://tscn/buff_v.tscn" id="6_nevnv"]
+[ext_resource type="Texture2D" uid="uid://cp3dbvjci2gyx" path="res://res/texture/state/state.png" id="7_xp0m4"]
+
+[sub_resource type="Theme" id="Theme_j02u7"]
+default_font = ExtResource("1_ynxlq")
+
+[sub_resource type="LabelSettings" id="LabelSettings_u1qfg"]
+font_size = 32
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jca2j"]
+bg_color = Color(1, 0.298039, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ypip"]
+bg_color = Color(0.243137, 0.929412, 0.905882, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fd2kg"]
+bg_color = Color(0.501961, 0.113725, 0.682353, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67y4i"]
+bg_color = Color(1, 0.298039, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4y84e"]
+bg_color = Color(0.243137, 0.929412, 0.905882, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_uqd50"]
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[node name="BattleStage" type="Panel"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_j02u7")
+script = ExtResource("2_vogb3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/Panel/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1280, 800)
+render_target_update_mode = 0
+
+[node name="Battle3D" parent="VBoxContainer/Panel/SubViewportContainer/SubViewport" instance=ExtResource("3_10unc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.07727, 0.505075, 0.178626)
+
+[node name="ActionPanel" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+offset_top = 607.0
+offset_right = 1280.0
+offset_bottom = 799.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ActionPanel"]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ActionV1" parent="ActionPanel/HBoxContainer" instance=ExtResource("4_c4vts")]
+layout_mode = 2
+
+[node name="Label" parent="ActionPanel/HBoxContainer/ActionV1" index="2"]
+text = "罗汉拳"
+
+[node name="ActionV2" parent="ActionPanel/HBoxContainer" instance=ExtResource("4_c4vts")]
+layout_mode = 2
+cooldown_time = 2
+
+[node name="ActionV3" parent="ActionPanel/HBoxContainer" instance=ExtResource("4_c4vts")]
+layout_mode = 2
+cooldown_time = 3
+
+[node name="Label" parent="ActionPanel/HBoxContainer/ActionV3" index="2"]
+text = "霸刀"
+
+[node name="ActionV4" parent="ActionPanel/HBoxContainer" instance=ExtResource("4_c4vts")]
+layout_mode = 2
+cooldown_time = 4
+
+[node name="ColorRect" parent="ActionPanel/HBoxContainer/ActionV4" index="0"]
+color = Color(0.243137, 0.929412, 0.905882, 1)
+
+[node name="Label" parent="ActionPanel/HBoxContainer/ActionV4" index="2"]
+text = "飞弹"
+
+[node name="ActionV5" parent="ActionPanel/HBoxContainer" instance=ExtResource("4_c4vts")]
+layout_mode = 2
+cooldown_time = 5
+
+[node name="ColorRect" parent="ActionPanel/HBoxContainer/ActionV5" index="0"]
+color = Color(1, 0.298039, 0, 1)
+
+[node name="Label" parent="ActionPanel/HBoxContainer/ActionV5" index="2"]
+text = "紫金葫芦"
+
+[node name="ActionV6" parent="ActionPanel/HBoxContainer" instance=ExtResource("4_c4vts")]
+layout_mode = 2
+cooldown_time = 6
+
+[node name="ColorRect" parent="ActionPanel/HBoxContainer/ActionV6" index="0"]
+color = Color(1, 0.298039, 0, 1)
+
+[node name="Label" parent="ActionPanel/HBoxContainer/ActionV6" index="2"]
+text = "青藤剑"
+
+[node name="ActionV7" parent="ActionPanel/HBoxContainer" instance=ExtResource("4_c4vts")]
+layout_mode = 2
+cooldown_time = 7
+
+[node name="ColorRect" parent="ActionPanel/HBoxContainer/ActionV7" index="0"]
+color = Color(1, 0.945098, 0.262745, 1)
+
+[node name="Label" parent="ActionPanel/HBoxContainer/ActionV7" index="2"]
+text = "定风符"
+
+[node name="ActionV8" parent="ActionPanel/HBoxContainer" instance=ExtResource("4_c4vts")]
+layout_mode = 2
+cooldown_time = 8
+
+[node name="ColorRect" parent="ActionPanel/HBoxContainer/ActionV8" index="0"]
+color = Color(1, 0.945098, 0.262745, 1)
+
+[node name="Label" parent="ActionPanel/HBoxContainer/ActionV8" index="2"]
+text = "驱云符"
+
+[node name="StatePlayer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 34.5
+offset_right = 540.0
+offset_bottom = 195.5
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StatePlayer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="StatePlayer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 38
+text = "路逍遥"
+label_settings = SubResource("LabelSettings_u1qfg")
+
+[node name="BarHP" parent="StatePlayer/VBoxContainer" instance=ExtResource("5_r0fog")]
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_jca2j")
+
+[node name="BarMP" parent="StatePlayer/VBoxContainer" instance=ExtResource("5_r0fog")]
+custom_minimum_size = Vector2(150, 12)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_5ypip")
+
+[node name="BarAP" parent="StatePlayer/VBoxContainer" instance=ExtResource("5_r0fog")]
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_fd2kg")
+
+[node name="HBoxContainer" type="GridContainer" parent="StatePlayer"]
+layout_mode = 2
+columns = 8
+
+[node name="BuffV1" parent="StatePlayer/HBoxContainer" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV2" parent="StatePlayer/HBoxContainer" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV3" parent="StatePlayer/HBoxContainer" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV4" parent="StatePlayer/HBoxContainer" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV5" parent="StatePlayer/HBoxContainer" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV6" parent="StatePlayer/HBoxContainer" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV7" parent="StatePlayer/HBoxContainer" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV8" parent="StatePlayer/HBoxContainer" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV9" parent="StatePlayer/HBoxContainer" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV10" parent="StatePlayer/HBoxContainer" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="StateEnemy" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -512.0
+offset_bottom = 172.0
+grow_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StateEnemy"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="StateEnemy/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 38
+text = "土甲虫"
+label_settings = SubResource("LabelSettings_u1qfg")
+horizontal_alignment = 2
+
+[node name="BarHP" parent="StateEnemy/VBoxContainer" instance=ExtResource("5_r0fog")]
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_67y4i")
+fill_mode = 1
+
+[node name="BarMP" parent="StateEnemy/VBoxContainer" instance=ExtResource("5_r0fog")]
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_4y84e")
+fill_mode = 1
+
+[node name="BarAP" parent="StateEnemy/VBoxContainer" instance=ExtResource("5_r0fog")]
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_fd2kg")
+fill_mode = 1
+
+[node name="Condition" type="GridContainer" parent="StateEnemy"]
+layout_direction = 3
+layout_mode = 2
+columns = 8
+
+[node name="BuffV1" parent="StateEnemy/Condition" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV2" parent="StateEnemy/Condition" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV3" parent="StateEnemy/Condition" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV4" parent="StateEnemy/Condition" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV5" parent="StateEnemy/Condition" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV6" parent="StateEnemy/Condition" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV7" parent="StateEnemy/Condition" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV8" parent="StateEnemy/Condition" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV9" parent="StateEnemy/Condition" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="BuffV10" parent="StateEnemy/Condition" instance=ExtResource("6_nevnv")]
+layout_mode = 2
+
+[node name="Info" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.0
+offset_top = -182.5
+offset_right = 235.0
+offset_bottom = 182.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Info"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Info/VBoxContainer"]
+layout_mode = 2
+text = "技能状态说明框"
+label_settings = SubResource("LabelSettings_uqd50")
+vertical_alignment = 1
+
+[node name="HSeparator" type="ColorRect" parent="Info/VBoxContainer"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Info/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "技能信息显示"
+
+[node name="Message" type="Panel" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -496.0
+offset_top = -504.0
+offset_right = 2.0
+offset_bottom = -212.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Message"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "你感到筋脉逆转"
+fit_content = true
+
+[node name="Condition" type="GridContainer" parent="."]
+clip_contents = true
+layout_mode = 1
+offset_right = 333.0
+offset_bottom = 262.0
+
+[node name="Condition2" type="GridContainer" parent="."]
+clip_contents = true
+layout_mode = 1
+offset_right = 333.0
+offset_bottom = 262.0
+
+[node name="Stete" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+texture = ExtResource("7_xp0m4")
+
+[editable path="ActionPanel/HBoxContainer/ActionV1"]
+[editable path="ActionPanel/HBoxContainer/ActionV2"]
+[editable path="ActionPanel/HBoxContainer/ActionV3"]
+[editable path="ActionPanel/HBoxContainer/ActionV4"]
+[editable path="ActionPanel/HBoxContainer/ActionV5"]
+[editable path="ActionPanel/HBoxContainer/ActionV6"]
+[editable path="ActionPanel/HBoxContainer/ActionV7"]
+[editable path="ActionPanel/HBoxContainer/ActionV8"]

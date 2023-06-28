@@ -1,40 +1,58 @@
 # 行动类
 class_name Action
 
-signal finished()
-signal started()
+# 行动前、行动、行动完成
+signal on_cd_ready()
+signal on_started()
+signal on_executed()
+signal on_finished()
 
-signal trigger_event_called(name, args)
+# 所有
 
 # 行动名称
 var alias:String
+# 类别
+var type:String
 # 行动描述
 var description:String
-# 行动所需要的能量
-var action_energy:int = 100
-# 当前行动积累的能量
-var current_energy:int = 0
-# 行动后剩余的能量
-var remain_energy:int = 0
-# 演员
-var actor
-# 战场
-var battle_field
-# 是否可以行动
-func has_enough_energy() -> bool:
-	return current_energy >= action_energy
-	
-# 动作执行
-func execute() -> void:
-	emit_signal("started")
-	remain_energy = current_energy - action_energy
-	_execute()
+# 行动cd
+var cd
+# 目前cd
+var cd_now
+# 行动者
+var master:Chara
+# 目标单位
+var target:Chara
+# 环境
+var env:Obj
+# 行动是否准备好
+var dec
 
-func trigger_event(event: String, args := []) -> void:
-	emit_signal("trigger_event_called", event, args)
+func is_cd_ready() -> bool:
+	if cd_now >= cd:
+		emit_signal("on_cd_ready")
+		return true
+	return false
+	
+func update(delta):
+	cd_now += delta
+	pass	
+
+func execute() -> void:
+	emit_signal("on_executed")
+	cd_now = 0
+	_execute()
+	finished()
+
+func finished():
+	emit_signal("on_finished")
+	_finished()
 
 func _finished() -> void:
-	emit_signal("finished")
+	pass
 
 func _execute() -> void:
-	assert(false)
+	pass
+
+func do_action():
+	pass

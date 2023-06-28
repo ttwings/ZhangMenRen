@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cw53icp4j0m1w"]
+
+[ext_resource type="Script" path="res://core/item.gd" id="1_fmr7g"]
+[ext_resource type="Texture2D" uid="uid://dtnn4ysylud4a" path="res://res/texture/item/weapon/greatsword_2.png" id="2_ju4m6"]
+
+[resource]
+script = ExtResource("1_fmr7g")
+alias = "月影玄冰剑"
+desc = "这把剑身上有月影闪耀，散发着玄冰的气息"
+hp = 0
+max_hp = 0
+mp = 0
+max_mp = 0
+ap = 0
+max_ap = 0
+type = "剑"
+material = ""
+atts = {
+"实体伤害": "40-80",
+"攻速": "0.8",
+"穿刺转换": "10%"
+}
+spe = {
+"影": "10",
+"玄冰": "1"
+}
+skill = {
+"月影剑": "1"
+}
+req = {
+"修为": 2,
+"灵力": 120
+}
+lv = 3
+texture = ExtResource("2_ju4m6")
+color = Color(0.243137, 0.929412, 0.905882, 1)

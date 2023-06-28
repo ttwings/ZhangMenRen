@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Special" load_steps=2 format=3 uid="uid://d42gy8u77yie"]
+
+[ext_resource type="Script" path="res://special/special.gd" id="1_p27vu"]
+
+[resource]
+script = ExtResource("1_p27vu")
+alias = &"影"
+desc = "攻速提升0.2"
+lv = 1
+add_atts = {
+"攻速": 0.2
+}

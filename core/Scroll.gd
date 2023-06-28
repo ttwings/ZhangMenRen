@@ -1,3 +1,4 @@
+extends Item
 # 符篆类
 class_name Scroll
 

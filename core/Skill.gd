@@ -1,40 +1,14 @@
-extends Buff
+extends Action
+
 class_name Skill
-signal onCast()
 
-var cd = 5
-var cdVal = 0
-var ranDec = ""
-var castRan = 10
-var isActive = true #是否主动技能
+## 主要消耗各类能量。肉体类攻击，一般不消耗，灵法类消耗灵力
 
-func castStart():
-	if _castIf() :
-		_cast()
-		cdVal = 0
-		emit_signal("onCast")
-		masCha.emit_signal("onCastSkill",self)
-		return true
-	return false
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
 
-func _cast():
-	pass
-	
-func _castIf():
-	if mas.isNormAnim() && cdVal >= cd && isActive:
-		return true
-	return false
-	
-func _selIf(cha):
-	return true
-#按比率造成伤害
-func hurtPer(cha,per):
-	hurt(cha,mas.atk * per)
-#造成伤害
-func hurt(cha,val):
-	mas.hurt(cha,val,HURTTYPE.SKILL,self)
 
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	._process(delta)
-	if isActive :
-		cdVal += mas.cdSpd * delta
+	pass

@@ -1,50 +1,78 @@
-extends Base
+extends Att
+
 class_name Buff
 
+## 当删除时触发
+signal on_del
+## 当设置释放者时触发
+signal on_set_cast(char)
+## 当设置接受者时触发
+signal on_set_mast(char)
+# 设置层数
+signal on_set_lv()
+		
 var life = -1
-var lifeVal = 0
-var isDie = false 
-# 是否是负面状态
-var is_debuff = false
+var life_val = 0
+var is_del = false
 # 释放者
-var caster:Actor = null
-# 接受者
-var target:Actor = null
-# 图标名称
-var icon_name:String = ""
+var cast_cha:Chara = null
+# 持有者
+var mast_cha:Chara = null
 
-func loadInfo(id):
-	self.id = id
-	icoId = "ico_%s" % id
-	_data()
-	for i in cons.attDs:
-		if get(i) != null:
-			attBase[i] = get(i)
-	self.lv = lv
-	_dataEnd()
+var att:Att = null
+var eff:Node2D = null
+var eff_id = ""
+var is_negetive = false
+var direc = ""
 
-func inStart(mas):
-	masCha = mas
-	castCha = mas
-	.inStart(mas)
-	self.lv = lv
+var time
 
-var s = 0
-func _process(delta):
-	if life > 0 :
-		lifeVal -= delta
-		if lifeVal <= 0 :
-			lifeVal = life
-			setLv(lv - 1)
-			if lv <= 0 :
-				del()
-	if s < 1 :
-		s += delta
-		if s >= 1 :
-			_upS()
+func _init() -> void:
+	init()
+	var ss = get_script().resource_path
+	var fname = ss.split("/")
+	id = fname[fname.size()-1].split(".")[0]
+	direc = ss.left(ss.length() - id.length()-3)
 
-func _upS():
+func init():
+	pass
+	
+func att_init():
+	att = Att.new()	
+
+func _connect():
 	pass
 
-func getLvDec(lv):
-	return dec
+func del_connect():
+	pass
+	
+func _get_info():
+	return info
+	
+func process(delta):
+	pass
+	
+func _process(delta):
+	if life > 0 :
+		life_val -= delta
+		if life_val <= 0 :
+			life_val = life
+			lv = lv - 1
+			if lv <= 0 :
+				del()	
+	pass	
+	
+func _update_att():
+	pass
+	
+func del():
+	if eff != null : eff.queue_free()
+	del_connect()
+	_del()
+	emit_signal("on_del")
+		
+func _del():
+	pass		
+			
+	
+

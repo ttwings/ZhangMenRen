@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://sm8q6r7luuiq"]
+
+[ext_resource type="Script" path="res://ui/window_can_drag.gd" id="1_06dmt"]
+[ext_resource type="Theme" uid="uid://bppxnkyqhajrp" path="res://theme/light_theme.tres" id="1_mj3ms"]
+
+[node name="WindowCanDrag" type="Panel"]
+custom_minimum_size = Vector2(400, 300)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 307.0
+offset_top = 108.0
+offset_right = -310.0
+offset_bottom = -233.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mj3ms")
+script = ExtResource("1_06dmt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PanelStatus" type="Panel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Log" type="Panel" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Bag" type="Panel" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2

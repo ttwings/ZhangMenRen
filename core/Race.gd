@@ -1,41 +1,52 @@
-extends Resource
-# 属性类
+extends Node
+# 种族Node
 class_name Race
 # 当设置属性时
 # signal on_set_attribute(id)
 # 种类
-export(String) var type
+@export var type: String
 # 名称
-export(String) var alias
+@export var alias: String
 # 体型
-export(String) var body
+@export_enum("巨型","大型","中型","小型","微型") var body: int
 # 速度
-export(int) var speed
+@export var speed: int
 # 先手
-export(int) var initiative
+@export var initiative: int
 # 生命骰子
-export(int) var Hp_dice = 0
+@export var Hp_dice: int = 0
 # 灵力骰子
-export(int) var Mp_dice = 0
+@export var Mp_dice: int = 0
 # 神识骰子
-export(int) var Ap_dice = 0
-# 设置主属性，力量Str，资质Con，根骨Dex，悟性Int，威压Cha（魅力），感知Wis
-export(int) var Str = 0
-export(int) var Con = 0
-export(int) var Dex = 0
-export(int) var Int = 0
-export(int) var Cha = 0
-export(int) var Wis = 0
-# 防御
-export(int) var armor_class = 0
-# 强韧
-export(int) var fortitude = 0
-# 反射
-export(int) var reflex = 0
-# 意志
-export(int) var will = 0
+@export var Ap_dice: int = 0
+
+# 设置主属性，资质Con，根骨Dex，悟性Int
+@export var Con: int = 0
+@export var Dex: int = 0
+@export var Int: int = 0
+
+## 防御 护体强度
+@export var armor_class: int = 0
+# 防御 护体率
+@export var armor_rate: int = 0
+
+# 肉体 强韧 肉体豁免
+@export var fortitude: int = 0
+# 条件 反射 灵法豁免
+@export var reflex: int = 0
+# 神识 意志 神识豁免
+@export var will: int = 0
 
 # 遵守法律
-export(int) var law = 0
+@export_range(-100,100) var law: int = 0
+
 # 性格善良
-export(int) var good = 0
+@export_range(-100,100) var good: int = 0
+
+# 当进入节点时设置自己的组为race
+func _ready():
+	if owner is Base :
+		owner.add_append("race",self)
+		owner.set("race/type",type)
+		owner.set("race/alias",alias)
+	pass

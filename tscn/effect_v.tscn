@@ -1,0 +1,81 @@
+[gd_scene load_steps=16 format=3 uid="uid://b6ssevo3cknmc"]
+
+[ext_resource type="Script" path="res://tscn/effect_v.gd" id="1_flxs4"]
+[ext_resource type="Texture2D" uid="uid://yqf87nfcp5on" path="res://res/animation/test/dust-001/dust-001_000.png" id="2_nxosd"]
+[ext_resource type="Texture2D" uid="uid://bsswdb2g6h2nj" path="res://res/animation/test/dust-001/dust-001_001.png" id="3_mmy3x"]
+[ext_resource type="Texture2D" uid="uid://bgq1wfa5l3qci" path="res://res/animation/test/dust-001/dust-001_002.png" id="4_g71wb"]
+[ext_resource type="Texture2D" uid="uid://cf0jirtdhi2cj" path="res://res/animation/test/dust-001/dust-001_003.png" id="5_avnp0"]
+[ext_resource type="Texture2D" uid="uid://bf1dny1ecy31n" path="res://res/animation/test/dust-001/dust-001_004.png" id="6_ylcyk"]
+[ext_resource type="Texture2D" uid="uid://b0w23kwjxmssk" path="res://res/animation/test/dust-001/dust-001_005.png" id="7_oulyb"]
+[ext_resource type="Texture2D" uid="uid://dpb2cpwopwb8f" path="res://res/animation/test/dust-001/dust-001_006.png" id="8_mkmx3"]
+[ext_resource type="Texture2D" uid="uid://mhwrsvjnubqy" path="res://res/animation/test/dust-001/dust-001_007.png" id="9_dto3f"]
+[ext_resource type="Texture2D" uid="uid://dby7o8d3on6ns" path="res://res/animation/test/dust-001/dust-001_008.png" id="10_ulxtv"]
+[ext_resource type="Texture2D" uid="uid://dt0x8u1oixfhu" path="res://res/animation/test/dust-001/dust-001_009.png" id="11_yji4d"]
+[ext_resource type="Texture2D" uid="uid://c52ym2kqr4g57" path="res://res/animation/test/dust-001/dust-001_010.png" id="12_wyte0"]
+
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nxosd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mmy3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_g71wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_avnp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ylcyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oulyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mkmx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dto3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ulxtv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_yji4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wyte0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="Animation" id="Animation_unime"]
+resource_name = "eff"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5yh00"]
+_data = {
+"eff": SubResource("Animation_unime")
+}
+
+[node name="EffectV" type="Node3D"]
+script = ExtResource("1_flxs4")
+
+[node name="Spr" type="Node3D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite3D" parent="Spr"]
+centered = false
+texture_filter = 0
+sprite_frames = SubResource("1")
+frame_progress = 0.436795
+
+[node name="Normal" type="Sprite3D" parent="Spr"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5yh00")
+}

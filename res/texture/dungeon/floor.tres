@@ -1,319 +1,572 @@
-[gd_resource type="TileSet" load_steps=22 format=2]
+[gd_resource type="TileSet" load_steps=43 format=3 uid="uid://behvvr7e4l5f5"]
 
-[ext_resource path="res://res/texture/dungeon/floor/floor_sand_rock_0.png" type="Texture" id=1]
-[ext_resource path="res://res/texture/dungeon/floor/floor_sand_stone_0.png" type="Texture" id=2]
-[ext_resource path="res://res/texture/dungeon/floor/floor_sand_rock_3.png" type="Texture" id=3]
-[ext_resource path="res://res/texture/dungeon/floor/floor_sand_rock_2.png" type="Texture" id=4]
-[ext_resource path="res://res/texture/dungeon/floor/floor_sand_stone_1.png" type="Texture" id=5]
-[ext_resource path="res://res/texture/dungeon/floor/floor_sand_stone_2.png" type="Texture" id=6]
-[ext_resource path="res://res/texture/dungeon/floor/floor_sand_stone_3.png" type="Texture" id=7]
-[ext_resource path="res://res/texture/dungeon/floor/floor_sand_stone_4.png" type="Texture" id=8]
-[ext_resource path="res://res/texture/dungeon/trees/mangrove_1.png" type="Texture" id=9]
-[ext_resource path="res://res/texture/dungeon/trees/mangrove_2.png" type="Texture" id=10]
-[ext_resource path="res://res/texture/dungeon/trees/mangrove_3.png" type="Texture" id=11]
-[ext_resource path="res://res/texture/dungeon/trees/tree_1_lightred.png" type="Texture" id=12]
-[ext_resource path="res://res/texture/dungeon/trees/tree_1_red.png" type="Texture" id=13]
-[ext_resource path="res://res/texture/dungeon/trees/tree_1_yellow.png" type="Texture" id=14]
-[ext_resource path="res://res/texture/dungeon/trees/tree_2_lightred.png" type="Texture" id=15]
-[ext_resource path="res://res/texture/dungeon/trees/tree_2_red.png" type="Texture" id=16]
-[ext_resource path="res://res/texture/dungeon/floor/floor_sand_rock_1.png" type="Texture" id=17]
-[ext_resource path="res://res/texture/dungeon/floor/floor_sand_stone_5.png" type="Texture" id=18]
-[ext_resource path="res://res/texture/dungeon/floor/floor_sand_stone_6.png" type="Texture" id=19]
-[ext_resource path="res://res/texture/dungeon/floor/floor_sand_stone_7.png" type="Texture" id=20]
-[ext_resource path="res://res/texture/dungeon/trees/tree_2_yellow.png" type="Texture" id=21]
+[ext_resource type="Texture2D" uid="uid://bnmanqh528nk6" path="res://res/texture/dungeon/floor/floor_sand_rock_0.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cmvsjetmkxlki" path="res://res/texture/dungeon/floor/floor_sand_stone_0.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://beuq2jhn1vi3u" path="res://res/texture/dungeon/floor/floor_sand_rock_3.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://mxfscw4qnu8n" path="res://res/texture/dungeon/floor/floor_sand_rock_2.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://bygmdx8s0835s" path="res://res/texture/dungeon/floor/floor_sand_stone_1.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bbsqc02tkly4m" path="res://res/texture/dungeon/floor/floor_sand_stone_2.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://bhvi244rp1ca" path="res://res/texture/dungeon/floor/floor_sand_stone_3.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://b2bu71efdydw3" path="res://res/texture/dungeon/floor/floor_sand_stone_4.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://d3870s3wosbdh" path="res://res/texture/dungeon/trees/mangrove_1.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://dco5v2w1jktex" path="res://res/texture/dungeon/trees/mangrove_2.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://cvfk68luhpcck" path="res://res/texture/dungeon/trees/mangrove_3.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://slq67steo054" path="res://res/texture/dungeon/trees/tree_1_lightred.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://b61kxvvo8nh03" path="res://res/texture/dungeon/trees/tree_1_red.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://deo4nqlxpc3b1" path="res://res/texture/dungeon/trees/tree_1_yellow.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://cty8wi20ba4i6" path="res://res/texture/dungeon/trees/tree_2_lightred.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://5byyomtwe4k5" path="res://res/texture/dungeon/trees/tree_2_red.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://buy0quu4hff7g" path="res://res/texture/dungeon/floor/floor_sand_rock_1.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://dvr5jpj1yygkv" path="res://res/texture/dungeon/floor/floor_sand_stone_5.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://bktvjc60qvlfe" path="res://res/texture/dungeon/floor/floor_sand_stone_6.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://dh0jpm2s7q0mr" path="res://res/texture/dungeon/floor/floor_sand_stone_7.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://gxedsak12cxl" path="res://res/texture/dungeon/trees/tree_2_yellow.png" id="21"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_47aag"]
+texture = ExtResource("9")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sok43"]
+texture = ExtResource("10")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sne80"]
+texture = ExtResource("17")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xteyb"]
+texture = ExtResource("4")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_utye1"]
+texture = ExtResource("3")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mx2xk"]
+texture = ExtResource("2")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gcarx"]
+texture = ExtResource("5")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_08bx1"]
+texture = ExtResource("6")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u86p4"]
+texture = ExtResource("7")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wq1ko"]
+texture = ExtResource("8")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ncp4n"]
+texture = ExtResource("18")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u6j58"]
+texture = ExtResource("19")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ijej6"]
+texture = ExtResource("11")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wx2k6"]
+texture = ExtResource("20")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3qgwg"]
+texture = ExtResource("12")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ijmk"]
+texture = ExtResource("13")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wvxwc"]
+texture = ExtResource("14")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kk5bx"]
+texture = ExtResource("15")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sb5c4"]
+texture = ExtResource("16")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3x7f5"]
+texture = ExtResource("21")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3chyq"]
+texture = ExtResource("1")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
 
 [resource]
-0/name = "mangrove_1"
-0/texture = ExtResource( 9 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 64, 64 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 32, 32 )
-0/navigation_offset = Vector2( 32, 32 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "mangrove_2"
-1/texture = ExtResource( 10 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 64, 64 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 32, 32 )
-1/navigation_offset = Vector2( 32, 32 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-2/name = "mangrove_3"
-2/texture = ExtResource( 11 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 64, 64 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 32, 32 )
-2/navigation_offset = Vector2( 32, 32 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "tree_1_lightred"
-3/texture = ExtResource( 12 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 0, 0, 64, 64 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 32, 32 )
-3/navigation_offset = Vector2( 32, 32 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "tree_1_red"
-4/texture = ExtResource( 13 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 64, 64 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 32, 32 )
-4/navigation_offset = Vector2( 32, 32 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-5/name = "tree_1_yellow"
-5/texture = ExtResource( 14 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 0, 0, 64, 64 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 32, 32 )
-5/navigation_offset = Vector2( 32, 32 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
-5/shapes = [  ]
-5/z_index = 0
-6/name = "tree_2_lightred"
-6/texture = ExtResource( 15 )
-6/tex_offset = Vector2( 0, 0 )
-6/modulate = Color( 1, 1, 1, 1 )
-6/region = Rect2( 0, 0, 64, 64 )
-6/tile_mode = 0
-6/occluder_offset = Vector2( 32, 32 )
-6/navigation_offset = Vector2( 32, 32 )
-6/shape_offset = Vector2( 0, 0 )
-6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape_one_way = false
-6/shape_one_way_margin = 0.0
-6/shapes = [  ]
-6/z_index = 0
-7/name = "tree_2_red"
-7/texture = ExtResource( 16 )
-7/tex_offset = Vector2( 0, 0 )
-7/modulate = Color( 1, 1, 1, 1 )
-7/region = Rect2( 0, 0, 64, 64 )
-7/tile_mode = 0
-7/occluder_offset = Vector2( 32, 32 )
-7/navigation_offset = Vector2( 32, 32 )
-7/shape_offset = Vector2( 0, 0 )
-7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape_one_way = false
-7/shape_one_way_margin = 0.0
-7/shapes = [  ]
-7/z_index = 0
-8/name = "tree_2_yellow"
-8/texture = ExtResource( 21 )
-8/tex_offset = Vector2( 0, 0 )
-8/modulate = Color( 1, 1, 1, 1 )
-8/region = Rect2( 0, 0, 64, 64 )
-8/tile_mode = 0
-8/occluder_offset = Vector2( 32, 32 )
-8/navigation_offset = Vector2( 32, 32 )
-8/shape_offset = Vector2( 0, 0 )
-8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-8/shape_one_way = false
-8/shape_one_way_margin = 0.0
-8/shapes = [  ]
-8/z_index = 0
-9/name = "floor_sand_rock_0"
-9/texture = ExtResource( 1 )
-9/tex_offset = Vector2( 0, 0 )
-9/modulate = Color( 1, 1, 1, 1 )
-9/region = Rect2( 0, 0, 64, 64 )
-9/tile_mode = 0
-9/occluder_offset = Vector2( 32, 32 )
-9/navigation_offset = Vector2( 32, 32 )
-9/shape_offset = Vector2( 0, 0 )
-9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape_one_way = false
-9/shape_one_way_margin = 0.0
-9/shapes = [  ]
-9/z_index = 0
-10/name = "floor_sand_rock_1"
-10/texture = ExtResource( 17 )
-10/tex_offset = Vector2( 0, 0 )
-10/modulate = Color( 1, 1, 1, 1 )
-10/region = Rect2( 0, 0, 64, 64 )
-10/tile_mode = 0
-10/occluder_offset = Vector2( 32, 32 )
-10/navigation_offset = Vector2( 32, 32 )
-10/shape_offset = Vector2( 0, 0 )
-10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-10/shape_one_way = false
-10/shape_one_way_margin = 0.0
-10/shapes = [  ]
-10/z_index = 0
-11/name = "floor_sand_rock_2"
-11/texture = ExtResource( 4 )
-11/tex_offset = Vector2( 0, 0 )
-11/modulate = Color( 1, 1, 1, 1 )
-11/region = Rect2( 0, 0, 64, 64 )
-11/tile_mode = 0
-11/occluder_offset = Vector2( 32, 32 )
-11/navigation_offset = Vector2( 32, 32 )
-11/shape_offset = Vector2( 0, 0 )
-11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-11/shape_one_way = false
-11/shape_one_way_margin = 0.0
-11/shapes = [  ]
-11/z_index = 0
-12/name = "floor_sand_rock_3"
-12/texture = ExtResource( 3 )
-12/tex_offset = Vector2( 0, 0 )
-12/modulate = Color( 1, 1, 1, 1 )
-12/region = Rect2( 0, 0, 64, 64 )
-12/tile_mode = 0
-12/occluder_offset = Vector2( 32, 32 )
-12/navigation_offset = Vector2( 32, 32 )
-12/shape_offset = Vector2( 0, 0 )
-12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-12/shape_one_way = false
-12/shape_one_way_margin = 0.0
-12/shapes = [  ]
-12/z_index = 0
-13/name = "floor_sand_stone_0"
-13/texture = ExtResource( 2 )
-13/tex_offset = Vector2( 0, 0 )
-13/modulate = Color( 1, 1, 1, 1 )
-13/region = Rect2( 0, 0, 64, 64 )
-13/tile_mode = 0
-13/occluder_offset = Vector2( 32, 32 )
-13/navigation_offset = Vector2( 32, 32 )
-13/shape_offset = Vector2( 0, 0 )
-13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-13/shape_one_way = false
-13/shape_one_way_margin = 0.0
-13/shapes = [  ]
-13/z_index = 0
-14/name = "floor_sand_stone_1"
-14/texture = ExtResource( 5 )
-14/tex_offset = Vector2( 0, 0 )
-14/modulate = Color( 1, 1, 1, 1 )
-14/region = Rect2( 0, 0, 64, 64 )
-14/tile_mode = 0
-14/occluder_offset = Vector2( 32, 32 )
-14/navigation_offset = Vector2( 32, 32 )
-14/shape_offset = Vector2( 0, 0 )
-14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-14/shape_one_way = false
-14/shape_one_way_margin = 0.0
-14/shapes = [  ]
-14/z_index = 0
-15/name = "floor_sand_stone_2"
-15/texture = ExtResource( 6 )
-15/tex_offset = Vector2( 0, 0 )
-15/modulate = Color( 1, 1, 1, 1 )
-15/region = Rect2( 0, 0, 64, 64 )
-15/tile_mode = 0
-15/occluder_offset = Vector2( 32, 32 )
-15/navigation_offset = Vector2( 32, 32 )
-15/shape_offset = Vector2( 0, 0 )
-15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-15/shape_one_way = false
-15/shape_one_way_margin = 0.0
-15/shapes = [  ]
-15/z_index = 0
-16/name = "floor_sand_stone_3"
-16/texture = ExtResource( 7 )
-16/tex_offset = Vector2( 0, 0 )
-16/modulate = Color( 1, 1, 1, 1 )
-16/region = Rect2( 0, 0, 64, 64 )
-16/tile_mode = 0
-16/occluder_offset = Vector2( 32, 32 )
-16/navigation_offset = Vector2( 32, 32 )
-16/shape_offset = Vector2( 0, 0 )
-16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-16/shape_one_way = false
-16/shape_one_way_margin = 0.0
-16/shapes = [  ]
-16/z_index = 0
-17/name = "floor_sand_stone_4"
-17/texture = ExtResource( 8 )
-17/tex_offset = Vector2( 0, 0 )
-17/modulate = Color( 1, 1, 1, 1 )
-17/region = Rect2( 0, 0, 64, 64 )
-17/tile_mode = 0
-17/occluder_offset = Vector2( 32, 32 )
-17/navigation_offset = Vector2( 32, 32 )
-17/shape_offset = Vector2( 0, 0 )
-17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-17/shape_one_way = false
-17/shape_one_way_margin = 0.0
-17/shapes = [  ]
-17/z_index = 0
-18/name = "floor_sand_stone_5"
-18/texture = ExtResource( 18 )
-18/tex_offset = Vector2( 0, 0 )
-18/modulate = Color( 1, 1, 1, 1 )
-18/region = Rect2( 0, 0, 64, 64 )
-18/tile_mode = 0
-18/occluder_offset = Vector2( 32, 32 )
-18/navigation_offset = Vector2( 32, 32 )
-18/shape_offset = Vector2( 0, 0 )
-18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-18/shape_one_way = false
-18/shape_one_way_margin = 0.0
-18/shapes = [  ]
-18/z_index = 0
-19/name = "floor_sand_stone_6"
-19/texture = ExtResource( 19 )
-19/tex_offset = Vector2( 0, 0 )
-19/modulate = Color( 1, 1, 1, 1 )
-19/region = Rect2( 0, 0, 64, 64 )
-19/tile_mode = 0
-19/occluder_offset = Vector2( 32, 32 )
-19/navigation_offset = Vector2( 32, 32 )
-19/shape_offset = Vector2( 0, 0 )
-19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-19/shape_one_way = false
-19/shape_one_way_margin = 0.0
-19/shapes = [  ]
-19/z_index = 0
-20/name = "floor_sand_stone_7"
-20/texture = ExtResource( 20 )
-20/tex_offset = Vector2( 0, 0 )
-20/modulate = Color( 1, 1, 1, 1 )
-20/region = Rect2( 0, 0, 64, 64 )
-20/tile_mode = 0
-20/occluder_offset = Vector2( 32, 32 )
-20/navigation_offset = Vector2( 32, 32 )
-20/shape_offset = Vector2( 0, 0 )
-20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-20/shape_one_way = false
-20/shape_one_way_margin = 0.0
-20/shapes = [  ]
-20/z_index = 0
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_47aag")
+sources/1 = SubResource("TileSetAtlasSource_sok43")
+sources/2 = SubResource("TileSetAtlasSource_ijej6")
+sources/3 = SubResource("TileSetAtlasSource_3qgwg")
+sources/4 = SubResource("TileSetAtlasSource_3ijmk")
+sources/5 = SubResource("TileSetAtlasSource_wvxwc")
+sources/6 = SubResource("TileSetAtlasSource_kk5bx")
+sources/7 = SubResource("TileSetAtlasSource_sb5c4")
+sources/8 = SubResource("TileSetAtlasSource_3x7f5")
+sources/9 = SubResource("TileSetAtlasSource_3chyq")
+sources/10 = SubResource("TileSetAtlasSource_sne80")
+sources/11 = SubResource("TileSetAtlasSource_xteyb")
+sources/12 = SubResource("TileSetAtlasSource_utye1")
+sources/13 = SubResource("TileSetAtlasSource_mx2xk")
+sources/14 = SubResource("TileSetAtlasSource_gcarx")
+sources/15 = SubResource("TileSetAtlasSource_08bx1")
+sources/16 = SubResource("TileSetAtlasSource_u86p4")
+sources/17 = SubResource("TileSetAtlasSource_wq1ko")
+sources/18 = SubResource("TileSetAtlasSource_ncp4n")
+sources/19 = SubResource("TileSetAtlasSource_u6j58")
+sources/20 = SubResource("TileSetAtlasSource_wx2k6")

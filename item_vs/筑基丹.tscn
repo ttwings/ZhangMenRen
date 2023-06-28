@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" uid="uid://df7tvi581w13l" path="res://item_panel.tscn" id="1_4hjsf"]
+
+[node name="ItemV" instance=ExtResource("1_4hjsf")]
+
+[node name="Alias" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+self_modulate = Color(1, 0.298039, 0, 1)
+text = "筑基丹
+"
+
+[node name="Type" parent="MarginContainer/MarginContainer/VBoxContainer" index="2"]
+self_modulate = Color(1, 0.298039, 0, 1)
+text = "丹药"
+
+[node name="Att3" parent="MarginContainer/MarginContainer/VBoxContainer/Atts" index="2"]
+visible = false
+
+[node name="Alias" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe1" index="0"]
+text = "筑基"
+
+[node name="Desc" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe1" index="1"]
+text = " 突破炼器大圆满瓶颈"
+
+[node name="Alias" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe2" index="0"]
+text = "灵气"
+
+[node name="Desc" parent="MarginContainer/MarginContainer/VBoxContainer/Spe/Spe2" index="1"]
+text = " 200点灵气提供"
+
+[node name="Spe3" parent="MarginContainer/MarginContainer/VBoxContainer/Spe" index="3"]
+visible = false
+
+[node name="Spe4" parent="MarginContainer/MarginContainer/VBoxContainer/Spe" index="4"]
+visible = false
+
+[node name="Spe5" parent="MarginContainer/MarginContainer/VBoxContainer/Spe" index="5"]
+visible = false
+
+[node name="Spe6" parent="MarginContainer/MarginContainer/VBoxContainer/Spe" index="6"]
+visible = false
+
+[node name="Spe7" parent="MarginContainer/MarginContainer/VBoxContainer/Spe" index="7"]
+visible = false
+
+[node name="Spe8" parent="MarginContainer/MarginContainer/VBoxContainer/Spe" index="8"]
+visible = false
+
+[node name="Spe9" parent="MarginContainer/MarginContainer/VBoxContainer/Spe" index="9"]
+visible = false
+
+[node name="Skill" parent="MarginContainer/MarginContainer/VBoxContainer" index="5"]
+visible = false
+
+[node name="Core" parent="MarginContainer/MarginContainer/VBoxContainer" index="6"]
+visible = false
+
+[node name="Req1" parent="MarginContainer/MarginContainer/VBoxContainer/Req" index="0"]
+visible = false
+
+[node name="Req2" parent="MarginContainer/MarginContainer/VBoxContainer/Req" index="1"]
+visible = false
+
+[node name="Req3" parent="MarginContainer/MarginContainer/VBoxContainer/Req" index="2"]
+visible = false
+
+[node name="Lv" parent="MarginContainer/MarginContainer/VBoxContainer" index="8"]
+text = "一阶极品"

@@ -1,24 +1,22 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" script_class="Race" load_steps=2 format=3 uid="uid://4rmn7c65uhvx"]
 
-[ext_resource path="res://core/Race.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://core/race.gd" id="1"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 type = "人族"
 alias = "青年人族"
-body = "中型"
+body = 0
 speed = 4
 initiative = 2
 Hp_dice = 8
 Mp_dice = 0
 Ap_dice = 0
-Str = 8
 Con = 8
 Dex = 8
 Int = 8
-Cha = 8
-Wis = 8
 armor_class = 2
+armor_rate = 0
 fortitude = 2
 reflex = 2
 will = 2

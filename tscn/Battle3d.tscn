@@ -1,0 +1,498 @@
+[gd_scene load_steps=31 format=3 uid="uid://lrhdsihadg12"]
+
+[ext_resource type="Script" path="res://tscn/Battle3d.gd" id="1_1malf"]
+[ext_resource type="Texture2D" uid="uid://c83ysdsemagpd" path="res://res/texture/background/background_glacial_mountains.png" id="2_i51fc"]
+[ext_resource type="Script" path="res://tscn/Wall.gd" id="3_x1jx3"]
+[ext_resource type="MeshLibrary" uid="uid://c1a208je2rmkl" path="res://meshlib/tile3d.tres" id="4_2av7i"]
+[ext_resource type="PackedScene" uid="uid://bx3q8kgexwl2r" path="res://meshlib/Tree01.tscn" id="5_i5xlw"]
+[ext_resource type="Script" path="res://tscn/monster_v.gd" id="6_q6ls6"]
+[ext_resource type="Texture2D" uid="uid://cq4iahqobfmxb" path="res://res/texture/monster/animals/boring_beetle.png" id="7_t77um"]
+[ext_resource type="EffekseerEffect" uid="uid://qfcbp68logwi" path="res://addons/SampleEffek/02_Tktk03/ToonHit.efkefc" id="8_m37it"]
+[ext_resource type="Texture2D" uid="uid://dhbn4cfkb06gy" path="res://res/texture/particle/circle_05.png" id="9_0yj6b"]
+[ext_resource type="Texture2D" uid="uid://d02ncixxupc5m" path="res://res/texture/character/chara001.png" id="10_gfdh3"]
+[ext_resource type="EffekseerEffect" uid="uid://bo42kaqi5pax0" path="res://addons/SampleEffek/00_Basic/Laser01.efkefc" id="11_q2mne"]
+[ext_resource type="Texture2D" uid="uid://c48g8mqn7vyuy" path="res://res/texture/sky/Bumpy Sky/Bumpy_Sky-Blue_04-1024x512.png" id="12_5eldy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_14ah4"]
+size = Vector3(3, 2, 0.1)
+
+[sub_resource type="Animation" id="Animation_evd2t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pshpp"]
+resource_name = "attack"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.86863, 3.83349, -0.953802), Vector3(-0.5, 3.833, -5.5), Vector3(-1.86863, 3.83349, -0.953802)]
+}
+
+[sub_resource type="Animation" id="Animation_1vatp"]
+resource_name = "hurt"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.298039, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.86863, 3.83349, -0.953802), Vector3(-1.869, 3.833, -0.5), Vector3(-1.86863, 3.83349, -0.953802)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dpqxs"]
+_data = {
+"RESET": SubResource("Animation_evd2t"),
+"attack": SubResource("Animation_pshpp"),
+"hurt": SubResource("Animation_1vatp")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_est77"]
+size = Vector3(0.549631, 0.483058, 0.0448804)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wqe8b"]
+height = 1000.0
+
+[sub_resource type="Animation" id="Animation_xeyma"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.33, -6)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../MonsterV/Sprite3D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite3D:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_uq01x"]
+resource_name = "attack"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.33, -6), Vector3(-1.86863, 1.29238, -0.953802), Vector3(0, 1.33, -6)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../MonsterV/Sprite3D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2vvqk"]
+resource_name = "hurt"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.33, -6), Vector3(0, 1.33, -6), Vector3(0, 1.33, -6.5), Vector3(0, 1.33, -6)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_b7tls"]
+resource_name = "move_down"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_i8e5l"]
+resource_name = "move_left"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_aq1bv"]
+resource_name = "move_right"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_ncmx5"]
+resource_name = "move_up"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u7jxj"]
+_data = {
+"RESET": SubResource("Animation_xeyma"),
+"attack": SubResource("Animation_uq01x"),
+"hurt": SubResource("Animation_2vvqk"),
+"move_down": SubResource("Animation_b7tls"),
+"move_left": SubResource("Animation_i8e5l"),
+"move_right": SubResource("Animation_aq1bv"),
+"move_up": SubResource("Animation_ncmx5")
+}
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jomx3"]
+panorama = ExtResource("12_5eldy")
+
+[sub_resource type="Sky" id="Sky_8gbqm"]
+sky_material = SubResource("PanoramaSkyMaterial_jomx3")
+
+[sub_resource type="Environment" id="Environment_6ehck"]
+background_mode = 2
+sky = SubResource("Sky_8gbqm")
+
+[node name="BattleField" type="Node3D"]
+script = ExtResource("1_1malf")
+
+[node name="Background" type="Sprite3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.724159, 5.61174, 7.9563)
+texture_filter = 0
+texture = ExtResource("2_i51fc")
+
+[node name="Wall" type="Area3D" parent="Background"]
+script = ExtResource("3_x1jx3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Background/Wall"]
+shape = SubResource("BoxShape3D_14ah4")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("4_2av7i")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(0, 3, 2, 7, 5, 3, 65532, 65530, 3, 65530, 65532, 3, 65531, 65533, 1, 65532, 65533, 1, 65533, 65534, 1, 65534, 65534, 1, 65535, 65534, 1, 65530, 65530, 3, 2, 65535, 1, 3, 65532, 1, 3, 65533, 1, 4, 65533, 3, 5, 65534, 1, 5, 65535, 1, 6, 0, 1, 6, 1, 1, 6, 2, 1, 7, 2, 1, 7, 3, 3, 65530, 65531, 3, 65530, 65533, 1, 65530, 65534, 1, 65530, 65535, 3, 65530, 0, 3, 65530, 1, 3, 65530, 2, 3, 65530, 3, 3, 65530, 4, 3, 65530, 5, 3, 65531, 5, 3, 65532, 5, 3, 65533, 5, 3, 65534, 5, 3, 65535, 5, 2, 0, 5, 2, 1, 5, 2, 2, 5, 3, 3, 5, 3, 4, 5, 3, 5, 5, 3, 6, 5, 3, 7, 4, 3, 6, 4, 3, 5, 4, 3, 4, 4, 2, 2, 3, 2, 1, 3, 2, 65535, 3, 3, 65534, 3, 3, 65533, 3, 3, 65532, 3, 3, 65532, 4, 3, 65531, 4, 3, 65533, 4, 3, 65534, 4, 3, 65535, 4, 3, 3, 3, 2, 4, 3, 2, 3, 4, 2, 2, 4, 2, 1, 4, 2, 0, 4, 2, 65531, 3, 3, 5, 3, 3, 6, 3, 3, 5, 2, 3, 4, 2, 2, 3, 1, 2, 3, 2, 2, 2, 2, 2, 1, 2, 2, 0, 2, 2, 65535, 2, 3, 65531, 2, 3, 65532, 2, 3, 65533, 2, 3, 65534, 2, 3, 0, 1, 2, 1, 1, 2, 2, 1, 2, 4, 1, 2, 5, 1, 2, 65535, 1, 3, 65534, 1, 3, 65533, 1, 3, 65532, 1, 3, 65531, 1, 3, 65531, 0, 3, 65532, 0, 3, 65533, 0, 3, 65534, 0, 3, 65535, 0, 3, 0, 0, 3, 1, 0, 3, 2, 0, 2, 7, 1, 3, 7, 0, 3, 5, 0, 2, 4, 0, 2, 3, 0, 2, 65533, 65535, 3, 65532, 65535, 3, 65531, 65535, 3, 65531, 65534, 1, 0, 65534, 3, 1, 65535, 3, 3, 65535, 1, 4, 65535, 1, 6, 65535, 1, 7, 65535, 1, 7, 65534, 2, 6, 65534, 1, 4, 65534, 3, 3, 65534, 1, 2, 65534, 1, 1, 65534, 3, 65534, 65535, 3, 65535, 65535, 3, 0, 65535, 3, 65532, 65534, 1, 65531, 65532, 3, 65531, 65531, 3, 65531, 65530, 3, 65533, 65530, 3, 65534, 65530, 3, 1, 65531, 1, 2, 65531, 1, 3, 65531, 1, 4, 65531, 1, 5, 65531, 1, 6, 65531, 3, 6, 65530, 3, 7, 65530, 3, 5, 65530, 3, 4, 65530, 1, 3, 65530, 1, 2, 65530, 1, 7, 65531, 3, 7, 65532, 3, 7, 65533, 2, 6, 65533, 3, 6, 65532, 3, 5, 65532, 1, 5, 65533, 3, 4, 65532, 1, 0, 65531, 1, 65535, 65531, 1, 65534, 65531, 1, 65533, 65531, 1, 65533, 65532, 1, 65532, 65532, 3, 65532, 65531, 3, 65533, 65533, 1, 65534, 65532, 1, 65535, 65532, 1, 65535, 65533, 1, 65534, 65533, 1, 0, 65533, 1, 0, 65532, 1, 1, 65532, 1, 2, 65532, 1, 2, 65533, 1, 1, 65533, 1, 65535, 65530, 1, 0, 65530, 1, 1, 65530, 1, 65529, 5, 3, 65529, 4, 3, 65529, 3, 3, 65529, 2, 3, 65529, 1, 3, 65529, 65535, 3, 65529, 65534, 3, 65529, 65533, 3, 65529, 65532, 3, 65529, 65531, 3, 65529, 65530, 3, 65528, 65531, 3, 65528, 65532, 3, 65528, 65533, 3, 65528, 65534, 3, 65528, 65535, 3, 65528, 0, 3, 65528, 1, 3, 65529, 0, 3, 65528, 5, 3, 65528, 4, 3, 65528, 3, 3, 65528, 2, 3, 65527, 65532, 3, 65527, 65531, 3, 65528, 65530, 3, 65527, 65530, 3, 65526, 65530, 3, 65525, 65530, 3, 65524, 65530, 3, 65523, 65530, 3, 65522, 65530, 3, 65522, 65531, 3, 65521, 65531, 3, 65521, 65532, 3, 65521, 65533, 3, 65521, 65534, 3, 65521, 65535, 3, 65521, 0, 3, 65521, 1, 3, 65521, 2, 3, 65522, 5, 3, 65523, 5, 3, 65524, 5, 3, 65525, 5, 3, 65525, 4, 3, 65526, 4, 3, 65526, 5, 3, 65527, 5, 3, 65527, 4, 3, 65521, 5, 3, 65521, 4, 3, 65521, 3, 3, 65522, 3, 3, 65523, 3, 3, 65523, 4, 3, 65524, 4, 3, 65524, 3, 3, 65525, 3, 3, 65526, 3, 3, 65526, 2, 3, 65527, 2, 3, 65527, 3, 3, 65522, 4, 3, 65522, 2, 3, 65523, 2, 3, 65523, 1, 3, 65523, 0, 3, 65523, 65535, 3, 65524, 65535, 3, 65524, 0, 3, 65525, 1, 3, 65527, 1, 3, 65526, 0, 3, 65526, 65535, 3, 65526, 65534, 3, 65526, 65533, 3, 65527, 65533, 3, 65527, 65534, 3, 65527, 65535, 3, 65527, 0, 3, 65525, 2, 3, 65526, 1, 3, 65524, 1, 3, 65524, 2, 3, 65525, 65535, 3, 65525, 65534, 3, 65525, 65533, 3, 65525, 65532, 3, 65525, 65531, 3, 65526, 65531, 3, 65526, 65532, 3, 65525, 0, 3, 65524, 65533, 3, 65524, 65532, 3, 65524, 65531, 3, 65523, 65531, 3, 65523, 65532, 3, 65522, 65533, 3, 65522, 65534, 3, 65523, 65534, 3, 65523, 65533, 3, 65524, 65534, 3, 65522, 65535, 3, 65522, 0, 3, 65522, 1, 3, 65522, 65532, 3, 65521, 65530, 3, 8, 5, 3, 8, 4, 3, 8, 3, 3, 8, 2, 1, 8, 1, 1, 8, 0, 1, 8, 65535, 1, 8, 65534, 3, 8, 65533, 2, 8, 65532, 3, 8, 65531, 3, 8, 65530, 3, 9, 65530, 3, 9, 65531, 2, 9, 65532, 2, 9, 65533, 2, 9, 65534, 2, 9, 65535, 1, 9, 4, 3, 9, 5, 3, 10, 5, 2, 10, 4, 2, 10, 3, 3, 10, 2, 1, 10, 1, 1, 10, 0, 1, 9, 1, 1, 9, 0, 1, 10, 65535, 1, 9, 2, 3, 9, 3, 3, 11, 1, 1, 12, 0, 1, 12, 65535, 1, 12, 65534, 3, 12, 65533, 2, 11, 65534, 2, 11, 65535, 1, 11, 65533, 2, 10, 65532, 2, 11, 65531, 3, 11, 65532, 2, 10, 65533, 2, 10, 65534, 2, 10, 65531, 2, 10, 65530, 3, 11, 65530, 3, 12, 65530, 3, 12, 65531, 3, 12, 65532, 2, 11, 0, 1, 12, 1, 1, 12, 2, 1, 12, 3, 2, 12, 5, 3, 11, 5, 3, 11, 4, 2, 12, 4, 2, 11, 2, 1, 11, 3, 3, 13, 5, 3, 13, 4, 2, 13, 3, 2, 13, 2, 3, 13, 1, 1, 13, 0, 1, 13, 65535, 3, 14, 65534, 2, 14, 65533, 2, 14, 65532, 3, 14, 65531, 3, 13, 65531, 3, 13, 65530, 3, 13, 65532, 2, 13, 65533, 2, 13, 65534, 2, 14, 5, 2, 14, 4, 2, 14, 3, 2, 14, 2, 2, 15, 2, 2, 14, 1, 2, 15, 1, 3, 15, 0, 2, 15, 65535, 3, 15, 65534, 3, 15, 65533, 3, 14, 65535, 2, 14, 0, 2, 14, 65530, 3, 15, 65531, 3, 15, 65532, 3, 15, 65530, 3, 15, 5, 3, 15, 4, 3, 15, 3, 2, 4, 65529, 1, 3, 65529, 1, 2, 65529, 1, 1, 65529, 1, 0, 65529, 1, 65535, 65529, 1, 15, 65529, 3, 14, 65529, 3, 13, 65529, 3, 12, 65529, 3, 11, 65529, 3, 10, 65529, 3, 9, 65529, 3, 9, 65528, 3, 8, 65528, 3, 7, 65528, 3, 6, 65528, 3, 6, 65529, 3, 7, 65529, 3, 8, 65529, 3, 5, 65529, 3, 5, 65528, 3, 4, 65528, 3, 3, 65528, 3, 2, 65528, 3, 1, 65528, 3, 0, 65528, 3, 65535, 65528, 3, 65534, 65528, 3, 65533, 65528, 3, 65533, 65529, 3, 65534, 65529, 3, 65532, 65529, 3, 65531, 65529, 3, 65530, 65529, 3, 65530, 65528, 3, 65531, 65528, 3, 65532, 65528, 3, 65529, 65528, 3, 65528, 65528, 3, 65528, 65529, 3, 65529, 65529, 3, 65527, 65529, 3, 65526, 65529, 3, 65525, 65529, 3, 65524, 65529, 3, 65523, 65529, 3, 65522, 65529, 3, 65521, 65529, 3, 65521, 65528, 3, 65522, 65528, 3, 65523, 65528, 3, 65524, 65528, 3, 65526, 65528, 3, 65527, 65528, 3, 65525, 65528, 3, 15, 65528, 3, 14, 65528, 3, 13, 65528, 3, 12, 65528, 3, 11, 65528, 3, 10, 65528, 3, 15, 65527, 3, 14, 65527, 3, 13, 65527, 3, 12, 65527, 3, 11, 65527, 3, 10, 65527, 3, 9, 65527, 3, 8, 65527, 3, 7, 65527, 3, 6, 65527, 3, 5, 65527, 3, 4, 65527, 3, 3, 65527, 3, 2, 65527, 3, 1, 65527, 3, 0, 65527, 3, 65532, 65527, 3, 65533, 65527, 3, 65535, 65527, 3, 65534, 65527, 3, 65531, 65527, 3, 65530, 65527, 3, 65526, 65527, 3, 65527, 65527, 3, 65528, 65527, 3, 65529, 65527, 3, 65523, 65527, 3, 65524, 65527, 3, 65525, 65527, 3, 65522, 65527, 3, 65521, 65527, 3, 15, 65526, 3, 14, 65526, 3, 13, 65526, 3, 12, 65526, 3, 11, 65526, 3, 10, 65526, 3, 9, 65526, 3, 8, 65526, 3, 7, 65526, 3, 6, 65526, 3, 5, 65526, 3, 4, 65526, 3, 3, 65526, 3, 2, 65526, 3, 1, 65526, 3, 0, 65526, 3, 65535, 65526, 3, 65534, 65526, 3, 65533, 65526, 3, 65532, 65526, 3, 65531, 65526, 3, 65530, 65526, 3, 65529, 65526, 3, 65528, 65526, 3, 65527, 65526, 3, 65526, 65526, 3, 65525, 65526, 3, 65524, 65526, 3, 65521, 65526, 3, 65522, 65526, 3, 65523, 65526, 3, 65521, 65525, 3, 65522, 65525, 3, 65523, 65525, 3, 65524, 65525, 3, 65525, 65525, 3, 65525, 65524, 3, 65526, 65524, 3, 65526, 65525, 3, 65527, 65525, 3, 65528, 65525, 3, 65528, 65524, 3, 65529, 65524, 3, 65529, 65525, 3, 65530, 65524, 3, 65531, 65524, 3, 65532, 65525, 3, 65533, 65525, 3, 65533, 65524, 3, 65534, 65524, 3, 65531, 65525, 3, 65530, 65525, 3, 65534, 65525, 3, 65535, 65525, 3, 0, 65525, 3, 1, 65525, 3, 2, 65525, 3, 6, 65525, 3, 5, 65525, 3, 4, 65525, 3, 3, 65525, 3, 7, 65525, 3, 8, 65525, 3, 9, 65525, 3, 10, 65525, 3, 11, 65525, 3, 12, 65525, 3, 13, 65525, 3, 14, 65525, 3, 15, 65525, 3, 15, 65524, 3, 14, 65524, 3, 13, 65524, 3, 12, 65524, 3, 11, 65524, 3, 10, 65524, 3, 9, 65524, 3, 8, 65524, 3, 7, 65524, 3, 6, 65524, 3, 5, 65524, 3, 4, 65524, 3, 3, 65524, 3, 2, 65524, 3, 1, 65524, 3, 0, 65524, 3, 65535, 65524, 3, 65532, 65524, 3, 65527, 65524, 3, 65523, 65524, 3, 65522, 65524, 3, 65521, 65524, 3, 65524, 65524, 3)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="Obj3D" type="Node3D" parent="."]
+
+[node name="Tree01" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.238125, 1.9, 0.590369)
+
+[node name="Tree02" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.05025, 1.9, 0.849247)
+
+[node name="Tree03" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.55528, 1.9, 0.796937)
+
+[node name="Tree04" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.70077, 1.9, 0.664775)
+
+[node name="Tree05" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.10181, 1.9, 0.675882)
+
+[node name="Tree06" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2.61089, 1.9, 9.53674e-07)
+
+[node name="Tree07" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.76358, 1.9, 0.440058)
+
+[node name="Tree08" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.699, 1.9, 1.754)
+
+[node name="Tree09" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.198324, 1.9, 2.73696)
+
+[node name="Tree10" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.24905, 1.9, 2.79485)
+
+[node name="Tree11" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.19831, 1.9, 2.38648)
+
+[node name="Tree12" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.663425, 1.9, 1.754)
+
+[node name="Tree13" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.99392, 1.9, 1.40411)
+
+[node name="Tree14" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.78943, 1.9, 0.812597)
+
+[node name="Tree15" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.4755, 1.9, 1.79197)
+
+[node name="Tree16" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 9.45682, 1.9, 0.517614)
+
+[node name="Tree17" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10.3474, 1.9, 3.39127)
+
+[node name="Tree18" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.60325, 1.9, 3.39127)
+
+[node name="Tree19" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.41891, 1.9, 3.39127)
+
+[node name="Tree20" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.38384, 1.9, 3.39127)
+
+[node name="Tree21" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.6669, 1.9, 3.92433)
+
+[node name="Tree22" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.084815, 1.9, 4.52428)
+
+[node name="Tree23" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.00701, 1.9, 4.52428)
+
+[node name="Tree24" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -9.07959, 1.9, 4.52428)
+
+[node name="Tree25" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -11.7264, 1.9, 4.52428)
+
+[node name="Tree26" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -10.4091, 1.9, 2.62731)
+
+[node name="Tree27" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -8.22906, 1.9, 3.19288)
+
+[node name="Tree28" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.9043, 1.9, 3.19288)
+
+[node name="Tree29" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.37771, 1.9, 3.19288)
+
+[node name="Tree30" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.63809, 1.9, 2.05808)
+
+[node name="Tree31" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -8.43996, 1.9, 2.05808)
+
+[node name="Tree32" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -10.965, 1.9, 2.05808)
+
+[node name="Tree33" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -12.418, 1.9, 2.77672)
+
+[node name="Tree34" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -9.64484, 1.9, 3.80753)
+
+[node name="Tree35" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -13.4229, 1.9, 3.80753)
+
+[node name="Tree36" parent="Obj3D" instance=ExtResource("5_i5xlw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -12.6892, 1.9, 4.52137)
+
+[node name="MonsterV" type="Area3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -1.86863, 3.83349, -0.953802)
+script = ExtResource("6_q6ls6")
+
+[node name="Sprite3D" type="Sprite3D" parent="MonsterV"]
+billboard = 2
+texture_filter = 0
+texture = ExtResource("7_t77um")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MonsterV"]
+libraries = {
+"": SubResource("AnimationLibrary_dpqxs")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MonsterV"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0164115, 0)
+shape = SubResource("BoxShape3D_est77")
+
+[node name="EffekseerEmitter3D" type="EffekseerEmitter3D" parent="MonsterV"]
+effect = ExtResource("8_m37it")
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.199196, -0.137803)
+
+[node name="Ying" type="Sprite3D" parent="MonsterV"]
+transform = Transform3D(0.4, 0, 0, 0, -1.03127e-08, -0.4, 0, 0.235928, -1.74846e-08, 0, -0.280026, 0)
+modulate = Color(0.0862745, 0.0941176, 0.137255, 1)
+texture = ExtResource("9_0yj6b")
+
+[node name="Player" type="Area3D" parent="."]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 0, 1.33, -6)
+
+[node name="Sprite3D" type="Sprite3D" parent="Player"]
+billboard = 2
+texture_filter = 0
+texture = ExtResource("10_gfdh3")
+hframes = 4
+vframes = 4
+frame = 12
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_wqe8b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+libraries = {
+"": SubResource("AnimationLibrary_u7jxj")
+}
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(-0.711568, -0.0311271, 0.0539137, 0, 0.61859, 0.357143, -0.0622541, 0.355784, -0.616236, 0.265043, 1.225, -1.04807)
+
+[node name="EffekseerEmitter3D" type="EffekseerEmitter3D" parent="Player"]
+effect = ExtResource("11_q2mne")
+autoplay = false
+transform = Transform3D(0.0492404, 0, 0.00868241, 0, 0.05, 0, -0.00868241, 0, 0.0492404, 0, 0.203418, -0.0351815)
+
+[node name="Ying" type="Sprite3D" parent="Player"]
+transform = Transform3D(0.15, 0, 0, 0, -3.89031e-09, -0.15, 0, 0.089, -6.55671e-09, 0, -0.232216, 0)
+modulate = Color(0.0862745, 0.0941176, 0.137255, 1)
+texture = ExtResource("9_0yj6b")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6ehck")
+
+[node name="Effect" type="Node" parent="."]
+
+[node name="EffekseerEmitter3D" type="EffekseerEmitter3D" parent="Effect"]
+
+[node name="Bullets" type="Node" parent="."]

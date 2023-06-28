@@ -1,1859 +1,1859 @@
-[gd_scene load_steps=313 format=2]
+[gd_scene load_steps=313 format=3 uid="uid://buojbjtfnkikl"]
 
-[ext_resource path="res://res/texture/player/hand_right/artefact/flaming_death_new.png" type="Texture" id=1]
-[ext_resource path="res://res/texture/player/hand_right/artefact/arc_blade.png" type="Texture" id=2]
-[ext_resource path="res://res/texture/player/hand_right/artefact/asmodeus_new.png" type="Texture" id=3]
-[ext_resource path="res://res/texture/player/hand_right/hand_axe_2.png" type="Texture" id=4]
-[ext_resource path="res://res/texture/player/hand_right/artefact/arga_new.png" type="Texture" id=5]
-[ext_resource path="res://res/texture/player/hand_right/artefact/punk.png" type="Texture" id=6]
-[ext_resource path="res://res/texture/player/hand_right/artefact/arga_old.png" type="Texture" id=7]
-[ext_resource path="res://res/texture/player/hand_right/artefact/bloodbane_old.png" type="Texture" id=8]
-[ext_resource path="res://res/texture/player/hand_right/artefact/axe_trog.png" type="Texture" id=9]
-[ext_resource path="res://res/texture/player/hand_right/artefact/axe_of_woe.png" type="Texture" id=10]
-[ext_resource path="res://res/texture/player/hand_right/artefact/bloodbane_new.png" type="Texture" id=11]
-[ext_resource path="res://res/texture/player/hand_right/artefact/asmodeus_old.png" type="Texture" id=12]
-[ext_resource path="res://res/texture/player/hand_right/artefact/blowgun_assassin.png" type="Texture" id=13]
-[ext_resource path="res://res/texture/player/hand_right/artefact/dire_lajatang.png" type="Texture" id=14]
-[ext_resource path="res://res/texture/player/hand_right/artefact/chilly_death_old.png" type="Texture" id=15]
-[ext_resource path="res://res/texture/player/hand_right/artefact/cutlass.png" type="Texture" id=16]
-[ext_resource path="res://res/texture/player/hand_right/artefact/crystal_spear_old.png" type="Texture" id=17]
-[ext_resource path="res://res/texture/player/hand_right/artefact/crystal_spear_new.png" type="Texture" id=18]
-[ext_resource path="res://res/texture/player/hand_right/artefact/crossbow_fire.png" type="Texture" id=19]
-[ext_resource path="res://res/texture/player/hand_right/artefact/botono.png" type="Texture" id=20]
-[ext_resource path="res://res/texture/player/hand_right/artefact/chilly_death_new.png" type="Texture" id=21]
-[ext_resource path="res://res/texture/player/hand_right/artefact/jihad.png" type="Texture" id=22]
-[ext_resource path="res://res/texture_player.gd" type="Script" id=23]
-[ext_resource path="res://res/texture/player/hand_right/crossbow_4.png" type="Texture" id=24]
-[ext_resource path="res://res/texture/player/hand_right/dagger_new.png" type="Texture" id=25]
-[ext_resource path="res://res/texture/player/hand_right/dagger_old.png" type="Texture" id=26]
-[ext_resource path="res://res/texture/player/hand_right/dagger_slant_2.png" type="Texture" id=27]
-[ext_resource path="res://res/texture/player/hand_right/dagger_slant_new.png" type="Texture" id=28]
-[ext_resource path="res://res/texture/player/hand_right/dagger_slant_old.png" type="Texture" id=29]
-[ext_resource path="res://res/texture/player/hand_right/dart.png" type="Texture" id=30]
-[ext_resource path="res://res/texture/player/hand_right/double_sword_2.png" type="Texture" id=31]
-[ext_resource path="res://res/texture/player/hand_right/double_sword_3.png" type="Texture" id=32]
-[ext_resource path="res://res/texture/player/hand_right/double_sword_new.png" type="Texture" id=33]
-[ext_resource path="res://res/texture/player/hand_right/double_sword_old.png" type="Texture" id=34]
-[ext_resource path="res://res/texture/player/hand_right/d_glaive.png" type="Texture" id=35]
-[ext_resource path="res://res/texture/player/hand_right/enchantress_dagger.png" type="Texture" id=36]
-[ext_resource path="res://res/texture/player/hand_right/eveningstar_2.png" type="Texture" id=37]
-[ext_resource path="res://res/texture/player/hand_right/eveningstar_new.png" type="Texture" id=38]
-[ext_resource path="res://res/texture/player/hand_right/eveningstar_old.png" type="Texture" id=39]
-[ext_resource path="res://res/texture/player/hand_right/falchion_2.png" type="Texture" id=40]
-[ext_resource path="res://res/texture/player/hand_right/axe_executioner_new.png" type="Texture" id=41]
-[ext_resource path="res://res/texture/player/hand_right/axe_executioner_old.png" type="Texture" id=42]
-[ext_resource path="res://res/texture/player/hand_right/axe_short.png" type="Texture" id=43]
-[ext_resource path="res://res/texture/player/hand_right/axe_small.png" type="Texture" id=44]
-[ext_resource path="res://res/texture/player/hand_right/battleaxe.png" type="Texture" id=45]
-[ext_resource path="res://res/texture/player/hand_right/battleaxe_2.png" type="Texture" id=46]
-[ext_resource path="res://res/texture/player/hand_right/black_sword.png" type="Texture" id=47]
-[ext_resource path="res://res/texture/player/hand_right/black_whip_new.png" type="Texture" id=48]
-[ext_resource path="res://res/texture/player/hand_right/black_whip_old.png" type="Texture" id=49]
-[ext_resource path="res://res/texture/player/hand_right/blessed_blade.png" type="Texture" id=50]
-[ext_resource path="res://res/texture/player/hand_right/blowgun.png" type="Texture" id=51]
-[ext_resource path="res://res/texture/player/hand_right/boromir.png" type="Texture" id=52]
-[ext_resource path="res://res/texture/player/hand_right/bow.png" type="Texture" id=53]
-[ext_resource path="res://res/texture/player/hand_right/bow_2.png" type="Texture" id=54]
-[ext_resource path="res://res/texture/player/hand_right/bow_3.png" type="Texture" id=55]
-[ext_resource path="res://res/texture/player/hand_right/bow_blue.png" type="Texture" id=56]
-[ext_resource path="res://res/texture/player/hand_right/broadsword.png" type="Texture" id=57]
-[ext_resource path="res://res/texture/player/hand_right/broad_axe.png" type="Texture" id=58]
-[ext_resource path="res://res/texture/player/hand_right/club.png" type="Texture" id=59]
-[ext_resource path="res://res/texture/player/hand_right/club_2.png" type="Texture" id=60]
-[ext_resource path="res://res/texture/player/hand_right/club_3.png" type="Texture" id=61]
-[ext_resource path="res://res/texture/player/hand_right/club_slant.png" type="Texture" id=62]
-[ext_resource path="res://res/texture/player/hand_right/crossbow.png" type="Texture" id=63]
-[ext_resource path="res://res/texture/player/hand_right/crossbow_2.png" type="Texture" id=64]
-[ext_resource path="res://res/texture/player/hand_right/crossbow_3.png" type="Texture" id=65]
-[ext_resource path="res://res/texture/player/hand_right/artefact/order.png" type="Texture" id=66]
-[ext_resource path="res://res/texture/player/hand_right/artefact/plutonium_sword_new.png" type="Texture" id=67]
-[ext_resource path="res://res/texture/player/hand_right/artefact/plutonium_sword_old.png" type="Texture" id=68]
-[ext_resource path="res://res/texture/player/hand_right/artefact/serpent_scourge.png" type="Texture" id=69]
-[ext_resource path="res://res/texture/player/hand_right/artefact/shillelagh.png" type="Texture" id=70]
-[ext_resource path="res://res/texture/player/hand_right/artefact/singing_sword.png" type="Texture" id=71]
-[ext_resource path="res://res/texture/player/hand_right/artefact/sniper.png" type="Texture" id=72]
-[ext_resource path="res://res/texture/player/hand_right/artefact/spriggans_knife_new.png" type="Texture" id=73]
-[ext_resource path="res://res/texture/player/hand_right/artefact/spriggans_knife_old.png" type="Texture" id=74]
-[ext_resource path="res://res/texture/player/hand_right/artefact/sword_of_power_new.png" type="Texture" id=75]
-[ext_resource path="res://res/texture/player/hand_right/artefact/sword_of_power_old.png" type="Texture" id=76]
-[ext_resource path="res://res/texture/player/hand_right/artefact/trident_octopus_king.png" type="Texture" id=77]
-[ext_resource path="res://res/texture/player/hand_right/artefact/undeadhunter.png" type="Texture" id=78]
-[ext_resource path="res://res/texture/player/hand_right/artefact/vampires_tooth.png" type="Texture" id=79]
-[ext_resource path="res://res/texture/player/hand_right/artefact/wucad_mu.png" type="Texture" id=80]
-[ext_resource path="res://res/texture/player/hand_right/artefact/wyrmbane.png" type="Texture" id=81]
-[ext_resource path="res://res/texture/player/hand_right/artefact/zonguldrok.png" type="Texture" id=82]
-[ext_resource path="res://res/texture/player/hand_right/misc/fire_red.png" type="Texture" id=83]
-[ext_resource path="res://res/texture/player/hand_right/misc/fire_white.png" type="Texture" id=84]
-[ext_resource path="res://res/texture/player/hand_right/misc/fire_white_2.png" type="Texture" id=85]
-[ext_resource path="res://res/texture/player/hand_right/misc/head.png" type="Texture" id=86]
-[ext_resource path="res://res/texture/player/hand_right/misc/horn.png" type="Texture" id=87]
-[ext_resource path="res://res/texture/player/hand_right/misc/lantern.png" type="Texture" id=88]
-[ext_resource path="res://res/texture/player/hand_right/misc/light_blue.png" type="Texture" id=89]
-[ext_resource path="res://res/texture/player/hand_right/misc/light_red.png" type="Texture" id=90]
-[ext_resource path="res://res/texture/player/hand_right/misc/light_yellow.png" type="Texture" id=91]
-[ext_resource path="res://res/texture/player/hand_right/misc/orb.png" type="Texture" id=92]
-[ext_resource path="res://res/texture/player/hand_right/misc/skull.png" type="Texture" id=93]
-[ext_resource path="res://res/texture/player/hand_right/misc/spark.png" type="Texture" id=94]
-[ext_resource path="res://res/texture/player/hand_right/misc/stone.png" type="Texture" id=95]
-[ext_resource path="res://res/texture/player/hand_right/axe.png" type="Texture" id=96]
-[ext_resource path="res://res/texture/player/hand_right/axe_blood.png" type="Texture" id=97]
-[ext_resource path="res://res/texture/player/hand_right/axe_double.png" type="Texture" id=98]
-[ext_resource path="res://res/texture/player/hand_right/axe_executioner_2.png" type="Texture" id=99]
-[ext_resource path="res://res/texture/player/hand_right/aragorn.png" type="Texture" id=100]
-[ext_resource path="res://res/texture/player/hand_right/arwen.png" type="Texture" id=101]
-[ext_resource path="res://res/texture/player/hand_right/misc/bladehands_fe.png" type="Texture" id=102]
-[ext_resource path="res://res/texture/player/hand_right/misc/bladehands_new.png" type="Texture" id=103]
-[ext_resource path="res://res/texture/player/hand_right/misc/bladehands_old.png" type="Texture" id=104]
-[ext_resource path="res://res/texture/player/hand_right/misc/bladehands_op.png" type="Texture" id=105]
-[ext_resource path="res://res/texture/player/hand_right/misc/bone_lantern.png" type="Texture" id=106]
-[ext_resource path="res://res/texture/player/hand_right/misc/bottle.png" type="Texture" id=107]
-[ext_resource path="res://res/texture/player/hand_right/misc/box.png" type="Texture" id=108]
-[ext_resource path="res://res/texture/player/hand_right/misc/crystal.png" type="Texture" id=109]
-[ext_resource path="res://res/texture/player/hand_right/misc/deck.png" type="Texture" id=110]
-[ext_resource path="res://res/texture/player/hand_right/misc/disc.png" type="Texture" id=111]
-[ext_resource path="res://res/texture/player/hand_right/misc/fan.png" type="Texture" id=112]
-[ext_resource path="res://res/texture/player/hand_right/misc/fire_blue.png" type="Texture" id=113]
-[ext_resource path="res://res/texture/player/hand_right/misc/fire_cyan.png" type="Texture" id=114]
-[ext_resource path="res://res/texture/player/hand_right/misc/fire_dark.png" type="Texture" id=115]
-[ext_resource path="res://res/texture/player/hand_right/misc/fire_green.png" type="Texture" id=116]
-[ext_resource path="res://res/texture/player/hand_right/artefact/knife_of_accuracy.png" type="Texture" id=117]
-[ext_resource path="res://res/texture/player/hand_right/artefact/krishna.png" type="Texture" id=118]
-[ext_resource path="res://res/texture/player/hand_right/artefact/leech.png" type="Texture" id=119]
-[ext_resource path="res://res/texture/player/hand_right/artefact/mace_of_brilliance.png" type="Texture" id=120]
-[ext_resource path="res://res/texture/player/hand_right/artefact/mace_of_variability.png" type="Texture" id=121]
-[ext_resource path="res://res/texture/player/hand_right/artefact/majin.png" type="Texture" id=122]
-[ext_resource path="res://res/texture/player/hand_right/artefact/morg.png" type="Texture" id=123]
-[ext_resource path="res://res/texture/player/hand_right/artefact/olgreb.png" type="Texture" id=124]
-[ext_resource path="res://res/texture/player/hand_right/artefact/dispater_new.png" type="Texture" id=125]
-[ext_resource path="res://res/texture/player/hand_right/artefact/dispater_old.png" type="Texture" id=126]
-[ext_resource path="res://res/texture/player/hand_right/artefact/doom_knight_new.png" type="Texture" id=127]
-[ext_resource path="res://res/texture/player/hand_right/artefact/doom_knight_old.png" type="Texture" id=128]
-[ext_resource path="res://res/texture/player/hand_right/artefact/elemental_staff.png" type="Texture" id=129]
-[ext_resource path="res://res/texture/player/hand_right/artefact/eos.png" type="Texture" id=130]
-[ext_resource path="res://res/texture/player/hand_right/artefact/finisher.png" type="Texture" id=131]
-[ext_resource path="res://res/texture/player/hand_right/artefact/firestarter.png" type="Texture" id=132]
-[ext_resource path="res://res/texture/player/hand_right/artefact/flaming_death_old.png" type="Texture" id=133]
-[ext_resource path="res://res/texture/player/hand_right/artefact/glaive_of_prune_new.png" type="Texture" id=134]
-[ext_resource path="res://res/texture/player/hand_right/artefact/glaive_of_prune_old.png" type="Texture" id=135]
-[ext_resource path="res://res/texture/player/hand_right/artefact/glaive_of_the_guard_new.png" type="Texture" id=136]
-[ext_resource path="res://res/texture/player/hand_right/artefact/glaive_of_the_guard_old.png" type="Texture" id=137]
-[ext_resource path="res://res/texture/player/hand_right/artefact/gyre.png" type="Texture" id=138]
-[ext_resource path="res://res/texture/player/hand_right/great_staff.png" type="Texture" id=139]
-[ext_resource path="res://res/texture/player/hand_right/great_sword.png" type="Texture" id=140]
-[ext_resource path="res://res/texture/player/hand_right/great_sword_slant_2.png" type="Texture" id=141]
-[ext_resource path="res://res/texture/player/hand_right/great_sword_slant_new.png" type="Texture" id=142]
-[ext_resource path="res://res/texture/player/hand_right/great_sword_slant_old.png" type="Texture" id=143]
-[ext_resource path="res://res/texture/player/hand_right/halberd_new.png" type="Texture" id=144]
-[ext_resource path="res://res/texture/player/hand_right/halberd_old.png" type="Texture" id=145]
-[ext_resource path="res://res/texture/player/hand_right/hammer_2_new.png" type="Texture" id=146]
-[ext_resource path="res://res/texture/player/hand_right/hammer_2_old.png" type="Texture" id=147]
-[ext_resource path="res://res/texture/player/hand_right/hammer_3.png" type="Texture" id=148]
-[ext_resource path="res://res/texture/player/hand_right/hammer_new.png" type="Texture" id=149]
-[ext_resource path="res://res/texture/player/hand_right/hammer_old.png" type="Texture" id=150]
-[ext_resource path="res://res/texture/player/hand_right/hand_axe_new.png" type="Texture" id=151]
-[ext_resource path="res://res/texture/player/hand_right/hand_axe_old.png" type="Texture" id=152]
-[ext_resource path="res://res/texture/player/hand_right/hand_crossbow.png" type="Texture" id=153]
-[ext_resource path="res://res/texture/player/hand_right/heavy_sword.png" type="Texture" id=154]
-[ext_resource path="res://res/texture/player/hand_right/holy_scourge_1.png" type="Texture" id=155]
-[ext_resource path="res://res/texture/player/hand_right/holy_scourge_2.png" type="Texture" id=156]
-[ext_resource path="res://res/texture/player/hand_right/hook.png" type="Texture" id=157]
-[ext_resource path="res://res/texture/player/hand_right/katana.png" type="Texture" id=158]
-[ext_resource path="res://res/texture/player/hand_right/katana_slant.png" type="Texture" id=159]
-[ext_resource path="res://res/texture/player/hand_right/knife.png" type="Texture" id=160]
-[ext_resource path="res://res/texture/player/hand_right/lance.png" type="Texture" id=161]
-[ext_resource path="res://res/texture/player/hand_right/lance_2.png" type="Texture" id=162]
-[ext_resource path="res://res/texture/player/hand_right/large_mace.png" type="Texture" id=163]
-[ext_resource path="res://res/texture/player/hand_right/legolas.png" type="Texture" id=164]
-[ext_resource path="res://res/texture/player/hand_right/long_sword.png" type="Texture" id=165]
-[ext_resource path="res://res/texture/player/hand_right/long_sword_slant_2.png" type="Texture" id=166]
-[ext_resource path="res://res/texture/player/hand_right/long_sword_slant_new.png" type="Texture" id=167]
-[ext_resource path="res://res/texture/player/hand_right/long_sword_slant_old.png" type="Texture" id=168]
-[ext_resource path="res://res/texture/player/hand_right/mace_2_new.png" type="Texture" id=169]
-[ext_resource path="res://res/texture/player/hand_right/mace_2_old.png" type="Texture" id=170]
-[ext_resource path="res://res/texture/player/hand_right/mace_3.png" type="Texture" id=171]
-[ext_resource path="res://res/texture/player/hand_right/mace_new.png" type="Texture" id=172]
-[ext_resource path="res://res/texture/player/hand_right/mace_old.png" type="Texture" id=173]
-[ext_resource path="res://res/texture/player/hand_right/falchion_new.png" type="Texture" id=174]
-[ext_resource path="res://res/texture/player/hand_right/falchion_old.png" type="Texture" id=175]
-[ext_resource path="res://res/texture/player/hand_right/flail_balls.png" type="Texture" id=176]
-[ext_resource path="res://res/texture/player/hand_right/flail_ball_2_new.png" type="Texture" id=177]
-[ext_resource path="res://res/texture/player/hand_right/flail_ball_2_old.png" type="Texture" id=178]
-[ext_resource path="res://res/texture/player/hand_right/flail_ball_3.png" type="Texture" id=179]
-[ext_resource path="res://res/texture/player/hand_right/flail_ball_4.png" type="Texture" id=180]
-[ext_resource path="res://res/texture/player/hand_right/flail_ball_new.png" type="Texture" id=181]
-[ext_resource path="res://res/texture/player/hand_right/flail_ball_old.png" type="Texture" id=182]
-[ext_resource path="res://res/texture/player/hand_right/flail_great.png" type="Texture" id=183]
-[ext_resource path="res://res/texture/player/hand_right/flail_great_2.png" type="Texture" id=184]
-[ext_resource path="res://res/texture/player/hand_right/flail_spike.png" type="Texture" id=185]
-[ext_resource path="res://res/texture/player/hand_right/flail_spike_2.png" type="Texture" id=186]
-[ext_resource path="res://res/texture/player/hand_right/flail_stick.png" type="Texture" id=187]
-[ext_resource path="res://res/texture/player/hand_right/flail_stick_slant.png" type="Texture" id=188]
-[ext_resource path="res://res/texture/player/hand_right/fork_2.png" type="Texture" id=189]
-[ext_resource path="res://res/texture/player/hand_right/frodo.png" type="Texture" id=190]
-[ext_resource path="res://res/texture/player/hand_right/gandalf.png" type="Texture" id=191]
-[ext_resource path="res://res/texture/player/hand_right/giant_club.png" type="Texture" id=192]
-[ext_resource path="res://res/texture/player/hand_right/giant_club_plain.png" type="Texture" id=193]
-[ext_resource path="res://res/texture/player/hand_right/giant_club_slant.png" type="Texture" id=194]
-[ext_resource path="res://res/texture/player/hand_right/giant_club_spike.png" type="Texture" id=195]
-[ext_resource path="res://res/texture/player/hand_right/giant_club_spike_slant.png" type="Texture" id=196]
-[ext_resource path="res://res/texture/player/hand_right/gimli.png" type="Texture" id=197]
-[ext_resource path="res://res/texture/player/hand_right/glaive_2.png" type="Texture" id=198]
-[ext_resource path="res://res/texture/player/hand_right/glaive_3.png" type="Texture" id=199]
-[ext_resource path="res://res/texture/player/hand_right/glaive_new.png" type="Texture" id=200]
-[ext_resource path="res://res/texture/player/hand_right/glaive_old.png" type="Texture" id=201]
-[ext_resource path="res://res/texture/player/hand_right/glaive_three.png" type="Texture" id=202]
-[ext_resource path="res://res/texture/player/hand_right/glaive_three_2.png" type="Texture" id=203]
-[ext_resource path="res://res/texture/player/hand_right/greatsling.png" type="Texture" id=204]
-[ext_resource path="res://res/texture/player/hand_right/great_axe.png" type="Texture" id=205]
-[ext_resource path="res://res/texture/player/hand_right/great_bow.png" type="Texture" id=206]
-[ext_resource path="res://res/texture/player/hand_right/great_mace.png" type="Texture" id=207]
-[ext_resource path="res://res/texture/player/hand_right/great_mace_2.png" type="Texture" id=208]
-[ext_resource path="res://res/texture/player/hand_right/mace_ruby_new.png" type="Texture" id=209]
-[ext_resource path="res://res/texture/player/hand_right/mace_ruby_old.png" type="Texture" id=210]
-[ext_resource path="res://res/texture/player/hand_right/morningstar_2_new.png" type="Texture" id=211]
-[ext_resource path="res://res/texture/player/hand_right/morningstar_2_old.png" type="Texture" id=212]
-[ext_resource path="res://res/texture/player/hand_right/morningstar_new.png" type="Texture" id=213]
-[ext_resource path="res://res/texture/player/hand_right/morningstar_old.png" type="Texture" id=214]
-[ext_resource path="res://res/texture/player/hand_right/nunchaku.png" type="Texture" id=215]
-[ext_resource path="res://res/texture/player/hand_right/pick_axe.png" type="Texture" id=216]
-[ext_resource path="res://res/texture/player/hand_right/pike.png" type="Texture" id=217]
-[ext_resource path="res://res/texture/player/hand_right/pole_forked.png" type="Texture" id=218]
-[ext_resource path="res://res/texture/player/hand_right/quarterstaff.png" type="Texture" id=219]
-[ext_resource path="res://res/texture/player/hand_right/quarterstaff_1.png" type="Texture" id=220]
-[ext_resource path="res://res/texture/player/hand_right/quarterstaff_2_new.png" type="Texture" id=221]
-[ext_resource path="res://res/texture/player/hand_right/quarterstaff_2_old.png" type="Texture" id=222]
-[ext_resource path="res://res/texture/player/hand_right/quarterstaff_3.png" type="Texture" id=223]
-[ext_resource path="res://res/texture/player/hand_right/quarterstaff_4.png" type="Texture" id=224]
-[ext_resource path="res://res/texture/player/hand_right/quarterstaff_jester.png" type="Texture" id=225]
-[ext_resource path="res://res/texture/player/hand_right/rapier.png" type="Texture" id=226]
-[ext_resource path="res://res/texture/player/hand_right/rapier_2.png" type="Texture" id=227]
-[ext_resource path="res://res/texture/player/hand_right/rod_aries_new.png" type="Texture" id=228]
-[ext_resource path="res://res/texture/player/hand_right/rod_aries_old.png" type="Texture" id=229]
-[ext_resource path="res://res/texture/player/hand_right/rod_blue_new.png" type="Texture" id=230]
-[ext_resource path="res://res/texture/player/hand_right/rod_blue_old.png" type="Texture" id=231]
-[ext_resource path="res://res/texture/player/hand_right/rod_brown_new.png" type="Texture" id=232]
-[ext_resource path="res://res/texture/player/hand_right/rod_brown_old.png" type="Texture" id=233]
-[ext_resource path="res://res/texture/player/hand_right/rod_emerald_new.png" type="Texture" id=234]
-[ext_resource path="res://res/texture/player/hand_right/rod_emerald_old.png" type="Texture" id=235]
-[ext_resource path="res://res/texture/player/hand_right/rod_forked_new.png" type="Texture" id=236]
-[ext_resource path="res://res/texture/player/hand_right/rod_forked_old.png" type="Texture" id=237]
-[ext_resource path="res://res/texture/player/hand_right/rod_hammer_new.png" type="Texture" id=238]
-[ext_resource path="res://res/texture/player/hand_right/rod_hammer_old.png" type="Texture" id=239]
-[ext_resource path="res://res/texture/player/hand_right/rod_magenta_new.png" type="Texture" id=240]
-[ext_resource path="res://res/texture/player/hand_right/rod_magenta_old.png" type="Texture" id=241]
-[ext_resource path="res://res/texture/player/hand_right/rod_moon_new.png" type="Texture" id=242]
-[ext_resource path="res://res/texture/player/hand_right/rod_moon_old.png" type="Texture" id=243]
-[ext_resource path="res://res/texture/player/hand_right/rod_ruby_new.png" type="Texture" id=244]
-[ext_resource path="res://res/texture/player/hand_right/rod_ruby_old.png" type="Texture" id=245]
-[ext_resource path="res://res/texture/player/hand_right/rod_thick_new.png" type="Texture" id=246]
-[ext_resource path="res://res/texture/player/hand_right/rod_thick_old.png" type="Texture" id=247]
-[ext_resource path="res://res/texture/player/hand_right/sabre.png" type="Texture" id=248]
-[ext_resource path="res://res/texture/player/hand_right/saruman.png" type="Texture" id=249]
-[ext_resource path="res://res/texture/player/hand_right/scepter.png" type="Texture" id=250]
-[ext_resource path="res://res/texture/player/hand_right/scimitar_new.png" type="Texture" id=251]
-[ext_resource path="res://res/texture/player/hand_right/scimitar_old.png" type="Texture" id=252]
-[ext_resource path="res://res/texture/player/hand_right/scythe_2.png" type="Texture" id=253]
-[ext_resource path="res://res/texture/player/hand_right/scythe_new.png" type="Texture" id=254]
-[ext_resource path="res://res/texture/player/hand_right/scythe_old.png" type="Texture" id=255]
-[ext_resource path="res://res/texture/player/hand_right/scythe_slant.png" type="Texture" id=256]
-[ext_resource path="res://res/texture/player/hand_right/short_sword.png" type="Texture" id=257]
-[ext_resource path="res://res/texture/player/hand_right/short_sword_2.png" type="Texture" id=258]
-[ext_resource path="res://res/texture/player/hand_right/short_sword_slant_2.png" type="Texture" id=259]
-[ext_resource path="res://res/texture/player/hand_right/short_sword_slant_3.png" type="Texture" id=260]
-[ext_resource path="res://res/texture/player/hand_right/short_sword_slant_new.png" type="Texture" id=261]
-[ext_resource path="res://res/texture/player/hand_right/short_sword_slant_old.png" type="Texture" id=262]
-[ext_resource path="res://res/texture/player/hand_right/sickle.png" type="Texture" id=263]
-[ext_resource path="res://res/texture/player/hand_right/sling.png" type="Texture" id=264]
-[ext_resource path="res://res/texture/player/hand_right/spear.png" type="Texture" id=265]
-[ext_resource path="res://res/texture/player/hand_right/spear_1.png" type="Texture" id=266]
-[ext_resource path="res://res/texture/player/hand_right/spear_2_new.png" type="Texture" id=267]
-[ext_resource path="res://res/texture/player/hand_right/spear_2_old.png" type="Texture" id=268]
-[ext_resource path="res://res/texture/player/hand_right/spear_3.png" type="Texture" id=269]
-[ext_resource path="res://res/texture/player/hand_right/spear_4.png" type="Texture" id=270]
-[ext_resource path="res://res/texture/player/hand_right/spear_5.png" type="Texture" id=271]
-[ext_resource path="res://res/texture/player/hand_right/staff_evil.png" type="Texture" id=272]
-[ext_resource path="res://res/texture/player/hand_right/staff_fancy.png" type="Texture" id=273]
-[ext_resource path="res://res/texture/player/hand_right/staff_fork.png" type="Texture" id=274]
-[ext_resource path="res://res/texture/player/hand_right/staff_large.png" type="Texture" id=275]
-[ext_resource path="res://res/texture/player/hand_right/staff_mage.png" type="Texture" id=276]
-[ext_resource path="res://res/texture/player/hand_right/staff_mage_2.png" type="Texture" id=277]
-[ext_resource path="res://res/texture/player/hand_right/staff_mummy.png" type="Texture" id=278]
-[ext_resource path="res://res/texture/player/hand_right/staff_organic.png" type="Texture" id=279]
-[ext_resource path="res://res/texture/player/hand_right/staff_plain.png" type="Texture" id=280]
-[ext_resource path="res://res/texture/player/hand_right/staff_ring_blue.png" type="Texture" id=281]
-[ext_resource path="res://res/texture/player/hand_right/staff_ruby.png" type="Texture" id=282]
-[ext_resource path="res://res/texture/player/hand_right/staff_scepter.png" type="Texture" id=283]
-[ext_resource path="res://res/texture/player/hand_right/staff_skull.png" type="Texture" id=284]
-[ext_resource path="res://res/texture/player/hand_right/stick.png" type="Texture" id=285]
-[ext_resource path="res://res/texture/player/hand_right/sword_2.png" type="Texture" id=286]
-[ext_resource path="res://res/texture/player/hand_right/sword_3.png" type="Texture" id=287]
-[ext_resource path="res://res/texture/player/hand_right/sword_black.png" type="Texture" id=288]
-[ext_resource path="res://res/texture/player/hand_right/sword_breaker.png" type="Texture" id=289]
-[ext_resource path="res://res/texture/player/hand_right/sword_jag.png" type="Texture" id=290]
-[ext_resource path="res://res/texture/player/hand_right/sword_seven.png" type="Texture" id=291]
-[ext_resource path="res://res/texture/player/hand_right/sword_thief.png" type="Texture" id=292]
-[ext_resource path="res://res/texture/player/hand_right/sword_tri.png" type="Texture" id=293]
-[ext_resource path="res://res/texture/player/hand_right/sword_twist.png" type="Texture" id=294]
-[ext_resource path="res://res/texture/player/hand_right/trident.png" type="Texture" id=295]
-[ext_resource path="res://res/texture/player/hand_right/trident_2.png" type="Texture" id=296]
-[ext_resource path="res://res/texture/player/hand_right/trident_3.png" type="Texture" id=297]
-[ext_resource path="res://res/texture/player/hand_right/trident_demon.png" type="Texture" id=298]
-[ext_resource path="res://res/texture/player/hand_right/trident_elec.png" type="Texture" id=299]
-[ext_resource path="res://res/texture/player/hand_right/trident_two.png" type="Texture" id=300]
-[ext_resource path="res://res/texture/player/hand_right/trident_two_2.png" type="Texture" id=301]
-[ext_resource path="res://res/texture/player/hand_right/triple_sword_2.png" type="Texture" id=302]
-[ext_resource path="res://res/texture/player/hand_right/triple_sword_new.png" type="Texture" id=303]
-[ext_resource path="res://res/texture/player/hand_right/triple_sword_old.png" type="Texture" id=304]
-[ext_resource path="res://res/texture/player/hand_right/trishula.png" type="Texture" id=305]
-[ext_resource path="res://res/texture/player/hand_right/war_axe_new.png" type="Texture" id=306]
-[ext_resource path="res://res/texture/player/hand_right/war_axe_old.png" type="Texture" id=307]
-[ext_resource path="res://res/texture/player/hand_right/whip_2.png" type="Texture" id=308]
-[ext_resource path="res://res/texture/player/hand_right/whip_new.png" type="Texture" id=309]
-[ext_resource path="res://res/texture/player/hand_right/whip_old.png" type="Texture" id=310]
-[ext_resource path="res://res/texture/player/base/human_male.png" type="Texture" id=311]
-[ext_resource path="res://res/texture/player/base/human_female.png" type="Texture" id=312]
+[ext_resource type="Texture2D" uid="uid://ckt0ytk8hatiw" path="res://res/texture/player/hand_right/artefact/flaming_death_new.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://wl884lmnxijv" path="res://res/texture/player/hand_right/artefact/arc_blade.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cr700dfx7jukb" path="res://res/texture/player/hand_right/artefact/asmodeus_new.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bs7v57mquwkwh" path="res://res/texture/player/hand_right/hand_axe_2.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dll8g2yxm3yxw" path="res://res/texture/player/hand_right/artefact/arga_new.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://068ueao7a6kb" path="res://res/texture/player/hand_right/artefact/punk.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://2plgrcd8g4dw" path="res://res/texture/player/hand_right/artefact/arga_old.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://dl6sy3anbce41" path="res://res/texture/player/hand_right/artefact/bloodbane_old.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://chy6mn4wl0r3q" path="res://res/texture/player/hand_right/artefact/axe_trog.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://dx3nya1qva7bo" path="res://res/texture/player/hand_right/artefact/axe_of_woe.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://daohn4m33tx6p" path="res://res/texture/player/hand_right/artefact/bloodbane_new.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://o3mvdopa4cvn" path="res://res/texture/player/hand_right/artefact/asmodeus_old.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://kslght2xawu5" path="res://res/texture/player/hand_right/artefact/blowgun_assassin.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://b4thu2o43qvk4" path="res://res/texture/player/hand_right/artefact/dire_lajatang.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://rqofx8ddlov" path="res://res/texture/player/hand_right/artefact/chilly_death_old.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://3j0mgw5yievv" path="res://res/texture/player/hand_right/artefact/cutlass.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://c1tdfnvsrgsiq" path="res://res/texture/player/hand_right/artefact/crystal_spear_old.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://d3kg8ssd7v0or" path="res://res/texture/player/hand_right/artefact/crystal_spear_new.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://dt1ae1gunpt4v" path="res://res/texture/player/hand_right/artefact/crossbow_fire.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://b6jqygy8dancb" path="res://res/texture/player/hand_right/artefact/botono.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://wr4xcmv5ilnb" path="res://res/texture/player/hand_right/artefact/chilly_death_new.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://643xfi18kjf8" path="res://res/texture/player/hand_right/artefact/jihad.png" id="22"]
+[ext_resource type="Script" path="res://res/texture_player.gd" id="23"]
+[ext_resource type="Texture2D" uid="uid://dvd6db364vjxo" path="res://res/texture/player/hand_right/crossbow_4.png" id="24"]
+[ext_resource type="Texture2D" uid="uid://cwlos8sb4h0yw" path="res://res/texture/player/hand_right/dagger_new.png" id="25"]
+[ext_resource type="Texture2D" uid="uid://b8uy4atxgskjr" path="res://res/texture/player/hand_right/dagger_old.png" id="26"]
+[ext_resource type="Texture2D" uid="uid://dt28n4rfls07i" path="res://res/texture/player/hand_right/dagger_slant_2.png" id="27"]
+[ext_resource type="Texture2D" uid="uid://2jcjq73aq5x2" path="res://res/texture/player/hand_right/dagger_slant_new.png" id="28"]
+[ext_resource type="Texture2D" uid="uid://cl6u44y3ehf0r" path="res://res/texture/player/hand_right/dagger_slant_old.png" id="29"]
+[ext_resource type="Texture2D" uid="uid://ddu4ivy4bdnqt" path="res://res/texture/player/hand_right/dart.png" id="30"]
+[ext_resource type="Texture2D" uid="uid://c3tw71s7jr4bb" path="res://res/texture/player/hand_right/double_sword_2.png" id="31"]
+[ext_resource type="Texture2D" uid="uid://mqthqeqyblgd" path="res://res/texture/player/hand_right/double_sword_3.png" id="32"]
+[ext_resource type="Texture2D" uid="uid://kfmcgvjwo8mq" path="res://res/texture/player/hand_right/double_sword_new.png" id="33"]
+[ext_resource type="Texture2D" uid="uid://db8qc4u7wqh42" path="res://res/texture/player/hand_right/double_sword_old.png" id="34"]
+[ext_resource type="Texture2D" uid="uid://46jlvwop5m1w" path="res://res/texture/player/hand_right/d_glaive.png" id="35"]
+[ext_resource type="Texture2D" uid="uid://bq8n2fy4bguyy" path="res://res/texture/player/hand_right/enchantress_dagger.png" id="36"]
+[ext_resource type="Texture2D" uid="uid://2go2jcthddqm" path="res://res/texture/player/hand_right/eveningstar_2.png" id="37"]
+[ext_resource type="Texture2D" uid="uid://tmqpbfpkoseu" path="res://res/texture/player/hand_right/eveningstar_new.png" id="38"]
+[ext_resource type="Texture2D" uid="uid://bbgb522twod87" path="res://res/texture/player/hand_right/eveningstar_old.png" id="39"]
+[ext_resource type="Texture2D" uid="uid://bjugsjye8bye" path="res://res/texture/player/hand_right/falchion_2.png" id="40"]
+[ext_resource type="Texture2D" uid="uid://djkusfudl2hh7" path="res://res/texture/player/hand_right/axe_executioner_new.png" id="41"]
+[ext_resource type="Texture2D" uid="uid://duu0qri6n2b6a" path="res://res/texture/player/hand_right/axe_executioner_old.png" id="42"]
+[ext_resource type="Texture2D" uid="uid://bsgfvbca85dav" path="res://res/texture/player/hand_right/axe_short.png" id="43"]
+[ext_resource type="Texture2D" uid="uid://lneowde1qomj" path="res://res/texture/player/hand_right/axe_small.png" id="44"]
+[ext_resource type="Texture2D" uid="uid://c7q6myx1nr7oj" path="res://res/texture/player/hand_right/battleaxe.png" id="45"]
+[ext_resource type="Texture2D" uid="uid://qbryptqmowyc" path="res://res/texture/player/hand_right/battleaxe_2.png" id="46"]
+[ext_resource type="Texture2D" uid="uid://bvygoavon0bhn" path="res://res/texture/player/hand_right/black_sword.png" id="47"]
+[ext_resource type="Texture2D" uid="uid://ce1add2u4k2lh" path="res://res/texture/player/hand_right/black_whip_new.png" id="48"]
+[ext_resource type="Texture2D" uid="uid://vj78sioelbg0" path="res://res/texture/player/hand_right/black_whip_old.png" id="49"]
+[ext_resource type="Texture2D" uid="uid://bjukg2qt7o3so" path="res://res/texture/player/hand_right/blessed_blade.png" id="50"]
+[ext_resource type="Texture2D" uid="uid://dmdqmigxeiyvi" path="res://res/texture/player/hand_right/blowgun.png" id="51"]
+[ext_resource type="Texture2D" uid="uid://dxuc1b8ulfmcr" path="res://res/texture/player/hand_right/boromir.png" id="52"]
+[ext_resource type="Texture2D" uid="uid://smywlsxs0awl" path="res://res/texture/player/hand_right/bow.png" id="53"]
+[ext_resource type="Texture2D" uid="uid://cmvl3jx3ebdch" path="res://res/texture/player/hand_right/bow_2.png" id="54"]
+[ext_resource type="Texture2D" uid="uid://enoqq85ruktt" path="res://res/texture/player/hand_right/bow_3.png" id="55"]
+[ext_resource type="Texture2D" uid="uid://coko185aitq1j" path="res://res/texture/player/hand_right/bow_blue.png" id="56"]
+[ext_resource type="Texture2D" uid="uid://bcueb0altooe7" path="res://res/texture/player/hand_right/broadsword.png" id="57"]
+[ext_resource type="Texture2D" uid="uid://71fly2xnhpct" path="res://res/texture/player/hand_right/broad_axe.png" id="58"]
+[ext_resource type="Texture2D" uid="uid://va4j6u6phgop" path="res://res/texture/player/hand_right/club.png" id="59"]
+[ext_resource type="Texture2D" uid="uid://csan82wpa4moq" path="res://res/texture/player/hand_right/club_2.png" id="60"]
+[ext_resource type="Texture2D" uid="uid://cgkj0fk3s6pug" path="res://res/texture/player/hand_right/club_3.png" id="61"]
+[ext_resource type="Texture2D" uid="uid://j3ju4otxpdgo" path="res://res/texture/player/hand_right/club_slant.png" id="62"]
+[ext_resource type="Texture2D" uid="uid://d32avqmw4o4we" path="res://res/texture/player/hand_right/crossbow.png" id="63"]
+[ext_resource type="Texture2D" uid="uid://ckqxatd56cse6" path="res://res/texture/player/hand_right/crossbow_2.png" id="64"]
+[ext_resource type="Texture2D" uid="uid://b11u6p71nva45" path="res://res/texture/player/hand_right/crossbow_3.png" id="65"]
+[ext_resource type="Texture2D" uid="uid://bokjn6xfbllqi" path="res://res/texture/player/hand_right/artefact/order.png" id="66"]
+[ext_resource type="Texture2D" uid="uid://bvow6k4udk8wi" path="res://res/texture/player/hand_right/artefact/plutonium_sword_new.png" id="67"]
+[ext_resource type="Texture2D" uid="uid://cn1guf0la754" path="res://res/texture/player/hand_right/artefact/plutonium_sword_old.png" id="68"]
+[ext_resource type="Texture2D" uid="uid://bg7m5rs83fj6n" path="res://res/texture/player/hand_right/artefact/serpent_scourge.png" id="69"]
+[ext_resource type="Texture2D" uid="uid://dvsryn4glfqfr" path="res://res/texture/player/hand_right/artefact/shillelagh.png" id="70"]
+[ext_resource type="Texture2D" uid="uid://bwjotnjveqy2d" path="res://res/texture/player/hand_right/artefact/singing_sword.png" id="71"]
+[ext_resource type="Texture2D" uid="uid://b5youynr3aoq5" path="res://res/texture/player/hand_right/artefact/sniper.png" id="72"]
+[ext_resource type="Texture2D" uid="uid://c5qmpsbexawbh" path="res://res/texture/player/hand_right/artefact/spriggans_knife_new.png" id="73"]
+[ext_resource type="Texture2D" uid="uid://cvngkovvcsm7q" path="res://res/texture/player/hand_right/artefact/spriggans_knife_old.png" id="74"]
+[ext_resource type="Texture2D" uid="uid://ci2m7qlsiurxg" path="res://res/texture/player/hand_right/artefact/sword_of_power_new.png" id="75"]
+[ext_resource type="Texture2D" uid="uid://pa4w4nrrdno7" path="res://res/texture/player/hand_right/artefact/sword_of_power_old.png" id="76"]
+[ext_resource type="Texture2D" uid="uid://dktjac74wbujl" path="res://res/texture/player/hand_right/artefact/trident_octopus_king.png" id="77"]
+[ext_resource type="Texture2D" uid="uid://cdq2o6m4ewarm" path="res://res/texture/player/hand_right/artefact/undeadhunter.png" id="78"]
+[ext_resource type="Texture2D" uid="uid://dh1uwqyjrv8ty" path="res://res/texture/player/hand_right/artefact/vampires_tooth.png" id="79"]
+[ext_resource type="Texture2D" uid="uid://dfdm6ewy4q44x" path="res://res/texture/player/hand_right/artefact/wucad_mu.png" id="80"]
+[ext_resource type="Texture2D" uid="uid://c0wxq1sbtcaek" path="res://res/texture/player/hand_right/artefact/wyrmbane.png" id="81"]
+[ext_resource type="Texture2D" uid="uid://c2qa1uslf4j7s" path="res://res/texture/player/hand_right/artefact/zonguldrok.png" id="82"]
+[ext_resource type="Texture2D" uid="uid://crmp86qkb0ncm" path="res://res/texture/player/hand_right/misc/fire_red.png" id="83"]
+[ext_resource type="Texture2D" uid="uid://bmlph54dyfmap" path="res://res/texture/player/hand_right/misc/fire_white.png" id="84"]
+[ext_resource type="Texture2D" uid="uid://can3ejn05mhy0" path="res://res/texture/player/hand_right/misc/fire_white_2.png" id="85"]
+[ext_resource type="Texture2D" uid="uid://wc7qqlkp5pnx" path="res://res/texture/player/hand_right/misc/head.png" id="86"]
+[ext_resource type="Texture2D" uid="uid://c5fshfw1dp47v" path="res://res/texture/player/hand_right/misc/horn.png" id="87"]
+[ext_resource type="Texture2D" uid="uid://dx0t7ckd7m7u7" path="res://res/texture/player/hand_right/misc/lantern.png" id="88"]
+[ext_resource type="Texture2D" uid="uid://dpgrq42xocwhh" path="res://res/texture/player/hand_right/misc/light_blue.png" id="89"]
+[ext_resource type="Texture2D" uid="uid://bvq407kbspwr4" path="res://res/texture/player/hand_right/misc/light_red.png" id="90"]
+[ext_resource type="Texture2D" uid="uid://cb32i1b8d1r4y" path="res://res/texture/player/hand_right/misc/light_yellow.png" id="91"]
+[ext_resource type="Texture2D" uid="uid://bu4q75asrykw6" path="res://res/texture/player/hand_right/misc/orb.png" id="92"]
+[ext_resource type="Texture2D" uid="uid://cjfwxuyw8kdyv" path="res://res/texture/player/hand_right/misc/skull.png" id="93"]
+[ext_resource type="Texture2D" uid="uid://cwwkue4etja1f" path="res://res/texture/player/hand_right/misc/spark.png" id="94"]
+[ext_resource type="Texture2D" uid="uid://dm72k3tuqgkpg" path="res://res/texture/player/hand_right/misc/stone.png" id="95"]
+[ext_resource type="Texture2D" uid="uid://vgwm1pay1nbu" path="res://res/texture/player/hand_right/axe.png" id="96"]
+[ext_resource type="Texture2D" uid="uid://bojjleddrjake" path="res://res/texture/player/hand_right/axe_blood.png" id="97"]
+[ext_resource type="Texture2D" uid="uid://b7h32qi01js0k" path="res://res/texture/player/hand_right/axe_double.png" id="98"]
+[ext_resource type="Texture2D" uid="uid://dhocfqu5n7ghc" path="res://res/texture/player/hand_right/axe_executioner_2.png" id="99"]
+[ext_resource type="Texture2D" uid="uid://bny04mikt04q5" path="res://res/texture/player/hand_right/aragorn.png" id="100"]
+[ext_resource type="Texture2D" uid="uid://cg0w2skp32vwl" path="res://res/texture/player/hand_right/arwen.png" id="101"]
+[ext_resource type="Texture2D" uid="uid://b8mouelor45w6" path="res://res/texture/player/hand_right/misc/bladehands_fe.png" id="102"]
+[ext_resource type="Texture2D" uid="uid://cxd27564tbud5" path="res://res/texture/player/hand_right/misc/bladehands_new.png" id="103"]
+[ext_resource type="Texture2D" uid="uid://cedj6nl4k28oq" path="res://res/texture/player/hand_right/misc/bladehands_old.png" id="104"]
+[ext_resource type="Texture2D" uid="uid://qx72romkf6fx" path="res://res/texture/player/hand_right/misc/bladehands_op.png" id="105"]
+[ext_resource type="Texture2D" uid="uid://dqycetng2pday" path="res://res/texture/player/hand_right/misc/bone_lantern.png" id="106"]
+[ext_resource type="Texture2D" uid="uid://iksgjorgmgb7" path="res://res/texture/player/hand_right/misc/bottle.png" id="107"]
+[ext_resource type="Texture2D" uid="uid://cx0wmx6wu0x7l" path="res://res/texture/player/hand_right/misc/box.png" id="108"]
+[ext_resource type="Texture2D" uid="uid://g2qij3vgenwu" path="res://res/texture/player/hand_right/misc/crystal.png" id="109"]
+[ext_resource type="Texture2D" uid="uid://bdae5v727yuo7" path="res://res/texture/player/hand_right/misc/deck.png" id="110"]
+[ext_resource type="Texture2D" uid="uid://e0b0qbay2f7d" path="res://res/texture/player/hand_right/misc/disc.png" id="111"]
+[ext_resource type="Texture2D" uid="uid://bad0apbt8gawv" path="res://res/texture/player/hand_right/misc/fan.png" id="112"]
+[ext_resource type="Texture2D" uid="uid://bnv0goepa6giv" path="res://res/texture/player/hand_right/misc/fire_blue.png" id="113"]
+[ext_resource type="Texture2D" uid="uid://j7p17trd88hd" path="res://res/texture/player/hand_right/misc/fire_cyan.png" id="114"]
+[ext_resource type="Texture2D" uid="uid://0uce6ny88fg1" path="res://res/texture/player/hand_right/misc/fire_dark.png" id="115"]
+[ext_resource type="Texture2D" uid="uid://dj3brstk410kg" path="res://res/texture/player/hand_right/misc/fire_green.png" id="116"]
+[ext_resource type="Texture2D" uid="uid://cpkloxjkon6xm" path="res://res/texture/player/hand_right/artefact/knife_of_accuracy.png" id="117"]
+[ext_resource type="Texture2D" uid="uid://gcikcnbsr2gx" path="res://res/texture/player/hand_right/artefact/krishna.png" id="118"]
+[ext_resource type="Texture2D" uid="uid://bvg1etm7r43j" path="res://res/texture/player/hand_right/artefact/leech.png" id="119"]
+[ext_resource type="Texture2D" uid="uid://co4jjj27sxet4" path="res://res/texture/player/hand_right/artefact/mace_of_brilliance.png" id="120"]
+[ext_resource type="Texture2D" uid="uid://bb6con2st37jc" path="res://res/texture/player/hand_right/artefact/mace_of_variability.png" id="121"]
+[ext_resource type="Texture2D" uid="uid://dow68l2eoe65l" path="res://res/texture/player/hand_right/artefact/majin.png" id="122"]
+[ext_resource type="Texture2D" uid="uid://bbjitnxx684cc" path="res://res/texture/player/hand_right/artefact/morg.png" id="123"]
+[ext_resource type="Texture2D" uid="uid://cu4klx5uuyvem" path="res://res/texture/player/hand_right/artefact/olgreb.png" id="124"]
+[ext_resource type="Texture2D" uid="uid://cw42ydfcvlhis" path="res://res/texture/player/hand_right/artefact/dispater_new.png" id="125"]
+[ext_resource type="Texture2D" uid="uid://br1wd6gk8rtr0" path="res://res/texture/player/hand_right/artefact/dispater_old.png" id="126"]
+[ext_resource type="Texture2D" uid="uid://c003pba1qdj4v" path="res://res/texture/player/hand_right/artefact/doom_knight_new.png" id="127"]
+[ext_resource type="Texture2D" uid="uid://clb58ctpwht5s" path="res://res/texture/player/hand_right/artefact/doom_knight_old.png" id="128"]
+[ext_resource type="Texture2D" uid="uid://cqs0jen78y4ar" path="res://res/texture/player/hand_right/artefact/elemental_staff.png" id="129"]
+[ext_resource type="Texture2D" uid="uid://way8stxnh28q" path="res://res/texture/player/hand_right/artefact/eos.png" id="130"]
+[ext_resource type="Texture2D" uid="uid://s71hm8fpnikv" path="res://res/texture/player/hand_right/artefact/finisher.png" id="131"]
+[ext_resource type="Texture2D" uid="uid://bnrnahd1cddwt" path="res://res/texture/player/hand_right/artefact/firestarter.png" id="132"]
+[ext_resource type="Texture2D" uid="uid://dgo53tblgosye" path="res://res/texture/player/hand_right/artefact/flaming_death_old.png" id="133"]
+[ext_resource type="Texture2D" uid="uid://cfof10nqdjvvb" path="res://res/texture/player/hand_right/artefact/glaive_of_prune_new.png" id="134"]
+[ext_resource type="Texture2D" uid="uid://4k4iekmpajoh" path="res://res/texture/player/hand_right/artefact/glaive_of_prune_old.png" id="135"]
+[ext_resource type="Texture2D" uid="uid://c6ob74quh4tn" path="res://res/texture/player/hand_right/artefact/glaive_of_the_guard_new.png" id="136"]
+[ext_resource type="Texture2D" uid="uid://dswpanbv74wr7" path="res://res/texture/player/hand_right/artefact/glaive_of_the_guard_old.png" id="137"]
+[ext_resource type="Texture2D" uid="uid://dhiodsjhb3bdb" path="res://res/texture/player/hand_right/artefact/gyre.png" id="138"]
+[ext_resource type="Texture2D" uid="uid://kyn6f7t3i14d" path="res://res/texture/player/hand_right/great_staff.png" id="139"]
+[ext_resource type="Texture2D" uid="uid://clf6rpi1jhjjn" path="res://res/texture/player/hand_right/great_sword.png" id="140"]
+[ext_resource type="Texture2D" uid="uid://c47y4deua03ur" path="res://res/texture/player/hand_right/great_sword_slant_2.png" id="141"]
+[ext_resource type="Texture2D" uid="uid://7wcfe6mlk5ut" path="res://res/texture/player/hand_right/great_sword_slant_new.png" id="142"]
+[ext_resource type="Texture2D" uid="uid://cww1s8a44gm1e" path="res://res/texture/player/hand_right/great_sword_slant_old.png" id="143"]
+[ext_resource type="Texture2D" uid="uid://die1l1of5wxi2" path="res://res/texture/player/hand_right/halberd_new.png" id="144"]
+[ext_resource type="Texture2D" uid="uid://1g3xhw4h5yrd" path="res://res/texture/player/hand_right/halberd_old.png" id="145"]
+[ext_resource type="Texture2D" uid="uid://dm4m36c2ej7f6" path="res://res/texture/player/hand_right/hammer_2_new.png" id="146"]
+[ext_resource type="Texture2D" uid="uid://d0wfq7baojj" path="res://res/texture/player/hand_right/hammer_2_old.png" id="147"]
+[ext_resource type="Texture2D" uid="uid://8onp6mgggp8n" path="res://res/texture/player/hand_right/hammer_3.png" id="148"]
+[ext_resource type="Texture2D" uid="uid://b4rpon1qs0rdw" path="res://res/texture/player/hand_right/hammer_new.png" id="149"]
+[ext_resource type="Texture2D" uid="uid://8156mfpil52e" path="res://res/texture/player/hand_right/hammer_old.png" id="150"]
+[ext_resource type="Texture2D" uid="uid://cbs281irkp1a7" path="res://res/texture/player/hand_right/hand_axe_new.png" id="151"]
+[ext_resource type="Texture2D" uid="uid://cdyon152fusdm" path="res://res/texture/player/hand_right/hand_axe_old.png" id="152"]
+[ext_resource type="Texture2D" uid="uid://c7ds8wbqt61c6" path="res://res/texture/player/hand_right/hand_crossbow.png" id="153"]
+[ext_resource type="Texture2D" uid="uid://bgjmdphn8vcg8" path="res://res/texture/player/hand_right/heavy_sword.png" id="154"]
+[ext_resource type="Texture2D" uid="uid://cevni7h5oc0kw" path="res://res/texture/player/hand_right/holy_scourge_1.png" id="155"]
+[ext_resource type="Texture2D" uid="uid://c388l1gbdgo4g" path="res://res/texture/player/hand_right/holy_scourge_2.png" id="156"]
+[ext_resource type="Texture2D" uid="uid://bdaoyfef04jie" path="res://res/texture/player/hand_right/hook.png" id="157"]
+[ext_resource type="Texture2D" uid="uid://byusesa6onku8" path="res://res/texture/player/hand_right/katana.png" id="158"]
+[ext_resource type="Texture2D" uid="uid://6bvgunu024wr" path="res://res/texture/player/hand_right/katana_slant.png" id="159"]
+[ext_resource type="Texture2D" uid="uid://b4eisfoia2ne3" path="res://res/texture/player/hand_right/knife.png" id="160"]
+[ext_resource type="Texture2D" uid="uid://dj3xtndbm6o5h" path="res://res/texture/player/hand_right/lance.png" id="161"]
+[ext_resource type="Texture2D" uid="uid://bujhjrrjkipxo" path="res://res/texture/player/hand_right/lance_2.png" id="162"]
+[ext_resource type="Texture2D" uid="uid://dfnsubsovdgb4" path="res://res/texture/player/hand_right/large_mace.png" id="163"]
+[ext_resource type="Texture2D" uid="uid://buhimplfvbg8j" path="res://res/texture/player/hand_right/legolas.png" id="164"]
+[ext_resource type="Texture2D" uid="uid://bclga88aaol0j" path="res://res/texture/player/hand_right/long_sword.png" id="165"]
+[ext_resource type="Texture2D" uid="uid://vh35wnhx1njd" path="res://res/texture/player/hand_right/long_sword_slant_2.png" id="166"]
+[ext_resource type="Texture2D" uid="uid://dlged4k8mqfj1" path="res://res/texture/player/hand_right/long_sword_slant_new.png" id="167"]
+[ext_resource type="Texture2D" uid="uid://b6txw58crerbq" path="res://res/texture/player/hand_right/long_sword_slant_old.png" id="168"]
+[ext_resource type="Texture2D" uid="uid://baachyq2o6xam" path="res://res/texture/player/hand_right/mace_2_new.png" id="169"]
+[ext_resource type="Texture2D" uid="uid://bguysd1b626ay" path="res://res/texture/player/hand_right/mace_2_old.png" id="170"]
+[ext_resource type="Texture2D" uid="uid://s2x0vkfnlnsg" path="res://res/texture/player/hand_right/mace_3.png" id="171"]
+[ext_resource type="Texture2D" uid="uid://c8b0l2k6ec77f" path="res://res/texture/player/hand_right/mace_new.png" id="172"]
+[ext_resource type="Texture2D" uid="uid://b05cgvq7dci1r" path="res://res/texture/player/hand_right/mace_old.png" id="173"]
+[ext_resource type="Texture2D" uid="uid://dqtf2n4ji7f14" path="res://res/texture/player/hand_right/falchion_new.png" id="174"]
+[ext_resource type="Texture2D" uid="uid://ce7wcmliew4oc" path="res://res/texture/player/hand_right/falchion_old.png" id="175"]
+[ext_resource type="Texture2D" uid="uid://1180tlhgmn5c" path="res://res/texture/player/hand_right/flail_balls.png" id="176"]
+[ext_resource type="Texture2D" uid="uid://0ymxf1wle54j" path="res://res/texture/player/hand_right/flail_ball_2_new.png" id="177"]
+[ext_resource type="Texture2D" uid="uid://bdwwtcmlmxx7i" path="res://res/texture/player/hand_right/flail_ball_2_old.png" id="178"]
+[ext_resource type="Texture2D" uid="uid://1j5l3gss07w8" path="res://res/texture/player/hand_right/flail_ball_3.png" id="179"]
+[ext_resource type="Texture2D" uid="uid://bfwrj465dtr1t" path="res://res/texture/player/hand_right/flail_ball_4.png" id="180"]
+[ext_resource type="Texture2D" uid="uid://ch3su8iw4xl7p" path="res://res/texture/player/hand_right/flail_ball_new.png" id="181"]
+[ext_resource type="Texture2D" uid="uid://bbyr2jhmbfiic" path="res://res/texture/player/hand_right/flail_ball_old.png" id="182"]
+[ext_resource type="Texture2D" uid="uid://bnvhscjmxdj5e" path="res://res/texture/player/hand_right/flail_great.png" id="183"]
+[ext_resource type="Texture2D" uid="uid://cpy70g4n42koc" path="res://res/texture/player/hand_right/flail_great_2.png" id="184"]
+[ext_resource type="Texture2D" uid="uid://e2slkwsmshg3" path="res://res/texture/player/hand_right/flail_spike.png" id="185"]
+[ext_resource type="Texture2D" uid="uid://c8bomovkmwq4l" path="res://res/texture/player/hand_right/flail_spike_2.png" id="186"]
+[ext_resource type="Texture2D" uid="uid://dxki0hoa2pejy" path="res://res/texture/player/hand_right/flail_stick.png" id="187"]
+[ext_resource type="Texture2D" uid="uid://bfl8mqsqucdmv" path="res://res/texture/player/hand_right/flail_stick_slant.png" id="188"]
+[ext_resource type="Texture2D" uid="uid://mosaclebahvt" path="res://res/texture/player/hand_right/fork_2.png" id="189"]
+[ext_resource type="Texture2D" uid="uid://rhwcjup8yqxy" path="res://res/texture/player/hand_right/frodo.png" id="190"]
+[ext_resource type="Texture2D" uid="uid://bwr3lxjkpgc16" path="res://res/texture/player/hand_right/gandalf.png" id="191"]
+[ext_resource type="Texture2D" uid="uid://kynlvgtejxwg" path="res://res/texture/player/hand_right/giant_club.png" id="192"]
+[ext_resource type="Texture2D" uid="uid://qw13d80armi" path="res://res/texture/player/hand_right/giant_club_plain.png" id="193"]
+[ext_resource type="Texture2D" uid="uid://corub3qfs3qy8" path="res://res/texture/player/hand_right/giant_club_slant.png" id="194"]
+[ext_resource type="Texture2D" uid="uid://qg1rt0l2muo7" path="res://res/texture/player/hand_right/giant_club_spike.png" id="195"]
+[ext_resource type="Texture2D" uid="uid://bmv5eyf6pm86p" path="res://res/texture/player/hand_right/giant_club_spike_slant.png" id="196"]
+[ext_resource type="Texture2D" uid="uid://b7rk84ib7qcbv" path="res://res/texture/player/hand_right/gimli.png" id="197"]
+[ext_resource type="Texture2D" uid="uid://caspq8y2vt2ov" path="res://res/texture/player/hand_right/glaive_2.png" id="198"]
+[ext_resource type="Texture2D" uid="uid://dnapo410v0kd1" path="res://res/texture/player/hand_right/glaive_3.png" id="199"]
+[ext_resource type="Texture2D" uid="uid://bl53vslht50bd" path="res://res/texture/player/hand_right/glaive_new.png" id="200"]
+[ext_resource type="Texture2D" uid="uid://bi0y1pcmeybid" path="res://res/texture/player/hand_right/glaive_old.png" id="201"]
+[ext_resource type="Texture2D" uid="uid://d0s4sra5pd7ek" path="res://res/texture/player/hand_right/glaive_three.png" id="202"]
+[ext_resource type="Texture2D" uid="uid://beaiyheih8apy" path="res://res/texture/player/hand_right/glaive_three_2.png" id="203"]
+[ext_resource type="Texture2D" uid="uid://b23grd4vbf4tc" path="res://res/texture/player/hand_right/greatsling.png" id="204"]
+[ext_resource type="Texture2D" uid="uid://di2ty1w3mbum0" path="res://res/texture/player/hand_right/great_axe.png" id="205"]
+[ext_resource type="Texture2D" uid="uid://bvs2r1lvq3dsr" path="res://res/texture/player/hand_right/great_bow.png" id="206"]
+[ext_resource type="Texture2D" uid="uid://ve6issbo3mst" path="res://res/texture/player/hand_right/great_mace.png" id="207"]
+[ext_resource type="Texture2D" uid="uid://dnl6urq0qcwyk" path="res://res/texture/player/hand_right/great_mace_2.png" id="208"]
+[ext_resource type="Texture2D" uid="uid://tq2quxvn60qh" path="res://res/texture/player/hand_right/mace_ruby_new.png" id="209"]
+[ext_resource type="Texture2D" uid="uid://q1rj5gypl2cx" path="res://res/texture/player/hand_right/mace_ruby_old.png" id="210"]
+[ext_resource type="Texture2D" uid="uid://dduarehmweelq" path="res://res/texture/player/hand_right/morningstar_2_new.png" id="211"]
+[ext_resource type="Texture2D" uid="uid://cmbh02gp1fbyn" path="res://res/texture/player/hand_right/morningstar_2_old.png" id="212"]
+[ext_resource type="Texture2D" uid="uid://k7a10cri70h6" path="res://res/texture/player/hand_right/morningstar_new.png" id="213"]
+[ext_resource type="Texture2D" uid="uid://do2g22kc1hb7o" path="res://res/texture/player/hand_right/morningstar_old.png" id="214"]
+[ext_resource type="Texture2D" uid="uid://d3n5r2mob82ah" path="res://res/texture/player/hand_right/nunchaku.png" id="215"]
+[ext_resource type="Texture2D" uid="uid://bcw5w1yejtu31" path="res://res/texture/player/hand_right/pick_axe.png" id="216"]
+[ext_resource type="Texture2D" uid="uid://btowodvi6ttul" path="res://res/texture/player/hand_right/pike.png" id="217"]
+[ext_resource type="Texture2D" uid="uid://j4jtxapxqryq" path="res://res/texture/player/hand_right/pole_forked.png" id="218"]
+[ext_resource type="Texture2D" uid="uid://pydeptu2gvg4" path="res://res/texture/player/hand_right/quarterstaff.png" id="219"]
+[ext_resource type="Texture2D" uid="uid://dj1yodrcmkduy" path="res://res/texture/player/hand_right/quarterstaff_1.png" id="220"]
+[ext_resource type="Texture2D" uid="uid://dlhf8ayw5ey8j" path="res://res/texture/player/hand_right/quarterstaff_2_new.png" id="221"]
+[ext_resource type="Texture2D" uid="uid://cci2pr8f6hbwy" path="res://res/texture/player/hand_right/quarterstaff_2_old.png" id="222"]
+[ext_resource type="Texture2D" uid="uid://b1ot51tq02mr7" path="res://res/texture/player/hand_right/quarterstaff_3.png" id="223"]
+[ext_resource type="Texture2D" uid="uid://b0xsvra0ai628" path="res://res/texture/player/hand_right/quarterstaff_4.png" id="224"]
+[ext_resource type="Texture2D" uid="uid://b2o6nsabgqbxw" path="res://res/texture/player/hand_right/quarterstaff_jester.png" id="225"]
+[ext_resource type="Texture2D" uid="uid://xbcbjhohy8yy" path="res://res/texture/player/hand_right/rapier.png" id="226"]
+[ext_resource type="Texture2D" uid="uid://cpkcwb7wjd5vo" path="res://res/texture/player/hand_right/rapier_2.png" id="227"]
+[ext_resource type="Texture2D" uid="uid://4wbf0qb0slh8" path="res://res/texture/player/hand_right/rod_aries_new.png" id="228"]
+[ext_resource type="Texture2D" uid="uid://bsuuqvfm4lutm" path="res://res/texture/player/hand_right/rod_aries_old.png" id="229"]
+[ext_resource type="Texture2D" uid="uid://ckwqye1ifwgdj" path="res://res/texture/player/hand_right/rod_blue_new.png" id="230"]
+[ext_resource type="Texture2D" uid="uid://bykfslfyp052a" path="res://res/texture/player/hand_right/rod_blue_old.png" id="231"]
+[ext_resource type="Texture2D" uid="uid://deg0qsjetqyws" path="res://res/texture/player/hand_right/rod_brown_new.png" id="232"]
+[ext_resource type="Texture2D" uid="uid://cugsyky7j4ev4" path="res://res/texture/player/hand_right/rod_brown_old.png" id="233"]
+[ext_resource type="Texture2D" uid="uid://dhudg1n7ers4t" path="res://res/texture/player/hand_right/rod_emerald_new.png" id="234"]
+[ext_resource type="Texture2D" uid="uid://dj7qufm5onocq" path="res://res/texture/player/hand_right/rod_emerald_old.png" id="235"]
+[ext_resource type="Texture2D" uid="uid://uueksqnki8ml" path="res://res/texture/player/hand_right/rod_forked_new.png" id="236"]
+[ext_resource type="Texture2D" uid="uid://d4htfuifpv001" path="res://res/texture/player/hand_right/rod_forked_old.png" id="237"]
+[ext_resource type="Texture2D" uid="uid://bwl84om3q86g6" path="res://res/texture/player/hand_right/rod_hammer_new.png" id="238"]
+[ext_resource type="Texture2D" uid="uid://dyvgv5v82kxlm" path="res://res/texture/player/hand_right/rod_hammer_old.png" id="239"]
+[ext_resource type="Texture2D" uid="uid://dkwoyvxgbcgeu" path="res://res/texture/player/hand_right/rod_magenta_new.png" id="240"]
+[ext_resource type="Texture2D" uid="uid://nou48kd32bla" path="res://res/texture/player/hand_right/rod_magenta_old.png" id="241"]
+[ext_resource type="Texture2D" uid="uid://byf3jo035udac" path="res://res/texture/player/hand_right/rod_moon_new.png" id="242"]
+[ext_resource type="Texture2D" uid="uid://d06pdki2utbmr" path="res://res/texture/player/hand_right/rod_moon_old.png" id="243"]
+[ext_resource type="Texture2D" uid="uid://bxa8hs13sc6kb" path="res://res/texture/player/hand_right/rod_ruby_new.png" id="244"]
+[ext_resource type="Texture2D" uid="uid://dunlrlw74erlb" path="res://res/texture/player/hand_right/rod_ruby_old.png" id="245"]
+[ext_resource type="Texture2D" uid="uid://bk83mn1cqgitc" path="res://res/texture/player/hand_right/rod_thick_new.png" id="246"]
+[ext_resource type="Texture2D" uid="uid://dr7b6dhgg1eq0" path="res://res/texture/player/hand_right/rod_thick_old.png" id="247"]
+[ext_resource type="Texture2D" uid="uid://dupmeaogcm53" path="res://res/texture/player/hand_right/sabre.png" id="248"]
+[ext_resource type="Texture2D" uid="uid://hsqpqayik806" path="res://res/texture/player/hand_right/saruman.png" id="249"]
+[ext_resource type="Texture2D" uid="uid://c0mol61qtbafg" path="res://res/texture/player/hand_right/scepter.png" id="250"]
+[ext_resource type="Texture2D" uid="uid://c605gj8igaslv" path="res://res/texture/player/hand_right/scimitar_new.png" id="251"]
+[ext_resource type="Texture2D" uid="uid://54d7hrhmn0yg" path="res://res/texture/player/hand_right/scimitar_old.png" id="252"]
+[ext_resource type="Texture2D" uid="uid://d4lx307g4jo1l" path="res://res/texture/player/hand_right/scythe_2.png" id="253"]
+[ext_resource type="Texture2D" uid="uid://bfqkhvovxbrq2" path="res://res/texture/player/hand_right/scythe_new.png" id="254"]
+[ext_resource type="Texture2D" uid="uid://bfs4a345qebw2" path="res://res/texture/player/hand_right/scythe_old.png" id="255"]
+[ext_resource type="Texture2D" uid="uid://bjl6an701pgh0" path="res://res/texture/player/hand_right/scythe_slant.png" id="256"]
+[ext_resource type="Texture2D" uid="uid://7ic4p5yn6y05" path="res://res/texture/player/hand_right/short_sword.png" id="257"]
+[ext_resource type="Texture2D" uid="uid://scqm2r81dt1n" path="res://res/texture/player/hand_right/short_sword_2.png" id="258"]
+[ext_resource type="Texture2D" uid="uid://cdmdah0octrrp" path="res://res/texture/player/hand_right/short_sword_slant_2.png" id="259"]
+[ext_resource type="Texture2D" uid="uid://dnb4vqs3ytd3b" path="res://res/texture/player/hand_right/short_sword_slant_3.png" id="260"]
+[ext_resource type="Texture2D" uid="uid://dfoyynsh2cwmv" path="res://res/texture/player/hand_right/short_sword_slant_new.png" id="261"]
+[ext_resource type="Texture2D" uid="uid://17f0kfsy4ww6" path="res://res/texture/player/hand_right/short_sword_slant_old.png" id="262"]
+[ext_resource type="Texture2D" uid="uid://cihl7tse0c7wt" path="res://res/texture/player/hand_right/sickle.png" id="263"]
+[ext_resource type="Texture2D" uid="uid://draovfcc3bg1y" path="res://res/texture/player/hand_right/sling.png" id="264"]
+[ext_resource type="Texture2D" uid="uid://dsugfyy3fejbw" path="res://res/texture/player/hand_right/spear.png" id="265"]
+[ext_resource type="Texture2D" uid="uid://btbb4bieibn53" path="res://res/texture/player/hand_right/spear_1.png" id="266"]
+[ext_resource type="Texture2D" uid="uid://ct8ys4wjel58d" path="res://res/texture/player/hand_right/spear_2_new.png" id="267"]
+[ext_resource type="Texture2D" uid="uid://c221mtlodtvec" path="res://res/texture/player/hand_right/spear_2_old.png" id="268"]
+[ext_resource type="Texture2D" uid="uid://dc6e028ln1imm" path="res://res/texture/player/hand_right/spear_3.png" id="269"]
+[ext_resource type="Texture2D" uid="uid://4qo4jxtemwfq" path="res://res/texture/player/hand_right/spear_4.png" id="270"]
+[ext_resource type="Texture2D" uid="uid://bqcnottvwkmsp" path="res://res/texture/player/hand_right/spear_5.png" id="271"]
+[ext_resource type="Texture2D" uid="uid://bhqdx671sjwqs" path="res://res/texture/player/hand_right/staff_evil.png" id="272"]
+[ext_resource type="Texture2D" uid="uid://c8p3i5j1h1csf" path="res://res/texture/player/hand_right/staff_fancy.png" id="273"]
+[ext_resource type="Texture2D" uid="uid://5dyumaoyhqer" path="res://res/texture/player/hand_right/staff_fork.png" id="274"]
+[ext_resource type="Texture2D" uid="uid://bbelkutxp2ufe" path="res://res/texture/player/hand_right/staff_large.png" id="275"]
+[ext_resource type="Texture2D" uid="uid://d38iyvsxk2dk4" path="res://res/texture/player/hand_right/staff_mage.png" id="276"]
+[ext_resource type="Texture2D" uid="uid://d2oromcxoqitd" path="res://res/texture/player/hand_right/staff_mage_2.png" id="277"]
+[ext_resource type="Texture2D" uid="uid://ceulk1s0eft3c" path="res://res/texture/player/hand_right/staff_mummy.png" id="278"]
+[ext_resource type="Texture2D" uid="uid://m78eaid1jcdw" path="res://res/texture/player/hand_right/staff_organic.png" id="279"]
+[ext_resource type="Texture2D" uid="uid://dq1fv5acpes4r" path="res://res/texture/player/hand_right/staff_plain.png" id="280"]
+[ext_resource type="Texture2D" uid="uid://dtp042d3w8bba" path="res://res/texture/player/hand_right/staff_ring_blue.png" id="281"]
+[ext_resource type="Texture2D" uid="uid://b7xmg2puo4sqm" path="res://res/texture/player/hand_right/staff_ruby.png" id="282"]
+[ext_resource type="Texture2D" uid="uid://v4ndincjxo4g" path="res://res/texture/player/hand_right/staff_scepter.png" id="283"]
+[ext_resource type="Texture2D" uid="uid://k2gxdjfekytm" path="res://res/texture/player/hand_right/staff_skull.png" id="284"]
+[ext_resource type="Texture2D" uid="uid://buddt6h5cr4cg" path="res://res/texture/player/hand_right/stick.png" id="285"]
+[ext_resource type="Texture2D" uid="uid://dq7u8e31bi7xk" path="res://res/texture/player/hand_right/sword_2.png" id="286"]
+[ext_resource type="Texture2D" uid="uid://bdkgokct75i5n" path="res://res/texture/player/hand_right/sword_3.png" id="287"]
+[ext_resource type="Texture2D" uid="uid://kw4nuwq2tiuc" path="res://res/texture/player/hand_right/sword_black.png" id="288"]
+[ext_resource type="Texture2D" uid="uid://ct5a4snkwd8s7" path="res://res/texture/player/hand_right/sword_breaker.png" id="289"]
+[ext_resource type="Texture2D" uid="uid://d2jri4nsqeolv" path="res://res/texture/player/hand_right/sword_jag.png" id="290"]
+[ext_resource type="Texture2D" uid="uid://c858suvemd3jk" path="res://res/texture/player/hand_right/sword_seven.png" id="291"]
+[ext_resource type="Texture2D" uid="uid://dmdqbgsck1hec" path="res://res/texture/player/hand_right/sword_thief.png" id="292"]
+[ext_resource type="Texture2D" uid="uid://cbj6gen3lmrqd" path="res://res/texture/player/hand_right/sword_tri.png" id="293"]
+[ext_resource type="Texture2D" uid="uid://ta4jkxu7qmiy" path="res://res/texture/player/hand_right/sword_twist.png" id="294"]
+[ext_resource type="Texture2D" uid="uid://c4x4b6s13mn3j" path="res://res/texture/player/hand_right/trident.png" id="295"]
+[ext_resource type="Texture2D" uid="uid://bnybwuabmxmk1" path="res://res/texture/player/hand_right/trident_2.png" id="296"]
+[ext_resource type="Texture2D" uid="uid://b5816sprodqu8" path="res://res/texture/player/hand_right/trident_3.png" id="297"]
+[ext_resource type="Texture2D" uid="uid://bt8kyk8uokg16" path="res://res/texture/player/hand_right/trident_demon.png" id="298"]
+[ext_resource type="Texture2D" uid="uid://diehm56f7gfej" path="res://res/texture/player/hand_right/trident_elec.png" id="299"]
+[ext_resource type="Texture2D" uid="uid://dl7cw83bxlq8m" path="res://res/texture/player/hand_right/trident_two.png" id="300"]
+[ext_resource type="Texture2D" uid="uid://cmaw5dmqjtnww" path="res://res/texture/player/hand_right/trident_two_2.png" id="301"]
+[ext_resource type="Texture2D" uid="uid://bl628yg3wcdk6" path="res://res/texture/player/hand_right/triple_sword_2.png" id="302"]
+[ext_resource type="Texture2D" uid="uid://chxy38bnpfjrj" path="res://res/texture/player/hand_right/triple_sword_new.png" id="303"]
+[ext_resource type="Texture2D" uid="uid://b6saf67dkoqgv" path="res://res/texture/player/hand_right/triple_sword_old.png" id="304"]
+[ext_resource type="Texture2D" uid="uid://gqjv0quduxcx" path="res://res/texture/player/hand_right/trishula.png" id="305"]
+[ext_resource type="Texture2D" uid="uid://5166jbedn6ay" path="res://res/texture/player/hand_right/war_axe_new.png" id="306"]
+[ext_resource type="Texture2D" uid="uid://de5hokdls3cgi" path="res://res/texture/player/hand_right/war_axe_old.png" id="307"]
+[ext_resource type="Texture2D" uid="uid://6nmrsxgw6w2v" path="res://res/texture/player/hand_right/whip_2.png" id="308"]
+[ext_resource type="Texture2D" uid="uid://custusbtw8rwa" path="res://res/texture/player/hand_right/whip_new.png" id="309"]
+[ext_resource type="Texture2D" uid="uid://c4wseb4jt0kox" path="res://res/texture/player/hand_right/whip_old.png" id="310"]
+[ext_resource type="Texture2D" uid="uid://c7lhmat0evwrp" path="res://res/texture/player/base/human_male.png" id="311"]
+[ext_resource type="Texture2D" uid="uid://b8p7gmwhubpmk" path="res://res/texture/player/base/human_female.png" id="312"]
 
 [node name="texture_player" type="Node2D"]
-script = ExtResource( 23 )
+script = ExtResource("23")
 
 [node name="base" type="Node2D" parent="."]
 
-[node name="human_female" type="Sprite" parent="base"]
-texture = ExtResource( 312 )
+[node name="human_female" type="Sprite2D" parent="base"]
+texture = ExtResource("312")
 centered = false
 
-[node name="human_male" type="Sprite" parent="base"]
-position = Vector2( 64, 0 )
-texture = ExtResource( 311 )
+[node name="human_male" type="Sprite2D" parent="base"]
+position = Vector2(64, 0)
+texture = ExtResource("311")
 centered = false
 
 [node name="hand_right" type="Node2D" parent="."]
 
 [node name="artefact" type="Node2D" parent="hand_right"]
 
-[node name="arc_blade" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 0, 64 )
-texture = ExtResource( 2 )
+[node name="arc_blade" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(0, 64)
+texture = ExtResource("2")
 centered = false
 
-[node name="arga_new" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 64, 64 )
-texture = ExtResource( 5 )
+[node name="arga_new" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(64, 64)
+texture = ExtResource("5")
 centered = false
 
-[node name="arga_old" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 128, 64 )
-texture = ExtResource( 7 )
+[node name="arga_old" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(128, 64)
+texture = ExtResource("7")
 centered = false
 
-[node name="asmodeus_new" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 192, 64 )
-texture = ExtResource( 3 )
+[node name="asmodeus_new" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(192, 64)
+texture = ExtResource("3")
 centered = false
 
-[node name="asmodeus_old" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 256, 64 )
-texture = ExtResource( 12 )
+[node name="asmodeus_old" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(256, 64)
+texture = ExtResource("12")
 centered = false
 
-[node name="axe_of_woe" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 320, 64 )
-texture = ExtResource( 10 )
+[node name="axe_of_woe" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(320, 64)
+texture = ExtResource("10")
 centered = false
 
-[node name="axe_trog" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 384, 64 )
-texture = ExtResource( 9 )
+[node name="axe_trog" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(384, 64)
+texture = ExtResource("9")
 centered = false
 
-[node name="bloodbane_new" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 448, 64 )
-texture = ExtResource( 11 )
+[node name="bloodbane_new" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(448, 64)
+texture = ExtResource("11")
 centered = false
 
-[node name="bloodbane_old" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 512, 64 )
-texture = ExtResource( 8 )
+[node name="bloodbane_old" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(512, 64)
+texture = ExtResource("8")
 centered = false
 
-[node name="blowgun_assassin" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 576, 64 )
-texture = ExtResource( 13 )
+[node name="blowgun_assassin" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(576, 64)
+texture = ExtResource("13")
 centered = false
 
-[node name="botono" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 640, 64 )
-texture = ExtResource( 20 )
+[node name="botono" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(640, 64)
+texture = ExtResource("20")
 centered = false
 
-[node name="chilly_death_new" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 704, 64 )
-texture = ExtResource( 21 )
+[node name="chilly_death_new" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(704, 64)
+texture = ExtResource("21")
 centered = false
 
-[node name="chilly_death_old" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 768, 64 )
-texture = ExtResource( 15 )
+[node name="chilly_death_old" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(768, 64)
+texture = ExtResource("15")
 centered = false
 
-[node name="crossbow_fire" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 832, 64 )
-texture = ExtResource( 19 )
+[node name="crossbow_fire" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(832, 64)
+texture = ExtResource("19")
 centered = false
 
-[node name="crystal_spear_new" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 896, 64 )
-texture = ExtResource( 18 )
+[node name="crystal_spear_new" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(896, 64)
+texture = ExtResource("18")
 centered = false
 
-[node name="crystal_spear_old" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 960, 64 )
-texture = ExtResource( 17 )
+[node name="crystal_spear_old" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(960, 64)
+texture = ExtResource("17")
 centered = false
 
-[node name="cutlass" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( 1024, 64 )
-texture = ExtResource( 16 )
+[node name="cutlass" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(1024, 64)
+texture = ExtResource("16")
 centered = false
 
-[node name="dire_lajatang" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 14 )
+[node name="dire_lajatang" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("14")
 centered = false
 
-[node name="dispater_new" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 125 )
+[node name="dispater_new" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("125")
 centered = false
 
-[node name="dispater_old" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 126 )
+[node name="dispater_old" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("126")
 centered = false
 
-[node name="doom_knight_new" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 127 )
+[node name="doom_knight_new" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("127")
 centered = false
 
-[node name="doom_knight_old" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 128 )
+[node name="doom_knight_old" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("128")
 centered = false
 
-[node name="elemental_staff" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 129 )
+[node name="elemental_staff" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("129")
 centered = false
 
-[node name="eos" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 130 )
+[node name="eos" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("130")
 centered = false
 
-[node name="finisher" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 131 )
+[node name="finisher" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("131")
 centered = false
 
-[node name="firestarter" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 132 )
+[node name="firestarter" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("132")
 centered = false
 
-[node name="flaming_death_new" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 1 )
+[node name="flaming_death_new" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("1")
 centered = false
 
-[node name="flaming_death_old" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 133 )
+[node name="flaming_death_old" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("133")
 centered = false
 
-[node name="glaive_of_prune_new" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 134 )
+[node name="glaive_of_prune_new" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("134")
 centered = false
 
-[node name="glaive_of_prune_old" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 135 )
+[node name="glaive_of_prune_old" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("135")
 centered = false
 
-[node name="glaive_of_the_guard_new" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 136 )
+[node name="glaive_of_the_guard_new" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("136")
 centered = false
 
-[node name="glaive_of_the_guard_old" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 137 )
+[node name="glaive_of_the_guard_old" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("137")
 centered = false
 
-[node name="gyre" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 138 )
+[node name="gyre" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("138")
 centered = false
 
-[node name="jihad" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 22 )
+[node name="jihad" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("22")
 centered = false
 
-[node name="knife_of_accuracy" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 117 )
+[node name="knife_of_accuracy" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("117")
 centered = false
 
-[node name="krishna" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 118 )
+[node name="krishna" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("118")
 centered = false
 
-[node name="leech" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 119 )
+[node name="leech" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("119")
 centered = false
 
-[node name="mace_of_brilliance" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 120 )
+[node name="mace_of_brilliance" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("120")
 centered = false
 
-[node name="mace_of_variability" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 121 )
+[node name="mace_of_variability" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("121")
 centered = false
 
-[node name="majin" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 122 )
+[node name="majin" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("122")
 centered = false
 
-[node name="morg" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 123 )
+[node name="morg" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("123")
 centered = false
 
-[node name="olgreb" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 124 )
+[node name="olgreb" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("124")
 centered = false
 
-[node name="order" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 66 )
+[node name="order" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("66")
 centered = false
 
-[node name="plutonium_sword_new" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 67 )
+[node name="plutonium_sword_new" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("67")
 centered = false
 
-[node name="plutonium_sword_old" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 68 )
+[node name="plutonium_sword_old" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("68")
 centered = false
 
-[node name="punk" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 6 )
+[node name="punk" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("6")
 centered = false
 
-[node name="serpent_scourge" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 69 )
+[node name="serpent_scourge" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("69")
 centered = false
 
-[node name="shillelagh" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 70 )
+[node name="shillelagh" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("70")
 centered = false
 
-[node name="singing_sword" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 71 )
+[node name="singing_sword" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("71")
 centered = false
 
-[node name="sniper" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 72 )
+[node name="sniper" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("72")
 centered = false
 
-[node name="spriggans_knife_new" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 73 )
+[node name="spriggans_knife_new" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("73")
 centered = false
 
-[node name="spriggans_knife_old" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 74 )
+[node name="spriggans_knife_old" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("74")
 centered = false
 
-[node name="sword_of_power_new" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 75 )
+[node name="sword_of_power_new" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("75")
 centered = false
 
-[node name="sword_of_power_old" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 76 )
+[node name="sword_of_power_old" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("76")
 centered = false
 
-[node name="trident_octopus_king" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 77 )
+[node name="trident_octopus_king" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("77")
 centered = false
 
-[node name="undeadhunter" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 78 )
+[node name="undeadhunter" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("78")
 centered = false
 
-[node name="vampires_tooth" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 79 )
+[node name="vampires_tooth" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("79")
 centered = false
 
-[node name="wucad_mu" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 80 )
+[node name="wucad_mu" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("80")
 centered = false
 
-[node name="wyrmbane" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 81 )
+[node name="wyrmbane" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("81")
 centered = false
 
-[node name="zonguldrok" type="Sprite" parent="hand_right/artefact"]
-position = Vector2( -128, 256 )
-texture = ExtResource( 82 )
+[node name="zonguldrok" type="Sprite2D" parent="hand_right/artefact"]
+position = Vector2(-128, 256)
+texture = ExtResource("82")
 centered = false
 
 [node name="misc" type="Node2D" parent="hand_right"]
 
-[node name="aragorn" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 100 )
-
-[node name="arwen" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 101 )
-
-[node name="bladehands_fe" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 102 )
-
-[node name="bladehands_new" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 103 )
-
-[node name="bladehands_old" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 104 )
-
-[node name="bladehands_op" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 105 )
-
-[node name="bone_lantern" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 106 )
+[node name="aragorn" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("100")
+
+[node name="arwen" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("101")
+
+[node name="bladehands_fe" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("102")
+
+[node name="bladehands_new" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("103")
+
+[node name="bladehands_old" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("104")
+
+[node name="bladehands_op" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("105")
+
+[node name="bone_lantern" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("106")
 
-[node name="bottle" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 107 )
+[node name="bottle" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("107")
 
-[node name="box" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 108 )
+[node name="box" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("108")
 
-[node name="crystal" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 109 )
+[node name="crystal" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("109")
 
-[node name="deck" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 110 )
+[node name="deck" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("110")
 
-[node name="disc" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 111 )
+[node name="disc" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("111")
 
-[node name="fan" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 112 )
+[node name="fan" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("112")
 
-[node name="fire_blue" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 113 )
+[node name="fire_blue" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("113")
 
-[node name="fire_cyan" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 114 )
+[node name="fire_cyan" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("114")
 
-[node name="fire_dark" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 115 )
+[node name="fire_dark" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("115")
 
-[node name="fire_green" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 116 )
+[node name="fire_green" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("116")
 
-[node name="fire_red" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 83 )
+[node name="fire_red" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("83")
 
-[node name="fire_white" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 84 )
+[node name="fire_white" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("84")
 
-[node name="fire_white_2" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 85 )
+[node name="fire_white_2" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("85")
 
-[node name="head" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 86 )
+[node name="head" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("86")
 
-[node name="horn" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 87 )
+[node name="horn" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("87")
 
-[node name="lantern" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 88 )
+[node name="lantern" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("88")
 
-[node name="light_blue" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 89 )
+[node name="light_blue" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("89")
 
-[node name="light_red" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 90 )
+[node name="light_red" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("90")
 
-[node name="light_yellow" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 91 )
+[node name="light_yellow" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("91")
 
-[node name="orb" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 92 )
+[node name="orb" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("92")
 
-[node name="skull" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 93 )
+[node name="skull" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("93")
 
-[node name="spark" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 94 )
+[node name="spark" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("94")
 
-[node name="stone" type="Sprite" parent="hand_right/misc"]
-position = Vector2( 384, 320 )
-texture = ExtResource( 95 )
+[node name="stone" type="Sprite2D" parent="hand_right/misc"]
+position = Vector2(384, 320)
+texture = ExtResource("95")
 
-[node name="aragorn" type="Sprite" parent="hand_right"]
-position = Vector2( 576, 192 )
-texture = ExtResource( 100 )
+[node name="aragorn" type="Sprite2D" parent="hand_right"]
+position = Vector2(576, 192)
+texture = ExtResource("100")
 centered = false
 
-[node name="arwen" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 101 )
+[node name="arwen" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("101")
 centered = false
 
-[node name="axe" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 96 )
+[node name="axe" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("96")
 centered = false
 
-[node name="axe_blood" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 97 )
+[node name="axe_blood" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("97")
 centered = false
 
-[node name="axe_double" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 98 )
+[node name="axe_double" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("98")
 centered = false
 
-[node name="axe_executioner_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 99 )
+[node name="axe_executioner_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("99")
 centered = false
 
-[node name="axe_executioner_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 41 )
+[node name="axe_executioner_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("41")
 centered = false
 
-[node name="axe_executioner_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 42 )
+[node name="axe_executioner_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("42")
 centered = false
 
-[node name="axe_short" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 43 )
+[node name="axe_short" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("43")
 centered = false
 
-[node name="axe_small" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 44 )
+[node name="axe_small" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("44")
 centered = false
 
-[node name="battleaxe" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 45 )
+[node name="battleaxe" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("45")
 centered = false
 
-[node name="battleaxe_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 46 )
+[node name="battleaxe_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("46")
 centered = false
 
-[node name="black_sword" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 47 )
+[node name="black_sword" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("47")
 centered = false
 
-[node name="black_whip_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 48 )
+[node name="black_whip_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("48")
 centered = false
 
-[node name="black_whip_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 49 )
+[node name="black_whip_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("49")
 centered = false
 
-[node name="blessed_blade" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 50 )
+[node name="blessed_blade" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("50")
 centered = false
 
-[node name="blowgun" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 51 )
+[node name="blowgun" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("51")
 centered = false
 
-[node name="boromir" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 52 )
+[node name="boromir" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("52")
 centered = false
 
-[node name="bow" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 53 )
+[node name="bow" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("53")
 centered = false
 
-[node name="bow_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 54 )
+[node name="bow_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("54")
 centered = false
 
-[node name="bow_3" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 55 )
+[node name="bow_3" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("55")
 centered = false
 
-[node name="bow_blue" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 56 )
+[node name="bow_blue" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("56")
 centered = false
 
-[node name="broadsword" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 57 )
+[node name="broadsword" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("57")
 centered = false
 
-[node name="broad_axe" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 58 )
+[node name="broad_axe" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("58")
 centered = false
 
-[node name="club" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 59 )
+[node name="club" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("59")
 centered = false
 
-[node name="club_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 60 )
+[node name="club_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("60")
 centered = false
 
-[node name="club_3" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 61 )
+[node name="club_3" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("61")
 centered = false
 
-[node name="club_slant" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 62 )
+[node name="club_slant" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("62")
 centered = false
 
-[node name="crossbow" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 63 )
+[node name="crossbow" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("63")
 centered = false
 
-[node name="crossbow_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 64 )
+[node name="crossbow_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("64")
 centered = false
 
-[node name="crossbow_3" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 65 )
+[node name="crossbow_3" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("65")
 centered = false
 
-[node name="crossbow_4" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 24 )
+[node name="crossbow_4" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("24")
 centered = false
 
-[node name="dagger_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 25 )
+[node name="dagger_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("25")
 centered = false
 
-[node name="dagger_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 26 )
+[node name="dagger_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("26")
 centered = false
 
-[node name="dagger_slant_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 27 )
+[node name="dagger_slant_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("27")
 centered = false
 
-[node name="dagger_slant_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 28 )
+[node name="dagger_slant_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("28")
 centered = false
 
-[node name="dagger_slant_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 29 )
+[node name="dagger_slant_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("29")
 centered = false
 
-[node name="dart" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 30 )
+[node name="dart" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("30")
 centered = false
 
-[node name="double_sword_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 31 )
+[node name="double_sword_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("31")
 centered = false
 
-[node name="double_sword_3" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 32 )
+[node name="double_sword_3" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("32")
 centered = false
 
-[node name="double_sword_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 33 )
+[node name="double_sword_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("33")
 centered = false
 
-[node name="double_sword_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 34 )
+[node name="double_sword_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("34")
 centered = false
 
-[node name="d_glaive" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 35 )
+[node name="d_glaive" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("35")
 centered = false
 
-[node name="enchantress_dagger" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 36 )
+[node name="enchantress_dagger" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("36")
 centered = false
 
-[node name="eveningstar_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 37 )
+[node name="eveningstar_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("37")
 centered = false
 
-[node name="eveningstar_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 38 )
+[node name="eveningstar_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("38")
 centered = false
 
-[node name="eveningstar_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 39 )
+[node name="eveningstar_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("39")
 centered = false
 
-[node name="falchion_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 40 )
+[node name="falchion_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("40")
 centered = false
 
-[node name="falchion_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 174 )
+[node name="falchion_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("174")
 centered = false
 
-[node name="falchion_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 175 )
+[node name="falchion_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("175")
 centered = false
 
-[node name="flail_balls" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 176 )
+[node name="flail_balls" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("176")
 centered = false
 
-[node name="flail_ball_2_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 177 )
+[node name="flail_ball_2_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("177")
 centered = false
 
-[node name="flail_ball_2_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 178 )
+[node name="flail_ball_2_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("178")
 centered = false
 
-[node name="flail_ball_3" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 179 )
+[node name="flail_ball_3" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("179")
 centered = false
 
-[node name="flail_ball_4" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 180 )
+[node name="flail_ball_4" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("180")
 centered = false
 
-[node name="flail_ball_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 181 )
+[node name="flail_ball_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("181")
 centered = false
 
-[node name="flail_ball_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 182 )
+[node name="flail_ball_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("182")
 centered = false
 
-[node name="flail_great" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 183 )
+[node name="flail_great" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("183")
 centered = false
 
-[node name="flail_great_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 184 )
+[node name="flail_great_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("184")
 centered = false
 
-[node name="flail_spike" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 185 )
+[node name="flail_spike" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("185")
 centered = false
 
-[node name="flail_spike_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 186 )
+[node name="flail_spike_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("186")
 centered = false
 
-[node name="flail_stick" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 187 )
+[node name="flail_stick" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("187")
 centered = false
 
-[node name="flail_stick_slant" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 188 )
+[node name="flail_stick_slant" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("188")
 centered = false
 
-[node name="fork_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 189 )
+[node name="fork_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("189")
 centered = false
 
-[node name="frodo" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 190 )
+[node name="frodo" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("190")
 centered = false
 
-[node name="gandalf" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 191 )
+[node name="gandalf" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("191")
 centered = false
 
-[node name="giant_club" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 192 )
+[node name="giant_club" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("192")
 centered = false
 
-[node name="giant_club_plain" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 193 )
+[node name="giant_club_plain" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("193")
 centered = false
 
-[node name="giant_club_slant" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 194 )
+[node name="giant_club_slant" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("194")
 centered = false
 
-[node name="giant_club_spike" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 195 )
+[node name="giant_club_spike" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("195")
 centered = false
 
-[node name="giant_club_spike_slant" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 196 )
+[node name="giant_club_spike_slant" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("196")
 centered = false
 
-[node name="gimli" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 197 )
+[node name="gimli" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("197")
 centered = false
 
-[node name="glaive_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 198 )
+[node name="glaive_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("198")
 centered = false
 
-[node name="glaive_3" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 199 )
+[node name="glaive_3" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("199")
 centered = false
 
-[node name="glaive_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 200 )
+[node name="glaive_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("200")
 centered = false
 
-[node name="glaive_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 201 )
+[node name="glaive_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("201")
 centered = false
 
-[node name="glaive_three" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 202 )
+[node name="glaive_three" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("202")
 centered = false
 
-[node name="glaive_three_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 203 )
+[node name="glaive_three_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("203")
 centered = false
 
-[node name="greatsling" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 204 )
+[node name="greatsling" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("204")
 centered = false
 
-[node name="great_axe" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 205 )
+[node name="great_axe" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("205")
 centered = false
 
-[node name="great_bow" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 206 )
+[node name="great_bow" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("206")
 centered = false
 
-[node name="great_mace" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 207 )
+[node name="great_mace" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("207")
 centered = false
 
-[node name="great_mace_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 208 )
+[node name="great_mace_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("208")
 centered = false
 
-[node name="great_staff" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 139 )
+[node name="great_staff" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("139")
 centered = false
 
-[node name="great_sword" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 140 )
+[node name="great_sword" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("140")
 centered = false
 
-[node name="great_sword_slant_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 141 )
+[node name="great_sword_slant_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("141")
 centered = false
 
-[node name="great_sword_slant_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 142 )
+[node name="great_sword_slant_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("142")
 centered = false
 
-[node name="great_sword_slant_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 143 )
+[node name="great_sword_slant_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("143")
 centered = false
 
-[node name="halberd_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 144 )
+[node name="halberd_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("144")
 centered = false
 
-[node name="halberd_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 145 )
+[node name="halberd_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("145")
 centered = false
 
-[node name="hammer_2_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 146 )
+[node name="hammer_2_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("146")
 centered = false
 
-[node name="hammer_2_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 147 )
+[node name="hammer_2_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("147")
 centered = false
 
-[node name="hammer_3" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 148 )
+[node name="hammer_3" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("148")
 centered = false
 
-[node name="hammer_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 149 )
+[node name="hammer_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("149")
 centered = false
 
-[node name="hammer_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 150 )
+[node name="hammer_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("150")
 centered = false
 
-[node name="hand_axe_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 4 )
+[node name="hand_axe_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("4")
 centered = false
 
-[node name="hand_axe_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 151 )
+[node name="hand_axe_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("151")
 centered = false
 
-[node name="hand_axe_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 152 )
+[node name="hand_axe_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("152")
 centered = false
 
-[node name="hand_crossbow" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 153 )
+[node name="hand_crossbow" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("153")
 centered = false
 
-[node name="heavy_sword" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 154 )
+[node name="heavy_sword" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("154")
 centered = false
 
-[node name="holy_scourge_1" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 155 )
+[node name="holy_scourge_1" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("155")
 centered = false
 
-[node name="holy_scourge_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 156 )
+[node name="holy_scourge_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("156")
 centered = false
 
-[node name="hook" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 157 )
+[node name="hook" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("157")
 centered = false
 
-[node name="katana" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 158 )
+[node name="katana" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("158")
 centered = false
 
-[node name="katana_slant" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 159 )
+[node name="katana_slant" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("159")
 centered = false
 
-[node name="knife" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 160 )
+[node name="knife" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("160")
 centered = false
 
-[node name="lance" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 161 )
+[node name="lance" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("161")
 centered = false
 
-[node name="lance_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 162 )
+[node name="lance_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("162")
 centered = false
 
-[node name="large_mace" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 163 )
+[node name="large_mace" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("163")
 centered = false
 
-[node name="legolas" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 164 )
+[node name="legolas" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("164")
 centered = false
 
-[node name="long_sword" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 165 )
+[node name="long_sword" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("165")
 centered = false
 
-[node name="long_sword_slant_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 166 )
+[node name="long_sword_slant_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("166")
 centered = false
 
-[node name="long_sword_slant_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 167 )
+[node name="long_sword_slant_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("167")
 centered = false
 
-[node name="long_sword_slant_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 168 )
+[node name="long_sword_slant_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("168")
 centered = false
 
-[node name="mace_2_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 169 )
+[node name="mace_2_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("169")
 centered = false
 
-[node name="mace_2_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 170 )
+[node name="mace_2_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("170")
 centered = false
 
-[node name="mace_3" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 171 )
+[node name="mace_3" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("171")
 centered = false
 
-[node name="mace_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 172 )
+[node name="mace_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("172")
 centered = false
 
-[node name="mace_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 173 )
+[node name="mace_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("173")
 centered = false
 
-[node name="mace_ruby_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 209 )
+[node name="mace_ruby_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("209")
 centered = false
 
-[node name="mace_ruby_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 210 )
+[node name="mace_ruby_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("210")
 centered = false
 
-[node name="morningstar_2_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 211 )
+[node name="morningstar_2_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("211")
 centered = false
 
-[node name="morningstar_2_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 212 )
+[node name="morningstar_2_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("212")
 centered = false
 
-[node name="morningstar_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 213 )
+[node name="morningstar_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("213")
 centered = false
 
-[node name="morningstar_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 214 )
+[node name="morningstar_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("214")
 centered = false
 
-[node name="nunchaku" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 215 )
+[node name="nunchaku" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("215")
 centered = false
 
-[node name="pick_axe" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 216 )
+[node name="pick_axe" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("216")
 centered = false
 
-[node name="pike" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 217 )
+[node name="pike" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("217")
 centered = false
 
-[node name="pole_forked" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 218 )
+[node name="pole_forked" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("218")
 centered = false
 
-[node name="quarterstaff" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 219 )
+[node name="quarterstaff" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("219")
 centered = false
 
-[node name="quarterstaff_1" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 220 )
+[node name="quarterstaff_1" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("220")
 centered = false
 
-[node name="quarterstaff_2_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 221 )
+[node name="quarterstaff_2_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("221")
 centered = false
 
-[node name="quarterstaff_2_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 222 )
+[node name="quarterstaff_2_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("222")
 centered = false
 
-[node name="quarterstaff_3" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 223 )
+[node name="quarterstaff_3" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("223")
 centered = false
 
-[node name="quarterstaff_4" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 224 )
+[node name="quarterstaff_4" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("224")
 centered = false
 
-[node name="quarterstaff_jester" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 225 )
+[node name="quarterstaff_jester" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("225")
 centered = false
 
-[node name="rapier" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 226 )
+[node name="rapier" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("226")
 centered = false
 
-[node name="rapier_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 227 )
+[node name="rapier_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("227")
 centered = false
 
-[node name="rod_aries_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 228 )
+[node name="rod_aries_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("228")
 centered = false
 
-[node name="rod_aries_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 229 )
+[node name="rod_aries_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("229")
 centered = false
 
-[node name="rod_blue_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 230 )
+[node name="rod_blue_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("230")
 centered = false
 
-[node name="rod_blue_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 231 )
+[node name="rod_blue_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("231")
 centered = false
 
-[node name="rod_brown_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 232 )
+[node name="rod_brown_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("232")
 centered = false
 
-[node name="rod_brown_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 233 )
+[node name="rod_brown_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("233")
 centered = false
 
-[node name="rod_emerald_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 234 )
+[node name="rod_emerald_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("234")
 centered = false
 
-[node name="rod_emerald_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 235 )
+[node name="rod_emerald_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("235")
 centered = false
 
-[node name="rod_forked_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 236 )
+[node name="rod_forked_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("236")
 centered = false
 
-[node name="rod_forked_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 237 )
+[node name="rod_forked_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("237")
 centered = false
 
-[node name="rod_hammer_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 238 )
+[node name="rod_hammer_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("238")
 centered = false
 
-[node name="rod_hammer_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 239 )
+[node name="rod_hammer_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("239")
 centered = false
 
-[node name="rod_magenta_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 240 )
+[node name="rod_magenta_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("240")
 centered = false
 
-[node name="rod_magenta_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 241 )
+[node name="rod_magenta_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("241")
 centered = false
 
-[node name="rod_moon_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 242 )
+[node name="rod_moon_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("242")
 centered = false
 
-[node name="rod_moon_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 243 )
+[node name="rod_moon_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("243")
 centered = false
 
-[node name="rod_ruby_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 244 )
+[node name="rod_ruby_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("244")
 centered = false
 
-[node name="rod_ruby_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 245 )
+[node name="rod_ruby_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("245")
 centered = false
 
-[node name="rod_thick_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 246 )
+[node name="rod_thick_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("246")
 centered = false
 
-[node name="rod_thick_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 247 )
+[node name="rod_thick_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("247")
 centered = false
 
-[node name="sabre" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 248 )
+[node name="sabre" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("248")
 centered = false
 
-[node name="saruman" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 249 )
+[node name="saruman" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("249")
 centered = false
 
-[node name="scepter" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 250 )
+[node name="scepter" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("250")
 centered = false
 
-[node name="scimitar_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 251 )
+[node name="scimitar_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("251")
 centered = false
 
-[node name="scimitar_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 252 )
+[node name="scimitar_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("252")
 centered = false
 
-[node name="scythe_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 253 )
+[node name="scythe_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("253")
 centered = false
 
-[node name="scythe_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 254 )
+[node name="scythe_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("254")
 centered = false
 
-[node name="scythe_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 255 )
+[node name="scythe_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("255")
 centered = false
 
-[node name="scythe_slant" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 256 )
+[node name="scythe_slant" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("256")
 centered = false
 
-[node name="short_sword" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 257 )
+[node name="short_sword" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("257")
 centered = false
 
-[node name="short_sword_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 258 )
+[node name="short_sword_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("258")
 centered = false
 
-[node name="short_sword_slant_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 259 )
+[node name="short_sword_slant_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("259")
 centered = false
 
-[node name="short_sword_slant_3" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 260 )
+[node name="short_sword_slant_3" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("260")
 centered = false
 
-[node name="short_sword_slant_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 261 )
+[node name="short_sword_slant_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("261")
 centered = false
 
-[node name="short_sword_slant_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 262 )
+[node name="short_sword_slant_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("262")
 centered = false
 
-[node name="sickle" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 263 )
+[node name="sickle" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("263")
 centered = false
 
-[node name="sling" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 264 )
+[node name="sling" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("264")
 centered = false
 
-[node name="spear" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 265 )
+[node name="spear" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("265")
 centered = false
 
-[node name="spear_1" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 266 )
+[node name="spear_1" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("266")
 centered = false
 
-[node name="spear_2_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 267 )
+[node name="spear_2_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("267")
 centered = false
 
-[node name="spear_2_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 268 )
+[node name="spear_2_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("268")
 centered = false
 
-[node name="spear_3" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 269 )
+[node name="spear_3" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("269")
 centered = false
 
-[node name="spear_4" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 270 )
+[node name="spear_4" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("270")
 centered = false
 
-[node name="spear_5" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 271 )
+[node name="spear_5" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("271")
 centered = false
 
-[node name="staff_evil" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 272 )
+[node name="staff_evil" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("272")
 centered = false
 
-[node name="staff_fancy" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 273 )
+[node name="staff_fancy" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("273")
 centered = false
 
-[node name="staff_fork" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 274 )
+[node name="staff_fork" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("274")
 centered = false
 
-[node name="staff_large" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 275 )
+[node name="staff_large" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("275")
 centered = false
 
-[node name="staff_mage" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 276 )
+[node name="staff_mage" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("276")
 centered = false
 
-[node name="staff_mage_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 277 )
+[node name="staff_mage_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("277")
 centered = false
 
-[node name="staff_mummy" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 278 )
+[node name="staff_mummy" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("278")
 centered = false
 
-[node name="staff_organic" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 279 )
+[node name="staff_organic" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("279")
 centered = false
 
-[node name="staff_plain" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 280 )
+[node name="staff_plain" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("280")
 centered = false
 
-[node name="staff_ring_blue" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 281 )
+[node name="staff_ring_blue" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("281")
 centered = false
 
-[node name="staff_ruby" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 282 )
+[node name="staff_ruby" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("282")
 centered = false
 
-[node name="staff_scepter" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 283 )
+[node name="staff_scepter" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("283")
 centered = false
 
-[node name="staff_skull" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 284 )
+[node name="staff_skull" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("284")
 centered = false
 
-[node name="stick" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 285 )
+[node name="stick" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("285")
 centered = false
 
-[node name="sword_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 286 )
+[node name="sword_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("286")
 centered = false
 
-[node name="sword_3" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 287 )
+[node name="sword_3" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("287")
 centered = false
 
-[node name="sword_black" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 288 )
+[node name="sword_black" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("288")
 centered = false
 
-[node name="sword_breaker" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 289 )
+[node name="sword_breaker" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("289")
 centered = false
 
-[node name="sword_jag" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 290 )
+[node name="sword_jag" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("290")
 centered = false
 
-[node name="sword_seven" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 291 )
+[node name="sword_seven" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("291")
 centered = false
 
-[node name="sword_thief" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 292 )
+[node name="sword_thief" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("292")
 centered = false
 
-[node name="sword_tri" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 293 )
+[node name="sword_tri" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("293")
 centered = false
 
-[node name="sword_twist" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 294 )
+[node name="sword_twist" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("294")
 centered = false
 
-[node name="trident" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 295 )
+[node name="trident" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("295")
 centered = false
 
-[node name="trident_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 296 )
+[node name="trident_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("296")
 centered = false
 
-[node name="trident_3" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 297 )
+[node name="trident_3" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("297")
 centered = false
 
-[node name="trident_demon" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 298 )
+[node name="trident_demon" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("298")
 centered = false
 
-[node name="trident_elec" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 299 )
+[node name="trident_elec" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("299")
 centered = false
 
-[node name="trident_two" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 300 )
+[node name="trident_two" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("300")
 centered = false
 
-[node name="trident_two_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 301 )
+[node name="trident_two_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("301")
 centered = false
 
-[node name="triple_sword_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 302 )
+[node name="triple_sword_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("302")
 centered = false
 
-[node name="triple_sword_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 303 )
+[node name="triple_sword_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("303")
 centered = false
 
-[node name="triple_sword_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 304 )
+[node name="triple_sword_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("304")
 centered = false
 
-[node name="trishula" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 305 )
+[node name="trishula" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("305")
 centered = false
 
-[node name="war_axe_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 306 )
+[node name="war_axe_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("306")
 centered = false
 
-[node name="war_axe_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 307 )
+[node name="war_axe_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("307")
 centered = false
 
-[node name="whip_2" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 308 )
+[node name="whip_2" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("308")
 centered = false
 
-[node name="whip_new" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 309 )
+[node name="whip_new" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("309")
 centered = false
 
-[node name="whip_old" type="Sprite" parent="hand_right"]
-position = Vector2( 512, 192 )
-texture = ExtResource( 310 )
+[node name="whip_old" type="Sprite2D" parent="hand_right"]
+position = Vector2(512, 192)
+texture = ExtResource("310")
 centered = false
